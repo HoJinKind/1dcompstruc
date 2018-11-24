@@ -1,0 +1,303 @@
+
+
+global Inst {
+  const ADD = 6h0;
+  const SUB = 6h1;
+  const MUL = 6h2;
+  const AND = 6h18;
+  const OR = 6h1e;
+  const XOR = 6h16;
+  const LDR = 6h1a;
+  const SHL = 6h20;
+  const SHR = 6h21;
+  const SRA = 6h23;
+  const CMPEQ = 6h33;
+  const CMPLT = 6h35;
+  const CMPLE = 6h37;
+  const DIVIDE   = 6h3;
+  
+}
+
+module mojo_top (
+    input clk,              // 50MHz clock
+    input rst_n,            // reset button (active low)
+    output led [8],         // 8 user controllable LEDs
+    input cclk,             // configuration clock, AVR ready when high
+    output spi_miso,        // AVR SPI MISO
+    input spi_ss,           // AVR SPI Slave Select
+    input spi_mosi,         // AVR SPI MOSI
+    input spi_sck,          // AVR SPI Clock
+    output spi_channel [4], // AVR general purpose pins (used by default to select ADC channel)
+    input avr_tx,           // AVR TX (FPGA RX)
+    output avr_rx,          // AVR RX (FPGA TX)
+    input avr_rx_busy,      // AVR RX buffer full
+ 
+    input modeInput,
+    input startInput,
+    input addInput,
+    input subInput,
+    input multInput,
+    input divInput,
+    input increaseInput,
+    output outputModeOne,
+    output outputModeTwo,
+    output io_seg1 [7],      // 7-segment LEDs on IO Shield
+    output io_sel1 [4],      // Digit select on IO Shield
+    output io_seg2 [7],      // 7-segment LEDs on IO Shield
+    output io_sel2 [4],     // Digit select on IO Shield
+    output io_seg4 [7],   // single 7-segment LEDs on IO Shield
+    output io_sel4 [1]   // single Digit select on IO Shield
+  ) {
+  
+  sig rst;                  // reset signal
+  
+  
+  sig a[16];   
+  sig alufn[6];
+  dff test_counter[30](.clk(clk), .rst(rst));
+  alu alu;
+
+  .clk(clk) {
+    // The reset conditioner is used to synchronize the reset signal to the FPGA
+    // clock. This ensures the entire FPGA comes out of reset at the same time.
+    reset_conditioner reset_cond;
+    button_conditioner btn_mode_input;
+    edge_detector edge_mode_input (#RISE(1), #FALL(0));
+    button_conditioner btn_start_input;
+    edge_detector edge_start_input (#RISE(1), #FALL(0));
+    button_conditioner btn_increase_input;
+    edge_detector edge_increase_input (#RISE(1), #FALL(0));
+    button_conditioner btn_add_input;
+    edge_detector edge_add_input (#RISE(1), #FALL(0));
+    .rst(rst) {
+      // states alternate between each possible alu operation based on the buttons pressed
+      
+      // ERROR simulates the error case for adder.
+      fsm state = {IDLE,STARTROUNDA,STARTROUNDB,WAITARITHMETIC,COMPARECOUNTER,COMPAREHIGHSCORE};
+      multi_seven_seg seg;
+      multi_seven_seg seg2;
+      multi_seven_seg seg4;
+  
+      dff currentscore[16];
+      dff counter[4];
+      dff highscore[16];
+      dff b[16];
+      dff buttonGameMode;//button toggle mode
+
+    }    
+  }
+  const DELAYTIME = 29;
+  bin_to_dec convertHS(#DIGITS(4), #LEADING_ZEROS(1));
+  bin_to_dec convertCS(#DIGITS(4), #LEADING_ZEROS(1));
+
+  always {
+  
+    btn_mode_input.in = modeInput; // io_button[4] is the "right" button
+    edge_mode_input.in = btn_mode_input.out; // connect the button to the edge edge_detector
+    
+    btn_start_input.in = startInput; // io_button[4] is the "right" button
+    edge_start_input.in = btn_start_input.out; // connect the button to the edge edge_detector
+    
+    btn_increase_input.in = increaseInput; // io_button[4] is the "right" button
+    edge_increase_input.in = btn_increase_input.out; // connect the button to the edge edge_detector
+    
+    btn_add_input.in = addInput; // io_button[4] is the "right" button
+    edge_add_input.in = btn_add_input.out; // connect the button to the edge edge_detector
+    
+    convertHS.value = highscore.q;//these values only go up to 9999
+    convertCS.value = currentscore.q;
+    reset_cond.in = ~rst_n; // input raw inverted reset signal
+    rst = reset_cond.out;   // conditioned reset
+
+    outputModeOne=~buttonGameMode.q;
+    outputModeTwo=buttonGameMode.q;
+    led = 8h00;             // turn LEDs off
+    spi_miso = bz;          // not using SPI
+    spi_channel = bzzzz;    // not using flags
+    avr_rx = bz;            // not using serial port
+    
+ 
+
+    
+    // Manual testing (dip switches used)    a[15:0] = io_dip[0];
+    alu.a =16b0;
+    alu.b = 16b0;
+    alu.alufn = 6b0; 
+    
+    // start initiates the testing for each module
+    
+   
+    
+    //set the values of everyth in the cases
+    case (state.q) {
+        state.IDLE:
+        led[0]=1;
+     //toggle between modes
+        counter.d =0;
+        b.d=16d11;
+        convertCS.value=16haaaa;
+        case (edge_mode_input.out){
+            1:
+              buttonGameMode.d=~buttonGameMode.q;
+                
+        
+        }
+        case(edge_start_input.out){
+          1:  //print current
+              //if button start which is input, is 1, then go already. no hesitation
+              currentscore.d=16b0;
+              if(buttonGameMode.q==0){
+                  state.d =state.STARTROUNDA;
+                  
+                  b.d=16b1;
+                  
+              
+              }
+              else{
+                  b.d=16b1;
+                  state.d =state.STARTROUNDB;
+  
+              }
+        
+             
+        }
+    
+        state.STARTROUNDA: 
+            led[1]=1;
+            if (edge_start_input.out){
+                        
+                        state.d = state.WAITARITHMETIC;
+            }
+
+        state.STARTROUNDB:
+          led[2]=1;
+      //joannas b
+    //skip first
+          if (edge_start_input.out){
+                        
+                        state.d = state.WAITARITHMETIC;
+
+            }
+          if (edge_increase_input.out){
+
+              if(b.q<5){
+                b.d=b.q+1;
+              }
+              else{
+                b.d=1;
+              }
+          }
+          
+          //in here, we display b, or maybe evrywhere :)
+
+  
+        state.WAITARITHMETIC:
+
+          led[3]=1;
+          if(edge_add_input.out){
+          alu.a =currentscore.q;
+          alu.b = b.q;
+          alu.alufn = Inst.ADD; //done operation, now need to set value to new current score
+          currentscore.d= alu.result;
+          state.d = state.COMPAREHIGHSCORE;
+          counter.d = counter.q+1;
+          //
+          }
+          if(subInput){
+          alu.a =currentscore.q;
+          alu.b = b.q;
+          alu.alufn = Inst.SUB;
+          currentscore.d= alu.result; 
+          state.d = state.COMPAREHIGHSCORE;
+          counter.d = counter.q+1;
+          }
+          if (multInput==1){
+            
+          alu.a =currentscore.q;
+          alu.b = b.q;
+          alu.alufn = Inst.MUL; 
+          currentscore.d= alu.result;  
+          state.d = state.COMPAREHIGHSCORE; 
+          counter.d = counter.q+1;
+          }
+        if (divInput==1){
+            
+          alu.a =currentscore.q;
+          alu.b = b.q;
+          alu.alufn = Inst.DIVIDE;
+          currentscore.d= alu.result;    
+          state.d = state.COMPAREHIGHSCORE;
+          counter.d = counter.q+1;
+          }
+        
+        state.COMPAREHIGHSCORE:
+            led[4]=1;
+            alu.a= currentscore.q;
+            alu.b= highscore.q;
+            alu.alufn=Inst.CMPLT;
+            if (alu.result[0]==0){
+                highscore.d=currentscore.q;
+            }
+            state.d= state.COMPARECOUNTER;
+
+
+        state.COMPARECOUNTER:
+          led[5]=1;
+          alu.a=counter.q;
+          alu.b= 5;
+          alu.alufn= Inst.CMPEQ;
+          if (alu.result[0]==1){
+              state.d = state.IDLE;
+              
+          }
+          else{
+              if(buttonGameMode.q==1){
+                  state.d = state.STARTROUNDB;
+              }
+              else{
+                  state.d= state.STARTROUNDA;
+                  b.d=b.q+1;
+              }
+          }
+            
+
+
+        
+            
+    }
+    
+    io_seg1 = 8hff;          // turn segments off
+    io_sel1 = 4hf;           // select no digits
+    
+    io_seg1 = ~seg.segs;
+    io_sel1 = ~seg.sel;
+    
+    io_seg2 = 8hff;          // turn segments off
+    io_sel2 = 4hf;           // select no digits
+    io_seg2 = ~seg2.segs;
+    io_sel2 = ~seg2.sel;
+    
+    
+    io_seg4= 8hff;          // turn segments off
+    io_sel4= 4hf;           // select no digits
+    io_seg4= ~seg4.segs;
+    io_sel4= ~seg4.sel;
+    seg.values = convertHS.digits;
+    seg2.values = convertCS.digits;
+    seg4.values = {b.q[3:0],b.q[3:0],b.q[3:0],b.q[3:0]};
+    
+   
+    test_counter.d = test_counter.q + 1;
+    
+
+
+    // Set output to ALU
+    //        if (counter.q[X]==1&&alu==8b1010){ //once counter reaches defined value, and output of ALU is equal to manually calculated value (CORRECT ANSWER)
+    //        counter.d = 0; //reset counter value to 0
+    //        state.d = state.ADDERTEST1A; //move on to next test case
+    //    }else if (counter.q[X] == 1 && alu!= 8b1010){ //once counter reachse defined value but output of value is not equal to calculated value (WRONG ANSWER)
+    //        counter.d=0; //reset counter value to 0
+    //        state.d=state.ADDERERROR;} //move to adder error state
+    //   at the bottom of each state test.
+  }
+}

@@ -1,0 +1,25 @@
+module compareModule (                    // Compare Module
+    input a[16],                    // 16 bit input for a
+    input b[16],                    // 16 bit input for b
+    input alufn[8],                 // 6 bit input for alufn
+    output result[16]             // 16 bit output
+) {
+ 
+  var v;
+  adderModule adderModule;
+    always {                        // Always loop
+    result = 0;
+    adderModule.a = a;
+    adderModule.b = b;
+    adderModule.alufn = 6b000001;
+	   v = a[15]&&b[15]&&!adderModule.result[15]||!a[15]&&b[15]&&adderModule.result[15];
+         case(alufn) {
+            Inst.CMPEQ:             // Compare Equal To
+                result[0] = a == b;				//z
+            Inst.CMPLT:             // Compare Less Than
+                result[0] = adderModule.result[15] ^ v;			//n XOR v
+            Inst.CMPLE:             // Compare Less Than Equal To
+                result[0] = (a==b)||(adderModule.result[15] ^ v);	//z OR (n XOR v)
+        }
+    }
+}

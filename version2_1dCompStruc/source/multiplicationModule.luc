@@ -1,0 +1,15 @@
+module multiplicationModule(
+    input a[16],             //16 bit input for A
+    input b[16],             //16 bit input for B
+    input alufn[6],          //16 bit input for the ALU function
+    output result[16]        //16 bit result for A x B 
+   )  
+{
+  always {
+    result = 0;  
+    case(alufn) {
+      Inst.MUL:             
+        result = a * b;     //multiplication
+    }
+  }
+}

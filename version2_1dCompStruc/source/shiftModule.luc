@@ -1,0 +1,20 @@
+module shiftModule (                                      // Shift Module
+    input a[16],                                    // 16 bit input for a
+    input b[16],                                    // 16 bit input for b
+    input alufn[6],                                 // 6 bit input for alufn
+    output result[16]                               // 16 bit output
+){
+
+    always {                                        // Always loop
+        result = 0;
+        
+        case(alufn) {                               // Return output according to alufn
+            Inst.SHL:
+                result = a << b[2:0];               // Shift left(SHL) 
+            Inst.SHR:
+                result = a >> b[2:0];               // Shift right(SHR)
+            Inst.SRA:
+                result = $signed(a) >>> b[2:0];     // Shift right arithmetic(SRA)
+        }
+    }
+}

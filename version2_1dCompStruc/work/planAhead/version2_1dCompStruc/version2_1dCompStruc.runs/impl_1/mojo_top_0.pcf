@@ -1,0 +1,143 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sat Nov 24 16:17:00 2018
+//! **************************************************************************
+
+SCHEMATIC START;
+CONFIG VCCAUX = "3.3";
+COMP "clk" LOCATE = SITE "P56" LEVEL 1;
+COMP "cclk" LOCATE = SITE "P70" LEVEL 1;
+COMP "rst_n" LOCATE = SITE "P38" LEVEL 1;
+COMP "spi_sck" LOCATE = SITE "P43" LEVEL 1;
+COMP "modeInput" LOCATE = SITE "P120" LEVEL 1;
+COMP "startInput" LOCATE = SITE "P118" LEVEL 1;
+COMP "addInput" LOCATE = SITE "P116" LEVEL 1;
+COMP "avr_rx_busy" LOCATE = SITE "P39" LEVEL 1;
+COMP "outputModeOne" LOCATE = SITE "P99" LEVEL 1;
+COMP "divInput" LOCATE = SITE "P104" LEVEL 1;
+COMP "outputModeTwo" LOCATE = SITE "P97" LEVEL 1;
+COMP "increaseInput" LOCATE = SITE "P101" LEVEL 1;
+COMP "multInput" LOCATE = SITE "P111" LEVEL 1;
+COMP "led[0]" LOCATE = SITE "P134" LEVEL 1;
+COMP "led[1]" LOCATE = SITE "P133" LEVEL 1;
+COMP "led[2]" LOCATE = SITE "P132" LEVEL 1;
+COMP "led[3]" LOCATE = SITE "P131" LEVEL 1;
+COMP "led[4]" LOCATE = SITE "P127" LEVEL 1;
+COMP "led[5]" LOCATE = SITE "P126" LEVEL 1;
+COMP "led[6]" LOCATE = SITE "P124" LEVEL 1;
+COMP "led[7]" LOCATE = SITE "P123" LEVEL 1;
+COMP "avr_tx" LOCATE = SITE "P55" LEVEL 1;
+COMP "spi_ss" LOCATE = SITE "P48" LEVEL 1;
+COMP "io_seg1[0]" LOCATE = SITE "P16" LEVEL 1;
+COMP "io_seg1[1]" LOCATE = SITE "P14" LEVEL 1;
+COMP "io_seg1[2]" LOCATE = SITE "P11" LEVEL 1;
+COMP "io_seg1[3]" LOCATE = SITE "P9" LEVEL 1;
+COMP "io_seg2[0]" LOCATE = SITE "P51" LEVEL 1;
+COMP "io_seg1[4]" LOCATE = SITE "P7" LEVEL 1;
+COMP "io_seg2[1]" LOCATE = SITE "P41" LEVEL 1;
+COMP "io_seg1[5]" LOCATE = SITE "P5" LEVEL 1;
+COMP "io_seg2[2]" LOCATE = SITE "P35" LEVEL 1;
+COMP "io_seg1[6]" LOCATE = SITE "P1" LEVEL 1;
+COMP "io_seg2[3]" LOCATE = SITE "P33" LEVEL 1;
+COMP "io_seg2[4]" LOCATE = SITE "P30" LEVEL 1;
+COMP "io_seg2[5]" LOCATE = SITE "P27" LEVEL 1;
+COMP "io_seg2[6]" LOCATE = SITE "P24" LEVEL 1;
+COMP "io_seg4[0]" LOCATE = SITE "P50" LEVEL 1;
+COMP "io_seg4[1]" LOCATE = SITE "P40" LEVEL 1;
+COMP "io_seg4[2]" LOCATE = SITE "P34" LEVEL 1;
+COMP "io_seg4[3]" LOCATE = SITE "P32" LEVEL 1;
+COMP "io_seg4[4]" LOCATE = SITE "P29" LEVEL 1;
+COMP "io_seg4[5]" LOCATE = SITE "P26" LEVEL 1;
+COMP "io_seg4[6]" LOCATE = SITE "P23" LEVEL 1;
+COMP "io_sel1[0]" LOCATE = SITE "P137" LEVEL 1;
+COMP "io_sel1[1]" LOCATE = SITE "P139" LEVEL 1;
+COMP "io_sel1[2]" LOCATE = SITE "P143" LEVEL 1;
+COMP "io_sel1[3]" LOCATE = SITE "P141" LEVEL 1;
+COMP "io_sel2[0]" LOCATE = SITE "P22" LEVEL 1;
+COMP "io_sel2[1]" LOCATE = SITE "P17" LEVEL 1;
+COMP "io_sel2[2]" LOCATE = SITE "P15" LEVEL 1;
+COMP "io_sel2[3]" LOCATE = SITE "P12" LEVEL 1;
+COMP "io_sel4[0]" LOCATE = SITE "P21" LEVEL 1;
+COMP "subInput" LOCATE = SITE "P114" LEVEL 1;
+COMP "spi_mosi" LOCATE = SITE "P44" LEVEL 1;
+TIMEGRP clk = BEL "M_highscore_q_6" BEL "M_highscore_q_13" BEL
+        "M_highscore_q_7" BEL "M_highscore_q_14" BEL "M_highscore_q_8" BEL
+        "M_highscore_q_15" BEL "M_highscore_q_9" BEL "edge_add_input/M_last_q"
+        BEL "M_buttonGameMode_q" BEL "btn_mode_input/M_ctr_q_0" BEL
+        "btn_mode_input/M_ctr_q_1" BEL "btn_mode_input/M_ctr_q_2" BEL
+        "btn_mode_input/M_ctr_q_3" BEL "btn_mode_input/M_ctr_q_4" BEL
+        "btn_mode_input/M_ctr_q_5" BEL "btn_mode_input/M_ctr_q_6" BEL
+        "btn_mode_input/M_ctr_q_7" BEL "btn_mode_input/M_ctr_q_8" BEL
+        "btn_mode_input/M_ctr_q_9" BEL "btn_mode_input/M_ctr_q_10" BEL
+        "btn_mode_input/M_ctr_q_11" BEL "btn_mode_input/M_ctr_q_12" BEL
+        "btn_mode_input/M_ctr_q_13" BEL "btn_mode_input/M_ctr_q_14" BEL
+        "btn_mode_input/M_ctr_q_15" BEL "btn_mode_input/M_ctr_q_16" BEL
+        "btn_mode_input/M_ctr_q_17" BEL "btn_mode_input/M_ctr_q_18" BEL
+        "btn_mode_input/M_ctr_q_19" BEL "btn_mode_input/sync/M_pipe_q_1" BEL
+        "btn_mode_input/sync/Mshreg_M_pipe_q_1" BEL "clk_BUFGP/BUFG" BEL
+        "reset_cond/M_stage_q_3" BEL "reset_cond/M_stage_q_2" BEL
+        "reset_cond/M_stage_q_1" BEL "reset_cond/M_stage_q_0" BEL
+        "M_counter_q_0" BEL "M_counter_q_1" BEL "M_counter_q_2" BEL
+        "M_counter_q_3" BEL "edge_increase_input/M_last_q" BEL
+        "seg4/ctr/M_ctr_q_17" BEL "seg4/ctr/M_ctr_q_16" BEL
+        "seg4/ctr/M_ctr_q_15" BEL "seg4/ctr/M_ctr_q_14" BEL
+        "seg4/ctr/M_ctr_q_13" BEL "seg4/ctr/M_ctr_q_12" BEL
+        "seg4/ctr/M_ctr_q_11" BEL "seg4/ctr/M_ctr_q_10" BEL
+        "seg4/ctr/M_ctr_q_9" BEL "seg4/ctr/M_ctr_q_8" BEL "seg4/ctr/M_ctr_q_7"
+        BEL "seg4/ctr/M_ctr_q_6" BEL "seg4/ctr/M_ctr_q_5" BEL
+        "seg4/ctr/M_ctr_q_4" BEL "seg4/ctr/M_ctr_q_3" BEL "seg4/ctr/M_ctr_q_2"
+        BEL "seg4/ctr/M_ctr_q_1" BEL "seg4/ctr/M_ctr_q_0" BEL "M_b_q_0" BEL
+        "M_b_q_1" BEL "M_b_q_2" BEL "M_b_q_3" BEL "M_b_q_4" BEL "M_b_q_5" BEL
+        "M_b_q_6" BEL "M_b_q_7" BEL "M_b_q_8" BEL "M_b_q_9" BEL
+        "edge_mode_input/M_last_q" BEL "M_state_q_FSM_FFd1" BEL
+        "M_state_q_FSM_FFd2" BEL "M_state_q_FSM_FFd3" BEL
+        "edge_start_input/M_last_q" BEL "btn_increase_input/M_ctr_q_0" BEL
+        "btn_increase_input/M_ctr_q_1" BEL "btn_increase_input/M_ctr_q_2" BEL
+        "btn_increase_input/M_ctr_q_3" BEL "btn_increase_input/M_ctr_q_4" BEL
+        "btn_increase_input/M_ctr_q_5" BEL "btn_increase_input/M_ctr_q_6" BEL
+        "btn_increase_input/M_ctr_q_7" BEL "btn_increase_input/M_ctr_q_8" BEL
+        "btn_increase_input/M_ctr_q_9" BEL "btn_increase_input/M_ctr_q_10" BEL
+        "btn_increase_input/M_ctr_q_11" BEL "btn_increase_input/M_ctr_q_12"
+        BEL "btn_increase_input/M_ctr_q_13" BEL
+        "btn_increase_input/M_ctr_q_14" BEL "btn_increase_input/M_ctr_q_15"
+        BEL "btn_increase_input/M_ctr_q_16" BEL
+        "btn_increase_input/M_ctr_q_17" BEL "btn_increase_input/M_ctr_q_18"
+        BEL "btn_increase_input/M_ctr_q_19" BEL
+        "btn_increase_input/sync/M_pipe_q_1" BEL
+        "btn_increase_input/sync/Mshreg_M_pipe_q_1" BEL
+        "btn_start_input/M_ctr_q_0" BEL "btn_start_input/M_ctr_q_1" BEL
+        "btn_start_input/M_ctr_q_2" BEL "btn_start_input/M_ctr_q_3" BEL
+        "btn_start_input/M_ctr_q_4" BEL "btn_start_input/M_ctr_q_5" BEL
+        "btn_start_input/M_ctr_q_6" BEL "btn_start_input/M_ctr_q_7" BEL
+        "btn_start_input/M_ctr_q_8" BEL "btn_start_input/M_ctr_q_9" BEL
+        "btn_start_input/M_ctr_q_10" BEL "btn_start_input/M_ctr_q_11" BEL
+        "btn_start_input/M_ctr_q_12" BEL "btn_start_input/M_ctr_q_13" BEL
+        "btn_start_input/M_ctr_q_14" BEL "btn_start_input/M_ctr_q_15" BEL
+        "btn_start_input/M_ctr_q_16" BEL "btn_start_input/M_ctr_q_17" BEL
+        "btn_start_input/M_ctr_q_18" BEL "btn_start_input/M_ctr_q_19" BEL
+        "btn_start_input/sync/M_pipe_q_1" BEL
+        "btn_start_input/sync/Mshreg_M_pipe_q_1" BEL "M_currentscore_q_10" BEL
+        "M_currentscore_q_11" BEL "M_currentscore_q_12" BEL
+        "M_currentscore_q_13" BEL "M_currentscore_q_14" BEL
+        "M_currentscore_q_15" BEL "M_b_q_10" BEL "M_b_q_11" BEL "M_b_q_12" BEL
+        "M_b_q_13" BEL "M_currentscore_q_0" BEL "M_b_q_14" BEL
+        "M_currentscore_q_1" BEL "M_b_q_15" BEL "M_currentscore_q_2" BEL
+        "M_currentscore_q_3" BEL "M_currentscore_q_4" BEL "M_currentscore_q_5"
+        BEL "M_currentscore_q_6" BEL "M_currentscore_q_7" BEL
+        "M_currentscore_q_8" BEL "M_currentscore_q_9" BEL "M_highscore_q_0"
+        BEL "M_highscore_q_1" BEL "M_highscore_q_2" BEL "M_highscore_q_3" BEL
+        "M_highscore_q_10" BEL "M_highscore_q_4" BEL "btn_add_input/M_ctr_q_0"
+        BEL "btn_add_input/M_ctr_q_1" BEL "btn_add_input/M_ctr_q_2" BEL
+        "btn_add_input/M_ctr_q_3" BEL "btn_add_input/M_ctr_q_4" BEL
+        "btn_add_input/M_ctr_q_5" BEL "btn_add_input/M_ctr_q_6" BEL
+        "btn_add_input/M_ctr_q_7" BEL "btn_add_input/M_ctr_q_8" BEL
+        "btn_add_input/M_ctr_q_9" BEL "btn_add_input/M_ctr_q_10" BEL
+        "btn_add_input/M_ctr_q_11" BEL "btn_add_input/M_ctr_q_12" BEL
+        "btn_add_input/M_ctr_q_13" BEL "btn_add_input/M_ctr_q_14" BEL
+        "btn_add_input/M_ctr_q_15" BEL "btn_add_input/M_ctr_q_16" BEL
+        "btn_add_input/M_ctr_q_17" BEL "btn_add_input/M_ctr_q_18" BEL
+        "btn_add_input/M_ctr_q_19" BEL "btn_add_input/sync/M_pipe_q_1" BEL
+        "btn_add_input/sync/Mshreg_M_pipe_q_1" BEL "M_highscore_q_11" BEL
+        "M_highscore_q_5" BEL "M_highscore_q_12";
+TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH 50%;
+SCHEMATIC END;
+

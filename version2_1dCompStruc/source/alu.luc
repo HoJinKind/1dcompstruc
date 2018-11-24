@@ -1,0 +1,91 @@
+module alu (
+    input a[16],
+    input b[16],
+    input alufn[6],
+    output result[16]
+  ) {
+  
+  adderModule adderModule;
+  booleanModule booleanModule;
+  compareModule compareModule;
+  shiftModule shiftModule;
+  multiplicationModule multiplicationModule;
+  divideMdle divideMdle;
+
+  always {
+    result = 0;
+    
+    // Setup adder, boolean, comparator, shifter submodules 
+    adderModule.a = a;
+    adderModule.b = b;
+    adderModule.alufn = alufn;
+        
+    divideMdle.a = a;
+    divideMdle.b = b;
+    divideMdle.alufn = alufn;
+      
+    booleanModule.a = a;
+    booleanModule.b = b;
+    booleanModule.alufn = alufn;
+      
+    compareModule.a = a;
+    compareModule.b = b;
+    compareModule.alufn = alufn;
+    
+    shiftModule.a = a;
+    shiftModule.b = b;
+    shiftModule.alufn = alufn;
+    
+    multiplicationModule.a = a;
+    multiplicationModule.b = b;
+    multiplicationModule.alufn = alufn;
+  
+    // Determine which submodule to use
+    case (alufn) {
+      Inst.ADD:
+        // Adder - Add
+        result = adderModule.result;        
+      Inst.SUB:
+        // Adder - Subtract
+        result = adderModule.result; 
+      Inst.MUL:
+        // Multiplier  
+        result = multiplicationModule.result;       
+      Inst.AND:
+        // Boolean - AND
+        result = booleanModule.result;        
+      Inst.OR:
+        // Boolean - OR
+        result = booleanModule.result;        
+      Inst.XOR:
+        // Boolean - XOR
+        result = booleanModule.result;        
+      Inst.LDR:
+        // Boolean - LDR
+        result = booleanModule.result;        
+      Inst.CMPEQ:
+        // Compare: ==
+        result = compareModule.result;        
+      Inst.CMPLT:
+        // Compare: <=
+        result = compareModule.result;        
+      Inst.CMPLE:
+        // Compare: <
+        result = compareModule.result;        
+      Inst.SHL:
+        // Shifter: shift left
+        result = shiftModule.result;        
+      Inst.SHR:
+        // Shifter: shift right
+        result = shiftModule.result;        
+      Inst.SRA:
+        // Shifter: shift right with sign extension
+        result = shiftModule.result;        
+      Inst.DIVIDE:
+        // Shifter: shift right with sign extension
+        result = divideMdle.result;      
+      default:
+        result = 18b1; 
+    }
+  }
+}
