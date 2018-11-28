@@ -1,8 +1,8 @@
 INTSTYLE=pa
-INFILE=C:\Users\hojin\Desktop\sutd notes\comp struc\8bitALU-master\version2_1dCompStruc\work\planAhead\version2_1dCompStruc\version2_1dCompStruc.runs\impl_1\mojo_top_0_routed.ncd
-OUTFILE=C:\Users\hojin\Desktop\sutd notes\comp struc\8bitALU-master\version2_1dCompStruc\work\planAhead\version2_1dCompStruc\version2_1dCompStruc.runs\impl_1\mojo_top_0.bit
+INFILE=C:\Users\hojin\OneDrive\Documents\repos\1dcompstruc\version2_1dCompStruc\work\planAhead\version2_1dCompStruc\version2_1dCompStruc.runs\impl_1\mojo_top_0_routed.ncd
+OUTFILE=C:\Users\hojin\OneDrive\Documents\repos\1dcompstruc\version2_1dCompStruc\work\planAhead\version2_1dCompStruc\version2_1dCompStruc.runs\impl_1\mojo_top_0.bit
 FAMILY=Spartan6
 PART=xc6slx9-2tqg144
-WORKINGDIR=C:\Users\hojin\Desktop\sutd notes\comp struc\8bitALU-master\version2_1dCompStruc\work\planAhead\version2_1dCompStruc\version2_1dCompStruc.runs\impl_1
+WORKINGDIR=C:\Users\hojin\OneDrive\Documents\repos\1dcompstruc\version2_1dCompStruc\work\planAhead\version2_1dCompStruc\version2_1dCompStruc.runs\impl_1
 LICENSE=WebPack
 USER_INFO=211606484_0_0_619

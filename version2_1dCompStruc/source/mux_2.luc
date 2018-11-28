@@ -1,0 +1,19 @@
+module mux_2 (
+    input a[16],
+    input b[16],
+    input sel,
+    output out[16]
+  ) {
+
+  always {
+    case (sel) {
+      0:
+        out = a;
+      1:
+        out = b;
+      default:
+        out = 16b0;
+    }
+  }
+}
+

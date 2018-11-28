@@ -10,6 +10,8 @@ NET "IncreaseInput"  LOC = P101 | IOSTANDARD = LVTTL;
 NET "outputModeOne"  LOC = P99 | IOSTANDARD = LVTTL;
 NET "outputModeTwo"  LOC = P97 | IOSTANDARD = LVTTL;
 
+NET "outputButtonLight"  LOC = P94 | IOSTANDARD = LVTTL;
+
 NET "io_seg1<0>" LOC = P16 | IOSTANDARD = LVTTL;
 NET "io_seg1<1>" LOC = P14 | IOSTANDARD = LVTTL;
 NET "io_seg1<2>" LOC = P11 | IOSTANDARD = LVTTL;

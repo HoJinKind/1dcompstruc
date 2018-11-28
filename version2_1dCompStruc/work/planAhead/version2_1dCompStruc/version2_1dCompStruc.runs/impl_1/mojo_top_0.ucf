@@ -29,6 +29,9 @@ NET "outputModeOne" IOSTANDARD = LVTTL;
 NET "outputModeTwo" LOC = P97;
 NET "outputModeTwo" IOSTANDARD = LVTTL;
 
+NET "outputButtonLight" LOC = P94;
+NET "outputButtonLight" IOSTANDARD = LVTTL;
+
 NET "io_seg1[0]" LOC = P16;
 NET "io_seg1[0]" IOSTANDARD = LVTTL;
 NET "io_seg1[1]" LOC = P14;

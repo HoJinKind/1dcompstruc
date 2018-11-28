@@ -7,9 +7,11 @@
     <src>shiftModule.luc</src>
     <src>seven_seg.luc</src>
     <src>divideMdule.luc</src>
+    <src>emulator.luc</src>
     <src>adderModule.luc</src>
     <src>multi_seven_seg.luc</src>
     <src top="true">mojo_top.luc</src>
+    <src>mux_2.luc</src>
     <src>booleanModule.luc</src>
     <ucf>custom.ucf</ucf>
     <ucf lib="true">mojo.ucf</ucf>

@@ -3,7 +3,7 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> Reading design: mojo_top_0.prj
 
@@ -53,39 +53,39 @@ Netlist Hierarchy                  : rebuilt
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/adderModule_16.v" into library work
+Analyzing Verilog file "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/adderModule_16.v" into library work
 Parsing module <adderModule_16>.
-Analyzing Verilog file "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/shiftModule_19.v" into library work
+Analyzing Verilog file "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/shiftModule_19.v" into library work
 Parsing module <shiftModule_19>.
-Analyzing Verilog file "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/seven_seg_27.v" into library work
+Analyzing Verilog file "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/seven_seg_27.v" into library work
 Parsing module <seven_seg_27>.
-Analyzing Verilog file "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/pipeline_22.v" into library work
+Analyzing Verilog file "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/pipeline_22.v" into library work
 Parsing module <pipeline_22>.
-Analyzing Verilog file "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/multiplicationModule_20.v" into library work
+Analyzing Verilog file "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/multiplicationModule_20.v" into library work
 Parsing module <multiplicationModule_20>.
-Analyzing Verilog file "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/divideMdule_21.v" into library work
+Analyzing Verilog file "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/divideMdule_21.v" into library work
 Parsing module <divideMdle_21>.
-Analyzing Verilog file "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/decoder_28.v" into library work
+Analyzing Verilog file "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/decoder_28.v" into library work
 Parsing module <decoder_28>.
-Analyzing Verilog file "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/counter_26.v" into library work
+Analyzing Verilog file "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/counter_26.v" into library work
 Parsing module <counter_26>.
-Analyzing Verilog file "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/compareModule_18.v" into library work
+Analyzing Verilog file "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/compareModule_18.v" into library work
 Parsing module <compareModule_18>.
-Analyzing Verilog file "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/booleanModule_17.v" into library work
+Analyzing Verilog file "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/booleanModule_17.v" into library work
 Parsing module <booleanModule_17>.
-Analyzing Verilog file "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/reset_conditioner_2.v" into library work
+Analyzing Verilog file "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/reset_conditioner_2.v" into library work
 Parsing module <reset_conditioner_2>.
-Analyzing Verilog file "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/multi_seven_seg_11.v" into library work
+Analyzing Verilog file "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/multi_seven_seg_11.v" into library work
 Parsing module <multi_seven_seg_11>.
-Analyzing Verilog file "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/edge_detector_4.v" into library work
+Analyzing Verilog file "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/edge_detector_4.v" into library work
 Parsing module <edge_detector_4>.
-Analyzing Verilog file "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/button_conditioner_3.v" into library work
+Analyzing Verilog file "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/button_conditioner_3.v" into library work
 Parsing module <button_conditioner_3>.
-Analyzing Verilog file "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/bin_to_dec_14.v" into library work
+Analyzing Verilog file "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/bin_to_dec_14.v" into library work
 Parsing module <bin_to_dec_14>.
-Analyzing Verilog file "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/alu_1.v" into library work
+Analyzing Verilog file "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/alu_1.v" into library work
 Parsing module <alu_1>.
-Analyzing Verilog file "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/mojo_top_0.v" into library work
+Analyzing Verilog file "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/mojo_top_0.v" into library work
 Parsing module <mojo_top_0>.
 
 =========================================================================
@@ -101,7 +101,7 @@ Elaborating module <adderModule_16>.
 Elaborating module <booleanModule_17>.
 
 Elaborating module <compareModule_18>.
-WARNING:HDLCompiler:413 - "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/compareModule_18.v" Line 41: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/compareModule_18.v" Line 41: Result of 32-bit expression is truncated to fit in 1-bit target.
 
 Elaborating module <shiftModule_19>.
 
@@ -126,24 +126,24 @@ Elaborating module <seven_seg_27>.
 Elaborating module <decoder_28>.
 
 Elaborating module <bin_to_dec_14>.
-WARNING:HDLCompiler:413 - "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/bin_to_dec_14.v" Line 39: Result of 64-bit expression is truncated to fit in 32-bit target.
-WARNING:HDLCompiler:413 - "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/bin_to_dec_14.v" Line 51: Result of 5-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/bin_to_dec_14.v" Line 52: Result of 15-bit expression is truncated to fit in 14-bit target.
-WARNING:HDLCompiler:413 - "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 198: Result of 16-bit expression is truncated to fit in 14-bit target.
-WARNING:HDLCompiler:413 - "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 199: Result of 16-bit expression is truncated to fit in 14-bit target.
-WARNING:HDLCompiler:413 - "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 217: Result of 16-bit expression is truncated to fit in 14-bit target.
-WARNING:HDLCompiler:413 - "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 319: Result of 8-bit expression is truncated to fit in 7-bit target.
-WARNING:HDLCompiler:413 - "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 323: Result of 8-bit expression is truncated to fit in 7-bit target.
-WARNING:HDLCompiler:413 - "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 327: Result of 8-bit expression is truncated to fit in 7-bit target.
-WARNING:HDLCompiler:413 - "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 328: Result of 4-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:413 - "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 330: Result of 4-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/bin_to_dec_14.v" Line 39: Result of 64-bit expression is truncated to fit in 32-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/bin_to_dec_14.v" Line 51: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/bin_to_dec_14.v" Line 52: Result of 15-bit expression is truncated to fit in 14-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 199: Result of 16-bit expression is truncated to fit in 14-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 200: Result of 16-bit expression is truncated to fit in 14-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 220: Result of 16-bit expression is truncated to fit in 14-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 328: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 332: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 336: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 337: Result of 4-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 339: Result of 4-bit expression is truncated to fit in 1-bit target.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <mojo_top_0>.
-    Related source file is "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/mojo_top_0.v".
+    Related source file is "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/mojo_top_0.v".
 WARNING:Xst:647 - Input <cclk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <spi_ss> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <spi_mosi> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -155,6 +155,7 @@ WARNING:Xst:647 - Input <avr_rx_busy> is never used. This port will be preserved
     Found 16-bit register for signal <M_b_q>.
     Found 1-bit register for signal <outputModeTwo>.
     Found 3-bit register for signal <M_state_q>.
+    Found 30-bit register for signal <M_test_counter_q>.
     Found 16-bit register for signal <M_currentscore_q>.
     Found finite state machine <FSM_0> for signal <M_state_q>.
     -----------------------------------------------------------------------
@@ -170,32 +171,33 @@ WARNING:Xst:647 - Input <avr_rx_busy> is never used. This port will be preserved
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 4-bit adder for signal <M_counter_q[3]_GND_1_o_add_12_OUT> created at line 265.
-    Found 16-bit adder for signal <M_b_q[15]_GND_1_o_add_45_OUT> created at line 314.
-    Found 1-bit tristate buffer for signal <spi_miso> created at line 181
-    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 181
-    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 181
-    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 181
-    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 181
-    Found 1-bit tristate buffer for signal <avr_rx> created at line 181
-    Found 16-bit comparator greater for signal <M_b_q[15]_GND_1_o_LessThan_9_o> created at line 250
+    Found 4-bit adder for signal <M_counter_q[3]_GND_1_o_add_14_OUT> created at line 274.
+    Found 16-bit adder for signal <M_b_q[15]_GND_1_o_add_47_OUT> created at line 323.
+    Found 30-bit adder for signal <M_test_counter_d> created at line 343.
+    Found 1-bit tristate buffer for signal <spi_miso> created at line 182
+    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 182
+    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 182
+    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 182
+    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 182
+    Found 1-bit tristate buffer for signal <avr_rx> created at line 182
+    Found 16-bit comparator greater for signal <M_b_q[15]_GND_1_o_LessThan_11_o> created at line 259
     Summary:
-	inferred   2 Adder/Subtractor(s).
-	inferred  53 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred  83 D-type flip-flop(s).
 	inferred   1 Comparator(s).
-	inferred  29 Multiplexer(s).
+	inferred  33 Multiplexer(s).
 	inferred   6 Tristate(s).
 	inferred   1 Finite State Machine(s).
 Unit <mojo_top_0> synthesized.
 
 Synthesizing Unit <alu_1>.
-    Related source file is "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/alu_1.v".
+    Related source file is "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/alu_1.v".
     Summary:
 	no macro.
 Unit <alu_1> synthesized.
 
 Synthesizing Unit <adderModule_16>.
-    Related source file is "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/adderModule_16.v".
+    Related source file is "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/adderModule_16.v".
     Found 16-bit subtractor for signal <a[15]_b[15]_sub_2_OUT> created at line 24.
     Found 16-bit adder for signal <a[15]_b[15]_add_0_OUT> created at line 21.
     Summary:
@@ -203,12 +205,12 @@ Synthesizing Unit <adderModule_16>.
 Unit <adderModule_16> synthesized.
 
 Synthesizing Unit <booleanModule_17>.
-    Related source file is "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/booleanModule_17.v".
+    Related source file is "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/booleanModule_17.v".
     Summary:
 Unit <booleanModule_17> synthesized.
 
 Synthesizing Unit <compareModule_18>.
-    Related source file is "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/compareModule_18.v".
+    Related source file is "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/compareModule_18.v".
     Found 1-bit 4-to-1 multiplexer for signal <_n0049> created at line 11.
     Found 16-bit comparator equal for signal <a[15]_b[15]_equal_1_o> created at line 38
     Summary:
@@ -217,7 +219,7 @@ Synthesizing Unit <compareModule_18>.
 Unit <compareModule_18> synthesized.
 
 Synthesizing Unit <shiftModule_19>.
-    Related source file is "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/shiftModule_19.v".
+    Related source file is "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/shiftModule_19.v".
 WARNING:Xst:647 - Input <b<15:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 16-bit shifter logical left for signal <a[15]_b[2]_shift_left_0_OUT> created at line 21
     Found 16-bit shifter logical right for signal <a[15]_b[2]_shift_right_1_OUT> created at line 24
@@ -229,7 +231,7 @@ WARNING:Xst:647 - Input <b<15:3>> is never used. This port will be preserved and
 Unit <shiftModule_19> synthesized.
 
 Synthesizing Unit <multiplicationModule_20>.
-    Related source file is "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/multiplicationModule_20.v".
+    Related source file is "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/multiplicationModule_20.v".
     Found 16x16-bit multiplier for signal <n0008> created at line 21.
     Summary:
 	inferred   1 Multiplier(s).
@@ -237,7 +239,7 @@ Synthesizing Unit <multiplicationModule_20>.
 Unit <multiplicationModule_20> synthesized.
 
 Synthesizing Unit <divideMdle_21>.
-    Related source file is "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/divideMdule_21.v".
+    Related source file is "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/divideMdule_21.v".
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <divideMdle_21> synthesized.
@@ -300,14 +302,14 @@ Synthesizing Unit <div_16u_16u>.
 Unit <div_16u_16u> synthesized.
 
 Synthesizing Unit <reset_conditioner_2>.
-    Related source file is "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/reset_conditioner_2.v".
+    Related source file is "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/reset_conditioner_2.v".
     Found 4-bit register for signal <M_stage_q>.
     Summary:
 	inferred   4 D-type flip-flop(s).
 Unit <reset_conditioner_2> synthesized.
 
 Synthesizing Unit <button_conditioner_3>.
-    Related source file is "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/button_conditioner_3.v".
+    Related source file is "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/button_conditioner_3.v".
     Found 20-bit register for signal <M_ctr_q>.
     Found 20-bit adder for signal <M_ctr_q[19]_GND_12_o_add_2_OUT> created at line 39.
     Summary:
@@ -316,21 +318,21 @@ Synthesizing Unit <button_conditioner_3>.
 Unit <button_conditioner_3> synthesized.
 
 Synthesizing Unit <pipeline_22>.
-    Related source file is "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/pipeline_22.v".
+    Related source file is "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/pipeline_22.v".
     Found 2-bit register for signal <M_pipe_q>.
     Summary:
 	inferred   2 D-type flip-flop(s).
 Unit <pipeline_22> synthesized.
 
 Synthesizing Unit <edge_detector_4>.
-    Related source file is "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/edge_detector_4.v".
+    Related source file is "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/edge_detector_4.v".
     Found 1-bit register for signal <M_last_q>.
     Summary:
 	inferred   1 D-type flip-flop(s).
 Unit <edge_detector_4> synthesized.
 
 Synthesizing Unit <multi_seven_seg_11>.
-    Related source file is "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/multi_seven_seg_11.v".
+    Related source file is "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/multi_seven_seg_11.v".
     Found 4-bit adder for signal <M_ctr_value[1]_GND_15_o_add_0_OUT> created at line 48.
     Found 31-bit shifter logical right for signal <n0010> created at line 48
     Summary:
@@ -339,7 +341,7 @@ Synthesizing Unit <multi_seven_seg_11>.
 Unit <multi_seven_seg_11> synthesized.
 
 Synthesizing Unit <counter_26>.
-    Related source file is "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/counter_26.v".
+    Related source file is "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/counter_26.v".
     Found 18-bit register for signal <M_ctr_q>.
     Found 18-bit adder for signal <M_ctr_q[17]_GND_16_o_add_0_OUT> created at line 35.
     Summary:
@@ -349,20 +351,20 @@ Synthesizing Unit <counter_26>.
 Unit <counter_26> synthesized.
 
 Synthesizing Unit <seven_seg_27>.
-    Related source file is "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/seven_seg_27.v".
+    Related source file is "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/seven_seg_27.v".
     Found 16x7-bit Read Only RAM for signal <segs>
     Summary:
 	inferred   1 RAM(s).
 Unit <seven_seg_27> synthesized.
 
 Synthesizing Unit <decoder_28>.
-    Related source file is "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/decoder_28.v".
+    Related source file is "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/decoder_28.v".
     Summary:
 	no macro.
 Unit <decoder_28> synthesized.
 
 Synthesizing Unit <bin_to_dec_14>.
-    Related source file is "C:/Users/hojin/Desktop/sutd notes/comp struc/8bitALU-master/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/bin_to_dec_14.v".
+    Related source file is "C:/Users/hojin/OneDrive/Documents/repos/1dcompstruc/version2_1dCompStruc/work/planAhead/version2_1dCompStruc/version2_1dCompStruc.srcs/sources_1/imports/verilog/bin_to_dec_14.v".
     Found 14-bit subtractor for signal <value[13]_GND_19_o_sub_22_OUT> created at line 55.
     Found 14-bit subtractor for signal <value[13]_GND_19_o_sub_45_OUT> created at line 55.
     Found 14-bit subtractor for signal <value[13]_GND_19_o_sub_67_OUT> created at line 55.
@@ -420,7 +422,7 @@ Macro Statistics
  16x7-bit single-port Read Only RAM                    : 3
 # Multipliers                                          : 1
  16x16-bit multiplier                                  : 1
-# Adders/Subtractors                                   : 54
+# Adders/Subtractors                                   : 55
  14-bit subtractor                                     : 6
  16-bit adder                                          : 3
  16-bit subtractor                                     : 2
@@ -437,16 +439,17 @@ Macro Statistics
  27-bit adder                                          : 2
  28-bit adder                                          : 2
  29-bit adder                                          : 2
- 30-bit adder                                          : 2
+ 30-bit adder                                          : 3
  31-bit adder                                          : 2
  32-bit adder                                          : 2
  4-bit adder                                           : 4
-# Registers                                            : 21
+# Registers                                            : 22
  1-bit register                                        : 5
  16-bit register                                       : 3
  18-bit register                                       : 3
  2-bit register                                        : 4
  20-bit register                                       : 4
+ 30-bit register                                       : 1
  4-bit register                                        : 2
 # Comparators                                          : 99
  14-bit comparator greater                             : 80
@@ -469,8 +472,8 @@ Macro Statistics
  30-bit comparator lessequal                           : 1
  31-bit comparator lessequal                           : 1
  32-bit comparator lessequal                           : 1
-# Multiplexers                                         : 641
- 1-bit 2-to-1 multiplexer                              : 545
+# Multiplexers                                         : 645
+ 1-bit 2-to-1 multiplexer                              : 549
  1-bit 4-to-1 multiplexer                              : 1
  14-bit 2-to-1 multiplexer                             : 55
  16-bit 2-to-1 multiplexer                             : 30
@@ -506,6 +509,7 @@ The following registers are absorbed into counter <M_ctr_q>: 1 register on signa
 Unit <counter_26> synthesized (advanced).
 
 Synthesizing (advanced) Unit <mojo_top_0>.
+The following registers are absorbed into counter <M_test_counter_q>: 1 register on signal <M_test_counter_q>.
 The following registers are absorbed into counter <M_counter_q>: 1 register on signal <M_counter_q>.
 Unit <mojo_top_0> synthesized (advanced).
 
@@ -537,9 +541,10 @@ Macro Statistics
  16-bit adder carry in                                 : 16
  16-bit subtractor                                     : 2
  4-bit adder                                           : 3
-# Counters                                             : 8
+# Counters                                             : 9
  18-bit up counter                                     : 3
  20-bit up counter                                     : 4
+ 30-bit up counter                                     : 1
  4-bit up counter                                      : 1
 # Registers                                            : 65
  Flip-Flops                                            : 65
@@ -564,8 +569,8 @@ Macro Statistics
  30-bit comparator lessequal                           : 1
  31-bit comparator lessequal                           : 1
  32-bit comparator lessequal                           : 1
-# Multiplexers                                         : 637
- 1-bit 2-to-1 multiplexer                              : 545
+# Multiplexers                                         : 641
+ 1-bit 2-to-1 multiplexer                              : 549
  1-bit 4-to-1 multiplexer                              : 1
  14-bit 2-to-1 multiplexer                             : 55
  16-bit 2-to-1 multiplexer                             : 30
@@ -598,6 +603,9 @@ Optimizing FSM <FSM_0> on signal <M_state_q[1:3]> with user encoding.
  101   | 101
  100   | 100
 -------------------
+WARNING:Xst:2677 - Node <M_test_counter_q_27> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_test_counter_q_28> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_test_counter_q_29> of sequential type is unconnected in block <mojo_top_0>.
 
 Optimizing unit <mojo_top_0> ...
 
@@ -610,24 +618,24 @@ Optimizing unit <alu_1> ...
 Optimizing unit <compareModule_18> ...
 
 Optimizing unit <div_16u_16u> ...
-INFO:Xst:2261 - The FF/Latch <seg4/ctr/M_ctr_q_10> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <seg2/ctr/M_ctr_q_10> <seg/ctr/M_ctr_q_10> 
-INFO:Xst:2261 - The FF/Latch <seg4/ctr/M_ctr_q_11> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <seg2/ctr/M_ctr_q_11> <seg/ctr/M_ctr_q_11> 
-INFO:Xst:2261 - The FF/Latch <seg4/ctr/M_ctr_q_12> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <seg2/ctr/M_ctr_q_12> <seg/ctr/M_ctr_q_12> 
-INFO:Xst:2261 - The FF/Latch <seg4/ctr/M_ctr_q_13> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <seg2/ctr/M_ctr_q_13> <seg/ctr/M_ctr_q_13> 
-INFO:Xst:2261 - The FF/Latch <seg4/ctr/M_ctr_q_14> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <seg2/ctr/M_ctr_q_14> <seg/ctr/M_ctr_q_14> 
-INFO:Xst:2261 - The FF/Latch <seg4/ctr/M_ctr_q_15> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <seg2/ctr/M_ctr_q_15> <seg/ctr/M_ctr_q_15> 
-INFO:Xst:2261 - The FF/Latch <seg4/ctr/M_ctr_q_16> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <seg2/ctr/M_ctr_q_16> <seg/ctr/M_ctr_q_16> 
-INFO:Xst:2261 - The FF/Latch <seg4/ctr/M_ctr_q_17> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <seg2/ctr/M_ctr_q_17> <seg/ctr/M_ctr_q_17> 
-INFO:Xst:2261 - The FF/Latch <seg4/ctr/M_ctr_q_0> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <seg2/ctr/M_ctr_q_0> <seg/ctr/M_ctr_q_0> 
-INFO:Xst:2261 - The FF/Latch <seg4/ctr/M_ctr_q_1> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <seg2/ctr/M_ctr_q_1> <seg/ctr/M_ctr_q_1> 
-INFO:Xst:2261 - The FF/Latch <seg4/ctr/M_ctr_q_2> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <seg2/ctr/M_ctr_q_2> <seg/ctr/M_ctr_q_2> 
-INFO:Xst:2261 - The FF/Latch <seg4/ctr/M_ctr_q_3> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <seg2/ctr/M_ctr_q_3> <seg/ctr/M_ctr_q_3> 
-INFO:Xst:2261 - The FF/Latch <seg4/ctr/M_ctr_q_4> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <seg2/ctr/M_ctr_q_4> <seg/ctr/M_ctr_q_4> 
-INFO:Xst:2261 - The FF/Latch <seg4/ctr/M_ctr_q_5> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <seg2/ctr/M_ctr_q_5> <seg/ctr/M_ctr_q_5> 
-INFO:Xst:2261 - The FF/Latch <seg4/ctr/M_ctr_q_6> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <seg2/ctr/M_ctr_q_6> <seg/ctr/M_ctr_q_6> 
-INFO:Xst:2261 - The FF/Latch <seg4/ctr/M_ctr_q_7> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <seg2/ctr/M_ctr_q_7> <seg/ctr/M_ctr_q_7> 
-INFO:Xst:2261 - The FF/Latch <seg4/ctr/M_ctr_q_8> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <seg2/ctr/M_ctr_q_8> <seg/ctr/M_ctr_q_8> 
-INFO:Xst:2261 - The FF/Latch <seg4/ctr/M_ctr_q_9> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <seg2/ctr/M_ctr_q_9> <seg/ctr/M_ctr_q_9> 
+INFO:Xst:2261 - The FF/Latch <M_test_counter_q_0> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <seg4/ctr/M_ctr_q_0> <seg2/ctr/M_ctr_q_0> <seg/ctr/M_ctr_q_0> 
+INFO:Xst:2261 - The FF/Latch <M_test_counter_q_1> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <seg4/ctr/M_ctr_q_1> <seg2/ctr/M_ctr_q_1> <seg/ctr/M_ctr_q_1> 
+INFO:Xst:2261 - The FF/Latch <M_test_counter_q_2> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <seg4/ctr/M_ctr_q_2> <seg2/ctr/M_ctr_q_2> <seg/ctr/M_ctr_q_2> 
+INFO:Xst:2261 - The FF/Latch <M_test_counter_q_3> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <seg4/ctr/M_ctr_q_3> <seg2/ctr/M_ctr_q_3> <seg/ctr/M_ctr_q_3> 
+INFO:Xst:2261 - The FF/Latch <M_test_counter_q_10> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <seg4/ctr/M_ctr_q_10> <seg2/ctr/M_ctr_q_10> <seg/ctr/M_ctr_q_10> 
+INFO:Xst:2261 - The FF/Latch <M_test_counter_q_4> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <seg4/ctr/M_ctr_q_4> <seg2/ctr/M_ctr_q_4> <seg/ctr/M_ctr_q_4> 
+INFO:Xst:2261 - The FF/Latch <M_test_counter_q_11> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <seg4/ctr/M_ctr_q_11> <seg2/ctr/M_ctr_q_11> <seg/ctr/M_ctr_q_11> 
+INFO:Xst:2261 - The FF/Latch <M_test_counter_q_5> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <seg4/ctr/M_ctr_q_5> <seg2/ctr/M_ctr_q_5> <seg/ctr/M_ctr_q_5> 
+INFO:Xst:2261 - The FF/Latch <M_test_counter_q_12> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <seg4/ctr/M_ctr_q_12> <seg2/ctr/M_ctr_q_12> <seg/ctr/M_ctr_q_12> 
+INFO:Xst:2261 - The FF/Latch <M_test_counter_q_6> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <seg4/ctr/M_ctr_q_6> <seg2/ctr/M_ctr_q_6> <seg/ctr/M_ctr_q_6> 
+INFO:Xst:2261 - The FF/Latch <M_test_counter_q_13> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <seg4/ctr/M_ctr_q_13> <seg2/ctr/M_ctr_q_13> <seg/ctr/M_ctr_q_13> 
+INFO:Xst:2261 - The FF/Latch <M_test_counter_q_7> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <seg4/ctr/M_ctr_q_7> <seg2/ctr/M_ctr_q_7> <seg/ctr/M_ctr_q_7> 
+INFO:Xst:2261 - The FF/Latch <M_test_counter_q_14> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <seg4/ctr/M_ctr_q_14> <seg2/ctr/M_ctr_q_14> <seg/ctr/M_ctr_q_14> 
+INFO:Xst:2261 - The FF/Latch <M_test_counter_q_8> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <seg4/ctr/M_ctr_q_8> <seg2/ctr/M_ctr_q_8> <seg/ctr/M_ctr_q_8> 
+INFO:Xst:2261 - The FF/Latch <M_test_counter_q_15> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <seg4/ctr/M_ctr_q_15> <seg2/ctr/M_ctr_q_15> <seg/ctr/M_ctr_q_15> 
+INFO:Xst:2261 - The FF/Latch <M_test_counter_q_9> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <seg4/ctr/M_ctr_q_9> <seg2/ctr/M_ctr_q_9> <seg/ctr/M_ctr_q_9> 
+INFO:Xst:2261 - The FF/Latch <M_test_counter_q_16> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <seg4/ctr/M_ctr_q_16> <seg2/ctr/M_ctr_q_16> <seg/ctr/M_ctr_q_16> 
+INFO:Xst:2261 - The FF/Latch <M_test_counter_q_17> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <seg4/ctr/M_ctr_q_17> <seg2/ctr/M_ctr_q_17> <seg/ctr/M_ctr_q_17> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -647,8 +655,8 @@ Unit <mojo_top_0> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 162
- Flip-Flops                                            : 162
+# Registers                                            : 171
+ Flip-Flops                                            : 171
 # Shift Registers                                      : 4
  2-bit shift register                                  : 4
 
@@ -673,32 +681,32 @@ Top Level Output File Name         : mojo_top_0.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1312
-#      GND                         : 14
+# BELS                             : 1334
+#      GND                         : 13
 #      INV                         : 13
-#      LUT1                        : 108
+#      LUT1                        : 117
 #      LUT2                        : 36
 #      LUT3                        : 52
 #      LUT4                        : 65
 #      LUT5                        : 130
-#      LUT6                        : 429
-#      MUXCY                       : 225
+#      LUT6                        : 426
+#      MUXCY                       : 234
 #      MUXF7                       : 5
-#      VCC                         : 16
-#      XORCY                       : 219
-# FlipFlops/Latches                : 166
+#      VCC                         : 15
+#      XORCY                       : 228
+# FlipFlops/Latches                : 175
 #      FD                          : 4
 #      FDE                         : 4
-#      FDR                         : 21
+#      FDR                         : 30
 #      FDRE                        : 133
 #      FDS                         : 4
 # Shift Registers                  : 4
 #      SRLC16E                     : 4
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 54
+# IO Buffers                       : 55
 #      IBUF                        : 8
-#      OBUF                        : 40
+#      OBUF                        : 41
 #      OBUFT                       : 6
 # DSPs                             : 1
 #      DSP48A1                     : 1
@@ -710,22 +718,22 @@ Selected Device : 6slx9tqg144-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             166  out of  11440     1%  
- Number of Slice LUTs:                  837  out of   5720    14%  
-    Number used as Logic:               833  out of   5720    14%  
+ Number of Slice Registers:             175  out of  11440     1%  
+ Number of Slice LUTs:                  843  out of   5720    14%  
+    Number used as Logic:               839  out of   5720    14%  
     Number used as Memory:                4  out of   1440     0%  
        Number used as SRL:                4
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    866
-   Number with an unused Flip Flop:     700  out of    866    80%  
-   Number with an unused LUT:            29  out of    866     3%  
-   Number of fully used LUT-FF pairs:   137  out of    866    15%  
-   Number of unique control sets:        21
+ Number of LUT Flip Flop pairs used:    872
+   Number with an unused Flip Flop:     697  out of    872    79%  
+   Number with an unused LUT:            29  out of    872     3%  
+   Number of fully used LUT-FF pairs:   146  out of    872    16%  
+   Number of unique control sets:        20
 
 IO Utilization: 
- Number of IOs:                          61
- Number of bonded IOBs:                  55  out of    102    53%  
+ Number of IOs:                          62
+ Number of bonded IOBs:                  56  out of    102    54%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
@@ -752,7 +760,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 170   |
+clk                                | BUFGP                  | 179   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -765,7 +773,7 @@ Speed Grade: -2
 
    Minimum period: 12.236ns (Maximum Frequency: 81.726MHz)
    Minimum input arrival time before clock: 13.193ns
-   Maximum output required time after clock: 43.743ns
+   Maximum output required time after clock: 43.849ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -775,7 +783,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 12.236ns (frequency: 81.726MHz)
-  Total number of paths / destination ports: 180771 / 452
+  Total number of paths / destination ports: 180663 / 470
 -------------------------------------------------------------------------
 Delay:               12.236ns (Levels of Logic = 23)
   Source:            btn_add_input/M_ctr_q_3 (FF)
@@ -812,7 +820,7 @@ Delay:               12.236ns (Levels of Logic = 23)
      LUT6:I5->O           19   0.254   1.261  result<0>4 (result<0>3)
      LUT6:I5->O            1   0.254   0.682  result<0>2_SW0 (N134)
      end scope: 'alu:N134'
-     LUT6:I5->O           16   0.254   1.182  _n0260_inv_rstpot (_n0260_inv_rstpot)
+     LUT6:I5->O           16   0.254   1.182  _n0271_inv_rstpot (_n0271_inv_rstpot)
      LUT3:I2->O            1   0.254   0.000  M_b_q_1_dpot (M_b_q_1_dpot)
      FDRE:D                    0.074          M_b_q_1
     ----------------------------------------
@@ -858,7 +866,7 @@ Offset:              13.193ns (Levels of Logic = 24)
      LUT6:I5->O           19   0.254   1.261  result<0>4 (result<0>3)
      LUT6:I5->O            1   0.254   0.682  result<0>2_SW0 (N134)
      end scope: 'alu:N134'
-     LUT6:I5->O           16   0.254   1.182  _n0260_inv_rstpot (_n0260_inv_rstpot)
+     LUT6:I5->O           16   0.254   1.182  _n0271_inv_rstpot (_n0271_inv_rstpot)
      LUT3:I2->O            1   0.254   0.000  M_b_q_1_dpot (M_b_q_1_dpot)
      FDRE:D                    0.074          M_b_q_1
     ----------------------------------------
@@ -867,9 +875,9 @@ Offset:              13.193ns (Levels of Logic = 24)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 1497195557094 / 38
+  Total number of paths / destination ports: 1497195557098 / 39
 -------------------------------------------------------------------------
-Offset:              43.743ns (Levels of Logic = 45)
+Offset:              43.849ns (Levels of Logic = 45)
   Source:            M_state_q_FSM_FFd3 (FF)
   Destination:       io_seg2<5> (PAD)
   Source Clock:      clk rising
@@ -878,7 +886,7 @@ Offset:              43.743ns (Levels of Logic = 45)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q            184   0.525   2.627  M_state_q_FSM_FFd3 (M_state_q_FSM_FFd3)
+     FDR:C->Q            185   0.525   2.628  M_state_q_FSM_FFd3 (M_state_q_FSM_FFd3)
      LUT3:I0->O           20   0.235   1.741  led<0>1 (led_0_OBUF)
      begin scope: 'convertCS:led_0_OBUF'
      LUT6:I0->O            1   0.254   0.910  value[13]_GND_19_o_LessThan_20_o1_SW0 (N14)
@@ -919,16 +927,16 @@ Offset:              43.743ns (Levels of Logic = 45)
      LUT6:I0->O            2   0.254   0.834  value[13]_GND_19_o_LessThan_77_o21 (value[13]_GND_19_o_LessThan_77_o)
      end scope: 'convertCS:value[13]_GND_19_o_LessThan_77_o'
      begin scope: 'seg2:value[13]_GND_19_o_LessThan_77_o'
-     LUT5:I3->O            1   0.250   0.682  Sh4412_SW0 (N216)
-     LUT6:I5->O            1   0.254   0.000  Sh4413_SW0_F (N224)
-     MUXF7:I0->O           1   0.163   0.790  Sh4413_SW0 (N208)
-     LUT5:I3->O            7   0.250   1.186  Sh4413 (Sh44)
+     LUT5:I3->O            1   0.250   0.910  Sh4412_SW0 (N216)
+     LUT6:I3->O            1   0.235   0.000  Sh4413_SW0_F (N224)
+     MUXF7:I0->O           1   0.163   0.682  Sh4413_SW0 (N208)
+     LUT5:I4->O            7   0.254   1.186  Sh4413 (Sh44)
      end scope: 'seg2:Sh44'
      LUT4:I0->O            1   0.254   0.681  io_seg2<5>1 (io_seg2_5_OBUF)
      OBUF:I->O                 2.912          io_seg2_5_OBUF (io_seg2<5>)
     ----------------------------------------
-    Total                     43.743ns (11.971ns logic, 31.772ns route)
-                                       (27.4% logic, 72.6% route)
+    Total                     43.849ns (11.956ns logic, 31.893ns route)
+                                       (27.3% logic, 72.7% route)
 
 =========================================================================
 
@@ -946,14 +954,14 @@ clk            |   12.236|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 16.00 secs
-Total CPU time to Xst completion: 16.02 secs
+Total REAL time to Xst completion: 22.00 secs
+Total CPU time to Xst completion: 22.52 secs
  
 --> 
 
-Total memory usage is 273524 kilobytes
+Total memory usage is 273140 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   19 (   0 filtered)
+Number of warnings :   22 (   0 filtered)
 Number of infos    :   20 (   0 filtered)
 

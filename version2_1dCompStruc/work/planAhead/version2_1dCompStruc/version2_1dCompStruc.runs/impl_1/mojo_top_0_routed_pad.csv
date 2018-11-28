@@ -1,7 +1,7 @@
 #Release 14.7 - par P.20131013 (nt)
 #Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-#Sat Nov 24 16:17:11 2018
+#Wed Nov 28 15:56:38 2018
 
 #
 ## NOTE: This file is designed to be imported into a spreadsheet program
@@ -112,7 +112,7 @@ P90,,,VCCAUX,,,,,,,,3.3,,,,
 P91,,,GND,,,,,,,,,,,,
 P92,,IOBS,IO_L41N_GCLK8_1,UNUSED,,1,,,,,,,,,
 P93,,IOBM,IO_L41P_GCLK9_IRDY1_1,UNUSED,,1,,,,,,,,,
-P94,,IOBS,IO_L40N_GCLK10_1,UNUSED,,1,,,,,,,,,
+P94,outputButtonLight,IOB,IO_L40N_GCLK10_1,OUTPUT,LVTTL,1,12,SLOW,,,,LOCATED,NO,NONE,
 P95,,IOBM,IO_L40P_GCLK11_1,UNUSED,,1,,,,,,,,,
 P96,,,GND,,,,,,,,,,,,
 P97,outputModeTwo,IOB,IO_L34N_1,OUTPUT,LVTTL,1,12,SLOW,,,,LOCATED,NO,NONE,

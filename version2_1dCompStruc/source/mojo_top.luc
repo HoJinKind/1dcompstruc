@@ -41,12 +41,14 @@ module mojo_top (
     input increaseInput,
     output outputModeOne,
     output outputModeTwo,
+    output outputButtonLight,   // single Digit select on IO Shield
     output io_seg1 [7],      // 7-segment LEDs on IO Shield
     output io_sel1 [4],      // Digit select on IO Shield
     output io_seg2 [7],      // 7-segment LEDs on IO Shield
     output io_sel2 [4],     // Digit select on IO Shield
     output io_seg4 [7],   // single 7-segment LEDs on IO Shield
     output io_sel4 [1]   // single Digit select on IO Shield
+    
   ) {
   
   sig rst;                  // reset signal
@@ -111,6 +113,7 @@ module mojo_top (
 
     outputModeOne=~buttonGameMode.q;
     outputModeTwo=buttonGameMode.q;
+    outputButtonLight=0;
     led = 8h00;             // turn LEDs off
     spi_miso = bz;          // not using SPI
     spi_channel = bzzzz;    // not using flags
@@ -131,6 +134,7 @@ module mojo_top (
     //set the values of everyth in the cases
     case (state.q) {
         state.IDLE:
+        outputButtonLight=1;
         led[0]=1;
      //toggle between modes
         counter.d =0;
@@ -164,6 +168,9 @@ module mojo_top (
     
         state.STARTROUNDA: 
             led[1]=1;
+            if(test_counter.q[26]==1){
+              outputButtonLight=1;
+            }
             if (edge_start_input.out){
                         
                         state.d = state.WAITARITHMETIC;
@@ -171,13 +178,14 @@ module mojo_top (
 
         state.STARTROUNDB:
           led[2]=1;
-      //joannas b
-    //skip first
+          if(test_counter.q[26]==1){
+              outputButtonLight=1;
+          }
           if (edge_start_input.out){
                         
                         state.d = state.WAITARITHMETIC;
 
-            }
+          }
           if (edge_increase_input.out){
 
               if(b.q<5){

@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sat Nov 24 16:17:00 2018
+// Written by: Map P.20131013 on Wed Nov 28 15:56:20 2018
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -58,52 +58,77 @@ COMP "io_sel2[2]" LOCATE = SITE "P15" LEVEL 1;
 COMP "io_sel2[3]" LOCATE = SITE "P12" LEVEL 1;
 COMP "io_sel4[0]" LOCATE = SITE "P21" LEVEL 1;
 COMP "subInput" LOCATE = SITE "P114" LEVEL 1;
+COMP "outputButtonLight" LOCATE = SITE "P94" LEVEL 1;
 COMP "spi_mosi" LOCATE = SITE "P44" LEVEL 1;
-TIMEGRP clk = BEL "M_highscore_q_6" BEL "M_highscore_q_13" BEL
-        "M_highscore_q_7" BEL "M_highscore_q_14" BEL "M_highscore_q_8" BEL
-        "M_highscore_q_15" BEL "M_highscore_q_9" BEL "edge_add_input/M_last_q"
-        BEL "M_buttonGameMode_q" BEL "btn_mode_input/M_ctr_q_0" BEL
-        "btn_mode_input/M_ctr_q_1" BEL "btn_mode_input/M_ctr_q_2" BEL
-        "btn_mode_input/M_ctr_q_3" BEL "btn_mode_input/M_ctr_q_4" BEL
-        "btn_mode_input/M_ctr_q_5" BEL "btn_mode_input/M_ctr_q_6" BEL
-        "btn_mode_input/M_ctr_q_7" BEL "btn_mode_input/M_ctr_q_8" BEL
-        "btn_mode_input/M_ctr_q_9" BEL "btn_mode_input/M_ctr_q_10" BEL
-        "btn_mode_input/M_ctr_q_11" BEL "btn_mode_input/M_ctr_q_12" BEL
-        "btn_mode_input/M_ctr_q_13" BEL "btn_mode_input/M_ctr_q_14" BEL
-        "btn_mode_input/M_ctr_q_15" BEL "btn_mode_input/M_ctr_q_16" BEL
-        "btn_mode_input/M_ctr_q_17" BEL "btn_mode_input/M_ctr_q_18" BEL
-        "btn_mode_input/M_ctr_q_19" BEL "btn_mode_input/sync/M_pipe_q_1" BEL
-        "btn_mode_input/sync/Mshreg_M_pipe_q_1" BEL "clk_BUFGP/BUFG" BEL
-        "reset_cond/M_stage_q_3" BEL "reset_cond/M_stage_q_2" BEL
+TIMEGRP clk = BEL "reset_cond/M_stage_q_3" BEL "reset_cond/M_stage_q_2" BEL
         "reset_cond/M_stage_q_1" BEL "reset_cond/M_stage_q_0" BEL
-        "M_counter_q_0" BEL "M_counter_q_1" BEL "M_counter_q_2" BEL
-        "M_counter_q_3" BEL "edge_increase_input/M_last_q" BEL
-        "seg4/ctr/M_ctr_q_17" BEL "seg4/ctr/M_ctr_q_16" BEL
-        "seg4/ctr/M_ctr_q_15" BEL "seg4/ctr/M_ctr_q_14" BEL
-        "seg4/ctr/M_ctr_q_13" BEL "seg4/ctr/M_ctr_q_12" BEL
-        "seg4/ctr/M_ctr_q_11" BEL "seg4/ctr/M_ctr_q_10" BEL
-        "seg4/ctr/M_ctr_q_9" BEL "seg4/ctr/M_ctr_q_8" BEL "seg4/ctr/M_ctr_q_7"
-        BEL "seg4/ctr/M_ctr_q_6" BEL "seg4/ctr/M_ctr_q_5" BEL
-        "seg4/ctr/M_ctr_q_4" BEL "seg4/ctr/M_ctr_q_3" BEL "seg4/ctr/M_ctr_q_2"
-        BEL "seg4/ctr/M_ctr_q_1" BEL "seg4/ctr/M_ctr_q_0" BEL "M_b_q_0" BEL
-        "M_b_q_1" BEL "M_b_q_2" BEL "M_b_q_3" BEL "M_b_q_4" BEL "M_b_q_5" BEL
-        "M_b_q_6" BEL "M_b_q_7" BEL "M_b_q_8" BEL "M_b_q_9" BEL
-        "edge_mode_input/M_last_q" BEL "M_state_q_FSM_FFd1" BEL
-        "M_state_q_FSM_FFd2" BEL "M_state_q_FSM_FFd3" BEL
-        "edge_start_input/M_last_q" BEL "btn_increase_input/M_ctr_q_0" BEL
-        "btn_increase_input/M_ctr_q_1" BEL "btn_increase_input/M_ctr_q_2" BEL
-        "btn_increase_input/M_ctr_q_3" BEL "btn_increase_input/M_ctr_q_4" BEL
-        "btn_increase_input/M_ctr_q_5" BEL "btn_increase_input/M_ctr_q_6" BEL
-        "btn_increase_input/M_ctr_q_7" BEL "btn_increase_input/M_ctr_q_8" BEL
-        "btn_increase_input/M_ctr_q_9" BEL "btn_increase_input/M_ctr_q_10" BEL
-        "btn_increase_input/M_ctr_q_11" BEL "btn_increase_input/M_ctr_q_12"
-        BEL "btn_increase_input/M_ctr_q_13" BEL
-        "btn_increase_input/M_ctr_q_14" BEL "btn_increase_input/M_ctr_q_15"
-        BEL "btn_increase_input/M_ctr_q_16" BEL
-        "btn_increase_input/M_ctr_q_17" BEL "btn_increase_input/M_ctr_q_18"
-        BEL "btn_increase_input/M_ctr_q_19" BEL
+        "btn_mode_input/M_ctr_q_0" BEL "btn_mode_input/M_ctr_q_1" BEL
+        "btn_mode_input/M_ctr_q_2" BEL "btn_mode_input/M_ctr_q_3" BEL
+        "btn_mode_input/M_ctr_q_4" BEL "btn_mode_input/M_ctr_q_5" BEL
+        "btn_mode_input/M_ctr_q_6" BEL "btn_mode_input/M_ctr_q_7" BEL
+        "btn_mode_input/M_ctr_q_8" BEL "btn_mode_input/M_ctr_q_9" BEL
+        "btn_mode_input/M_ctr_q_10" BEL "btn_mode_input/M_ctr_q_11" BEL
+        "btn_mode_input/M_ctr_q_12" BEL "btn_mode_input/M_ctr_q_13" BEL
+        "btn_mode_input/M_ctr_q_14" BEL "btn_mode_input/M_ctr_q_15" BEL
+        "btn_mode_input/M_ctr_q_16" BEL "btn_mode_input/M_ctr_q_17" BEL
+        "btn_mode_input/M_ctr_q_18" BEL "btn_mode_input/M_ctr_q_19" BEL
+        "btn_mode_input/sync/M_pipe_q_1" BEL
+        "btn_mode_input/sync/Mshreg_M_pipe_q_1" BEL "M_highscore_q_10" BEL
+        "M_highscore_q_11" BEL "M_highscore_q_12" BEL "M_highscore_q_13" BEL
+        "M_highscore_q_14" BEL "M_highscore_q_15" BEL
+        "btn_increase_input/M_ctr_q_0" BEL "btn_increase_input/M_ctr_q_1" BEL
+        "btn_increase_input/M_ctr_q_2" BEL "btn_increase_input/M_ctr_q_3" BEL
+        "btn_increase_input/M_ctr_q_4" BEL "btn_increase_input/M_ctr_q_5" BEL
+        "btn_increase_input/M_ctr_q_6" BEL "btn_increase_input/M_ctr_q_7" BEL
+        "btn_increase_input/M_ctr_q_8" BEL "btn_increase_input/M_ctr_q_9" BEL
+        "btn_increase_input/M_ctr_q_10" BEL "btn_increase_input/M_ctr_q_11"
+        BEL "btn_increase_input/M_ctr_q_12" BEL
+        "btn_increase_input/M_ctr_q_13" BEL "btn_increase_input/M_ctr_q_14"
+        BEL "btn_increase_input/M_ctr_q_15" BEL
+        "btn_increase_input/M_ctr_q_16" BEL "btn_increase_input/M_ctr_q_17"
+        BEL "btn_increase_input/M_ctr_q_18" BEL
+        "btn_increase_input/M_ctr_q_19" BEL
         "btn_increase_input/sync/M_pipe_q_1" BEL
-        "btn_increase_input/sync/Mshreg_M_pipe_q_1" BEL
+        "btn_increase_input/sync/Mshreg_M_pipe_q_1" BEL "M_counter_q_0" BEL
+        "M_counter_q_1" BEL "M_counter_q_2" BEL "M_counter_q_3" BEL
+        "M_highscore_q_0" BEL "M_highscore_q_1" BEL "M_highscore_q_2" BEL
+        "M_highscore_q_3" BEL "M_highscore_q_4" BEL "M_highscore_q_5" BEL
+        "M_currentscore_q_10" BEL "M_highscore_q_6" BEL "M_currentscore_q_11"
+        BEL "M_highscore_q_7" BEL "M_currentscore_q_12" BEL "M_highscore_q_8"
+        BEL "M_currentscore_q_13" BEL "M_highscore_q_9" BEL
+        "M_currentscore_q_14" BEL "M_currentscore_q_15" BEL
+        "M_state_q_FSM_FFd1" BEL "M_state_q_FSM_FFd2" BEL "M_state_q_FSM_FFd3"
+        BEL "M_test_counter_q_0" BEL "M_test_counter_q_1" BEL
+        "M_test_counter_q_2" BEL "M_test_counter_q_3" BEL "M_test_counter_q_4"
+        BEL "M_test_counter_q_5" BEL "M_test_counter_q_6" BEL
+        "M_test_counter_q_7" BEL "M_test_counter_q_8" BEL "M_test_counter_q_9"
+        BEL "M_test_counter_q_10" BEL "M_test_counter_q_11" BEL
+        "M_test_counter_q_12" BEL "M_test_counter_q_13" BEL
+        "M_test_counter_q_14" BEL "edge_mode_input/M_last_q" BEL
+        "M_test_counter_q_20" BEL "M_test_counter_q_15" BEL
+        "M_test_counter_q_21" BEL "M_test_counter_q_16" BEL
+        "M_test_counter_q_22" BEL "M_test_counter_q_17" BEL
+        "M_test_counter_q_23" BEL "M_test_counter_q_18" BEL
+        "M_test_counter_q_24" BEL "M_test_counter_q_19" BEL
+        "M_test_counter_q_25" BEL "M_test_counter_q_26" BEL
+        "M_buttonGameMode_q" BEL "edge_add_input/M_last_q" BEL
+        "btn_add_input/M_ctr_q_0" BEL "btn_add_input/M_ctr_q_1" BEL
+        "btn_add_input/M_ctr_q_2" BEL "btn_add_input/M_ctr_q_3" BEL
+        "btn_add_input/M_ctr_q_4" BEL "btn_add_input/M_ctr_q_5" BEL
+        "btn_add_input/M_ctr_q_6" BEL "btn_add_input/M_ctr_q_7" BEL
+        "btn_add_input/M_ctr_q_8" BEL "btn_add_input/M_ctr_q_9" BEL
+        "btn_add_input/M_ctr_q_10" BEL "btn_add_input/M_ctr_q_11" BEL
+        "btn_add_input/M_ctr_q_12" BEL "btn_add_input/M_ctr_q_13" BEL
+        "btn_add_input/M_ctr_q_14" BEL "btn_add_input/M_ctr_q_15" BEL
+        "btn_add_input/M_ctr_q_16" BEL "btn_add_input/M_ctr_q_17" BEL
+        "btn_add_input/M_ctr_q_18" BEL "btn_add_input/M_ctr_q_19" BEL
+        "btn_add_input/sync/M_pipe_q_1" BEL
+        "btn_add_input/sync/Mshreg_M_pipe_q_1" BEL "edge_start_input/M_last_q"
+        BEL "edge_increase_input/M_last_q" BEL "M_currentscore_q_0" BEL
+        "M_currentscore_q_1" BEL "M_currentscore_q_2" BEL "M_currentscore_q_3"
+        BEL "M_currentscore_q_4" BEL "M_currentscore_q_5" BEL
+        "M_currentscore_q_6" BEL "M_currentscore_q_7" BEL "M_currentscore_q_8"
+        BEL "M_currentscore_q_9" BEL "clk_BUFGP/BUFG" BEL
         "btn_start_input/M_ctr_q_0" BEL "btn_start_input/M_ctr_q_1" BEL
         "btn_start_input/M_ctr_q_2" BEL "btn_start_input/M_ctr_q_3" BEL
         "btn_start_input/M_ctr_q_4" BEL "btn_start_input/M_ctr_q_5" BEL
@@ -115,29 +140,10 @@ TIMEGRP clk = BEL "M_highscore_q_6" BEL "M_highscore_q_13" BEL
         "btn_start_input/M_ctr_q_16" BEL "btn_start_input/M_ctr_q_17" BEL
         "btn_start_input/M_ctr_q_18" BEL "btn_start_input/M_ctr_q_19" BEL
         "btn_start_input/sync/M_pipe_q_1" BEL
-        "btn_start_input/sync/Mshreg_M_pipe_q_1" BEL "M_currentscore_q_10" BEL
-        "M_currentscore_q_11" BEL "M_currentscore_q_12" BEL
-        "M_currentscore_q_13" BEL "M_currentscore_q_14" BEL
-        "M_currentscore_q_15" BEL "M_b_q_10" BEL "M_b_q_11" BEL "M_b_q_12" BEL
-        "M_b_q_13" BEL "M_currentscore_q_0" BEL "M_b_q_14" BEL
-        "M_currentscore_q_1" BEL "M_b_q_15" BEL "M_currentscore_q_2" BEL
-        "M_currentscore_q_3" BEL "M_currentscore_q_4" BEL "M_currentscore_q_5"
-        BEL "M_currentscore_q_6" BEL "M_currentscore_q_7" BEL
-        "M_currentscore_q_8" BEL "M_currentscore_q_9" BEL "M_highscore_q_0"
-        BEL "M_highscore_q_1" BEL "M_highscore_q_2" BEL "M_highscore_q_3" BEL
-        "M_highscore_q_10" BEL "M_highscore_q_4" BEL "btn_add_input/M_ctr_q_0"
-        BEL "btn_add_input/M_ctr_q_1" BEL "btn_add_input/M_ctr_q_2" BEL
-        "btn_add_input/M_ctr_q_3" BEL "btn_add_input/M_ctr_q_4" BEL
-        "btn_add_input/M_ctr_q_5" BEL "btn_add_input/M_ctr_q_6" BEL
-        "btn_add_input/M_ctr_q_7" BEL "btn_add_input/M_ctr_q_8" BEL
-        "btn_add_input/M_ctr_q_9" BEL "btn_add_input/M_ctr_q_10" BEL
-        "btn_add_input/M_ctr_q_11" BEL "btn_add_input/M_ctr_q_12" BEL
-        "btn_add_input/M_ctr_q_13" BEL "btn_add_input/M_ctr_q_14" BEL
-        "btn_add_input/M_ctr_q_15" BEL "btn_add_input/M_ctr_q_16" BEL
-        "btn_add_input/M_ctr_q_17" BEL "btn_add_input/M_ctr_q_18" BEL
-        "btn_add_input/M_ctr_q_19" BEL "btn_add_input/sync/M_pipe_q_1" BEL
-        "btn_add_input/sync/Mshreg_M_pipe_q_1" BEL "M_highscore_q_11" BEL
-        "M_highscore_q_5" BEL "M_highscore_q_12";
+        "btn_start_input/sync/Mshreg_M_pipe_q_1" BEL "M_b_q_10" BEL "M_b_q_11"
+        BEL "M_b_q_12" BEL "M_b_q_13" BEL "M_b_q_0" BEL "M_b_q_14" BEL
+        "M_b_q_1" BEL "M_b_q_15" BEL "M_b_q_2" BEL "M_b_q_3" BEL "M_b_q_4" BEL
+        "M_b_q_5" BEL "M_b_q_6" BEL "M_b_q_7" BEL "M_b_q_8" BEL "M_b_q_9";
 TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH 50%;
 SCHEMATIC END;
 

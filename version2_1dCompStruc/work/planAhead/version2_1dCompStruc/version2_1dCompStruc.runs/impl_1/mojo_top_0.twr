@@ -28,62 +28,16 @@ INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on
 Timing constraint: TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 180767 paths analyzed, 940 endpoints analyzed, 0 failing endpoints
+ 180659 paths analyzed, 981 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is  14.931ns.
+ Minimum period is  12.600ns.
 --------------------------------------------------------------------------------
-Slack:                  5.069ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               btn_add_input/M_ctr_q_0 (FF)
-  Destination:          M_b_q_11 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      14.778ns (Levels of Logic = 6)
-  Clock Path Skew:      -0.118ns (0.688 - 0.806)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_0 to M_b_q_11
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X10Y50.AQ      Tcko                  0.476   btn_add_input/M_ctr_q[3]
-                                                       btn_add_input/M_ctr_q_0
-    SLICE_X13Y41.D3      net (fanout=4)        1.550   M_ctr_q_0
-    SLICE_X13Y41.D       Tilo                  0.259   N123
-                                                       btn_add_input/out4_SW1
-    SLICE_X11Y51.B3      net (fanout=4)        1.541   N123
-    SLICE_X11Y51.B       Tilo                  0.259   out1_1
-                                                       M_state_q_FSM_FFd1-In11_1
-    SLICE_X12Y31.B6      net (fanout=13)       2.330   M_state_q_FSM_FFd1-In11
-    SLICE_X12Y31.B       Tilo                  0.254   M_b_q[15]
-                                                       Mmux_M_alu_b71
-    DSP48_X0Y9.A15       net (fanout=5)        1.884   M_alu_b[15]
-    DSP48_X0Y9.M0        Tdspdo_A_M            3.265   alu/multiplicationModule/Mmult_n0008
-                                                       alu/multiplicationModule/Mmult_n0008
-    SLICE_X14Y31.A5      net (fanout=5)        1.323   n0008[0]
-    SLICE_X14Y31.A       Tilo                  0.235   M_b_q[6]
-                                                       _n0260_inv_rstpot
-    SLICE_X13Y30.A2      net (fanout=16)       1.029   _n0260_inv_rstpot
-    SLICE_X13Y30.CLK     Tas                   0.373   M_b_q[14]
-                                                       M_b_q_11_dpot
-                                                       M_b_q_11
-    -------------------------------------------------  ---------------------------
-    Total                                     14.778ns (5.121ns logic, 9.657ns route)
-                                                       (34.7% logic, 65.3% route)
-
---------------------------------------------------------------------------------
-Slack:                  5.150ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               btn_add_input/M_ctr_q_0 (FF)
+Slack:                  7.400ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               btn_add_input/M_ctr_q_12 (FF)
   Destination:          M_highscore_q_6 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      14.729ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.086ns (0.627 - 0.713)
+  Data Path Delay:      12.554ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.011ns (0.290 - 0.301)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -94,41 +48,41 @@ Slack:                  5.150ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_0 to M_highscore_q_6
+  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_12 to M_highscore_q_6
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y50.AQ      Tcko                  0.476   btn_add_input/M_ctr_q[3]
-                                                       btn_add_input/M_ctr_q_0
-    SLICE_X13Y41.D3      net (fanout=4)        1.550   M_ctr_q_0
-    SLICE_X13Y41.D       Tilo                  0.259   N123
-                                                       btn_add_input/out4_SW1
-    SLICE_X11Y51.B3      net (fanout=4)        1.541   N123
-    SLICE_X11Y51.B       Tilo                  0.259   out1_1
+    SLICE_X16Y40.AQ      Tcko                  0.525   btn_add_input/M_ctr_q[15]
+                                                       btn_add_input/M_ctr_q_12
+    SLICE_X14Y38.A1      net (fanout=2)        0.987   btn_add_input/M_ctr_q[12]
+    SLICE_X14Y38.A       Tilo                  0.235   M_alu_b[0]
+                                                       btn_add_input/out3
+    SLICE_X17Y38.A1      net (fanout=6)        0.772   out2_1
+    SLICE_X17Y38.A       Tilo                  0.259   out1_1
                                                        M_state_q_FSM_FFd1-In11_1
-    SLICE_X12Y31.B6      net (fanout=13)       2.330   M_state_q_FSM_FFd1-In11
-    SLICE_X12Y31.B       Tilo                  0.254   M_b_q[15]
-                                                       Mmux_M_alu_b71
-    DSP48_X0Y9.A15       net (fanout=5)        1.884   M_alu_b[15]
-    DSP48_X0Y9.M0        Tdspdo_A_M            3.265   alu/multiplicationModule/Mmult_n0008
+    SLICE_X12Y33.D2      net (fanout=13)       1.497   M_state_q_FSM_FFd1-In11
+    SLICE_X12Y33.D       Tilo                  0.254   M_alu_a[6]
+                                                       Mmux_M_alu_a131
+    DSP48_X0Y8.B6        net (fanout=5)        1.100   M_alu_a[6]
+    DSP48_X0Y8.M0        Tdspdo_B_M            3.894   alu/multiplicationModule/Mmult_n0008
                                                        alu/multiplicationModule/Mmult_n0008
-    SLICE_X14Y39.D6      net (fanout=5)        1.224   n0008[0]
-    SLICE_X14Y39.D       Tilo                  0.235   _n0229_inv1_cepot_cepot
-                                                       _n0229_inv1_cepot_cepot
-    SLICE_X7Y38.CE       net (fanout=4)        1.044   _n0229_inv1_cepot_cepot
-    SLICE_X7Y38.CLK      Tceck                 0.408   M_highscore_q[7]
+    SLICE_X14Y39.D3      net (fanout=5)        1.662   n0008[0]
+    SLICE_X14Y39.D       Tilo                  0.235   _n0240_inv1_cepot_cepot
+                                                       _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CE      net (fanout=4)        0.726   _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CLK     Tceck                 0.408   M_highscore_q[7]
                                                        M_highscore_q_6
     -------------------------------------------------  ---------------------------
-    Total                                     14.729ns (5.156ns logic, 9.573ns route)
-                                                       (35.0% logic, 65.0% route)
+    Total                                     12.554ns (5.810ns logic, 6.744ns route)
+                                                       (46.3% logic, 53.7% route)
 
 --------------------------------------------------------------------------------
-Slack:                  5.168ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               btn_add_input/M_ctr_q_0 (FF)
+Slack:                  7.418ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               btn_add_input/M_ctr_q_12 (FF)
   Destination:          M_highscore_q_5 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      14.711ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.086ns (0.627 - 0.713)
+  Data Path Delay:      12.536ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.011ns (0.290 - 0.301)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -139,86 +93,41 @@ Slack:                  5.168ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_0 to M_highscore_q_5
+  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_12 to M_highscore_q_5
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y50.AQ      Tcko                  0.476   btn_add_input/M_ctr_q[3]
-                                                       btn_add_input/M_ctr_q_0
-    SLICE_X13Y41.D3      net (fanout=4)        1.550   M_ctr_q_0
-    SLICE_X13Y41.D       Tilo                  0.259   N123
-                                                       btn_add_input/out4_SW1
-    SLICE_X11Y51.B3      net (fanout=4)        1.541   N123
-    SLICE_X11Y51.B       Tilo                  0.259   out1_1
+    SLICE_X16Y40.AQ      Tcko                  0.525   btn_add_input/M_ctr_q[15]
+                                                       btn_add_input/M_ctr_q_12
+    SLICE_X14Y38.A1      net (fanout=2)        0.987   btn_add_input/M_ctr_q[12]
+    SLICE_X14Y38.A       Tilo                  0.235   M_alu_b[0]
+                                                       btn_add_input/out3
+    SLICE_X17Y38.A1      net (fanout=6)        0.772   out2_1
+    SLICE_X17Y38.A       Tilo                  0.259   out1_1
                                                        M_state_q_FSM_FFd1-In11_1
-    SLICE_X12Y31.B6      net (fanout=13)       2.330   M_state_q_FSM_FFd1-In11
-    SLICE_X12Y31.B       Tilo                  0.254   M_b_q[15]
-                                                       Mmux_M_alu_b71
-    DSP48_X0Y9.A15       net (fanout=5)        1.884   M_alu_b[15]
-    DSP48_X0Y9.M0        Tdspdo_A_M            3.265   alu/multiplicationModule/Mmult_n0008
+    SLICE_X12Y33.D2      net (fanout=13)       1.497   M_state_q_FSM_FFd1-In11
+    SLICE_X12Y33.D       Tilo                  0.254   M_alu_a[6]
+                                                       Mmux_M_alu_a131
+    DSP48_X0Y8.B6        net (fanout=5)        1.100   M_alu_a[6]
+    DSP48_X0Y8.M0        Tdspdo_B_M            3.894   alu/multiplicationModule/Mmult_n0008
                                                        alu/multiplicationModule/Mmult_n0008
-    SLICE_X14Y39.D6      net (fanout=5)        1.224   n0008[0]
-    SLICE_X14Y39.D       Tilo                  0.235   _n0229_inv1_cepot_cepot
-                                                       _n0229_inv1_cepot_cepot
-    SLICE_X7Y38.CE       net (fanout=4)        1.044   _n0229_inv1_cepot_cepot
-    SLICE_X7Y38.CLK      Tceck                 0.390   M_highscore_q[7]
+    SLICE_X14Y39.D3      net (fanout=5)        1.662   n0008[0]
+    SLICE_X14Y39.D       Tilo                  0.235   _n0240_inv1_cepot_cepot
+                                                       _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CE      net (fanout=4)        0.726   _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CLK     Tceck                 0.390   M_highscore_q[7]
                                                        M_highscore_q_5
     -------------------------------------------------  ---------------------------
-    Total                                     14.711ns (5.138ns logic, 9.573ns route)
-                                                       (34.9% logic, 65.1% route)
+    Total                                     12.536ns (5.792ns logic, 6.744ns route)
+                                                       (46.2% logic, 53.8% route)
 
 --------------------------------------------------------------------------------
-Slack:                  5.170ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               btn_add_input/M_ctr_q_0 (FF)
-  Destination:          M_highscore_q_8 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      14.699ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.096ns (0.617 - 0.713)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_0 to M_highscore_q_8
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X10Y50.AQ      Tcko                  0.476   btn_add_input/M_ctr_q[3]
-                                                       btn_add_input/M_ctr_q_0
-    SLICE_X13Y41.D3      net (fanout=4)        1.550   M_ctr_q_0
-    SLICE_X13Y41.D       Tilo                  0.259   N123
-                                                       btn_add_input/out4_SW1
-    SLICE_X11Y51.B3      net (fanout=4)        1.541   N123
-    SLICE_X11Y51.B       Tilo                  0.259   out1_1
-                                                       M_state_q_FSM_FFd1-In11_1
-    SLICE_X12Y31.B6      net (fanout=13)       2.330   M_state_q_FSM_FFd1-In11
-    SLICE_X12Y31.B       Tilo                  0.254   M_b_q[15]
-                                                       Mmux_M_alu_b71
-    DSP48_X0Y9.A15       net (fanout=5)        1.884   M_alu_b[15]
-    DSP48_X0Y9.M0        Tdspdo_A_M            3.265   alu/multiplicationModule/Mmult_n0008
-                                                       alu/multiplicationModule/Mmult_n0008
-    SLICE_X14Y39.D6      net (fanout=5)        1.224   n0008[0]
-    SLICE_X14Y39.D       Tilo                  0.235   _n0229_inv1_cepot_cepot
-                                                       _n0229_inv1_cepot_cepot
-    SLICE_X8Y40.CE       net (fanout=4)        1.109   _n0229_inv1_cepot_cepot
-    SLICE_X8Y40.CLK      Tceck                 0.313   M_highscore_q[11]
-                                                       M_highscore_q_8
-    -------------------------------------------------  ---------------------------
-    Total                                     14.699ns (5.061ns logic, 9.638ns route)
-                                                       (34.4% logic, 65.6% route)
-
---------------------------------------------------------------------------------
-Slack:                  5.176ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               btn_add_input/M_ctr_q_0 (FF)
+Slack:                  7.426ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               btn_add_input/M_ctr_q_12 (FF)
   Destination:          M_highscore_q_7 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      14.703ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.086ns (0.627 - 0.713)
+  Data Path Delay:      12.528ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.011ns (0.290 - 0.301)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -229,451 +138,41 @@ Slack:                  5.176ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_0 to M_highscore_q_7
+  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_12 to M_highscore_q_7
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y50.AQ      Tcko                  0.476   btn_add_input/M_ctr_q[3]
-                                                       btn_add_input/M_ctr_q_0
-    SLICE_X13Y41.D3      net (fanout=4)        1.550   M_ctr_q_0
-    SLICE_X13Y41.D       Tilo                  0.259   N123
-                                                       btn_add_input/out4_SW1
-    SLICE_X11Y51.B3      net (fanout=4)        1.541   N123
-    SLICE_X11Y51.B       Tilo                  0.259   out1_1
+    SLICE_X16Y40.AQ      Tcko                  0.525   btn_add_input/M_ctr_q[15]
+                                                       btn_add_input/M_ctr_q_12
+    SLICE_X14Y38.A1      net (fanout=2)        0.987   btn_add_input/M_ctr_q[12]
+    SLICE_X14Y38.A       Tilo                  0.235   M_alu_b[0]
+                                                       btn_add_input/out3
+    SLICE_X17Y38.A1      net (fanout=6)        0.772   out2_1
+    SLICE_X17Y38.A       Tilo                  0.259   out1_1
                                                        M_state_q_FSM_FFd1-In11_1
-    SLICE_X12Y31.B6      net (fanout=13)       2.330   M_state_q_FSM_FFd1-In11
-    SLICE_X12Y31.B       Tilo                  0.254   M_b_q[15]
-                                                       Mmux_M_alu_b71
-    DSP48_X0Y9.A15       net (fanout=5)        1.884   M_alu_b[15]
-    DSP48_X0Y9.M0        Tdspdo_A_M            3.265   alu/multiplicationModule/Mmult_n0008
+    SLICE_X12Y33.D2      net (fanout=13)       1.497   M_state_q_FSM_FFd1-In11
+    SLICE_X12Y33.D       Tilo                  0.254   M_alu_a[6]
+                                                       Mmux_M_alu_a131
+    DSP48_X0Y8.B6        net (fanout=5)        1.100   M_alu_a[6]
+    DSP48_X0Y8.M0        Tdspdo_B_M            3.894   alu/multiplicationModule/Mmult_n0008
                                                        alu/multiplicationModule/Mmult_n0008
-    SLICE_X14Y39.D6      net (fanout=5)        1.224   n0008[0]
-    SLICE_X14Y39.D       Tilo                  0.235   _n0229_inv1_cepot_cepot
-                                                       _n0229_inv1_cepot_cepot
-    SLICE_X7Y38.CE       net (fanout=4)        1.044   _n0229_inv1_cepot_cepot
-    SLICE_X7Y38.CLK      Tceck                 0.382   M_highscore_q[7]
+    SLICE_X14Y39.D3      net (fanout=5)        1.662   n0008[0]
+    SLICE_X14Y39.D       Tilo                  0.235   _n0240_inv1_cepot_cepot
+                                                       _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CE      net (fanout=4)        0.726   _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CLK     Tceck                 0.382   M_highscore_q[7]
                                                        M_highscore_q_7
     -------------------------------------------------  ---------------------------
-    Total                                     14.703ns (5.130ns logic, 9.573ns route)
-                                                       (34.9% logic, 65.1% route)
+    Total                                     12.528ns (5.784ns logic, 6.744ns route)
+                                                       (46.2% logic, 53.8% route)
 
 --------------------------------------------------------------------------------
-Slack:                  5.189ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               btn_add_input/M_ctr_q_0 (FF)
-  Destination:          M_b_q_11 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      14.658ns (Levels of Logic = 6)
-  Clock Path Skew:      -0.118ns (0.688 - 0.806)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_0 to M_b_q_11
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X10Y50.AQ      Tcko                  0.476   btn_add_input/M_ctr_q[3]
-                                                       btn_add_input/M_ctr_q_0
-    SLICE_X13Y41.D3      net (fanout=4)        1.550   M_ctr_q_0
-    SLICE_X13Y41.D       Tilo                  0.259   N123
-                                                       btn_add_input/out4_SW1
-    SLICE_X11Y52.D1      net (fanout=4)        1.892   N123
-    SLICE_X11Y52.D       Tilo                  0.259   M_state_q_FSM_FFd1-In111
-                                                       M_state_q_FSM_FFd1-In11_2
-    SLICE_X11Y38.B1      net (fanout=7)        2.462   M_state_q_FSM_FFd1-In111
-    SLICE_X11Y38.B       Tilo                  0.259   M_alu_a[15]
-                                                       Mmux_M_alu_a71
-    DSP48_X0Y9.B15       net (fanout=1)        0.647   M_alu_a[15]
-    DSP48_X0Y9.M0        Tdspdo_B_M            3.894   alu/multiplicationModule/Mmult_n0008
-                                                       alu/multiplicationModule/Mmult_n0008
-    SLICE_X14Y31.A5      net (fanout=5)        1.323   n0008[0]
-    SLICE_X14Y31.A       Tilo                  0.235   M_b_q[6]
-                                                       _n0260_inv_rstpot
-    SLICE_X13Y30.A2      net (fanout=16)       1.029   _n0260_inv_rstpot
-    SLICE_X13Y30.CLK     Tas                   0.373   M_b_q[14]
-                                                       M_b_q_11_dpot
-                                                       M_b_q_11
-    -------------------------------------------------  ---------------------------
-    Total                                     14.658ns (5.755ns logic, 8.903ns route)
-                                                       (39.3% logic, 60.7% route)
-
---------------------------------------------------------------------------------
-Slack:                  5.193ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               btn_add_input/M_ctr_q_0 (FF)
-  Destination:          M_highscore_q_4 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      14.686ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.086ns (0.627 - 0.713)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_0 to M_highscore_q_4
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X10Y50.AQ      Tcko                  0.476   btn_add_input/M_ctr_q[3]
-                                                       btn_add_input/M_ctr_q_0
-    SLICE_X13Y41.D3      net (fanout=4)        1.550   M_ctr_q_0
-    SLICE_X13Y41.D       Tilo                  0.259   N123
-                                                       btn_add_input/out4_SW1
-    SLICE_X11Y51.B3      net (fanout=4)        1.541   N123
-    SLICE_X11Y51.B       Tilo                  0.259   out1_1
-                                                       M_state_q_FSM_FFd1-In11_1
-    SLICE_X12Y31.B6      net (fanout=13)       2.330   M_state_q_FSM_FFd1-In11
-    SLICE_X12Y31.B       Tilo                  0.254   M_b_q[15]
-                                                       Mmux_M_alu_b71
-    DSP48_X0Y9.A15       net (fanout=5)        1.884   M_alu_b[15]
-    DSP48_X0Y9.M0        Tdspdo_A_M            3.265   alu/multiplicationModule/Mmult_n0008
-                                                       alu/multiplicationModule/Mmult_n0008
-    SLICE_X14Y39.D6      net (fanout=5)        1.224   n0008[0]
-    SLICE_X14Y39.D       Tilo                  0.235   _n0229_inv1_cepot_cepot
-                                                       _n0229_inv1_cepot_cepot
-    SLICE_X7Y38.CE       net (fanout=4)        1.044   _n0229_inv1_cepot_cepot
-    SLICE_X7Y38.CLK      Tceck                 0.365   M_highscore_q[7]
-                                                       M_highscore_q_4
-    -------------------------------------------------  ---------------------------
-    Total                                     14.686ns (5.113ns logic, 9.573ns route)
-                                                       (34.8% logic, 65.2% route)
-
---------------------------------------------------------------------------------
-Slack:                  5.210ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               btn_add_input/M_ctr_q_0 (FF)
-  Destination:          M_b_q_11 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      14.637ns (Levels of Logic = 6)
-  Clock Path Skew:      -0.118ns (0.688 - 0.806)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_0 to M_b_q_11
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X10Y50.AQ      Tcko                  0.476   btn_add_input/M_ctr_q[3]
-                                                       btn_add_input/M_ctr_q_0
-    SLICE_X13Y41.D3      net (fanout=4)        1.550   M_ctr_q_0
-    SLICE_X13Y41.D       Tilo                  0.259   N123
-                                                       btn_add_input/out4_SW1
-    SLICE_X11Y52.D1      net (fanout=4)        1.892   N123
-    SLICE_X11Y52.D       Tilo                  0.259   M_state_q_FSM_FFd1-In111
-                                                       M_state_q_FSM_FFd1-In11_2
-    SLICE_X6Y38.B1       net (fanout=7)        3.020   M_state_q_FSM_FFd1-In111
-    SLICE_X6Y38.B        Tilo                  0.235   M_alu_b[3]
-                                                       Mmux_M_alu_b102
-    DSP48_X0Y9.A3        net (fanout=4)        0.721   M_alu_b[3]
-    DSP48_X0Y9.M0        Tdspdo_A_M            3.265   alu/multiplicationModule/Mmult_n0008
-                                                       alu/multiplicationModule/Mmult_n0008
-    SLICE_X14Y31.A5      net (fanout=5)        1.323   n0008[0]
-    SLICE_X14Y31.A       Tilo                  0.235   M_b_q[6]
-                                                       _n0260_inv_rstpot
-    SLICE_X13Y30.A2      net (fanout=16)       1.029   _n0260_inv_rstpot
-    SLICE_X13Y30.CLK     Tas                   0.373   M_b_q[14]
-                                                       M_b_q_11_dpot
-                                                       M_b_q_11
-    -------------------------------------------------  ---------------------------
-    Total                                     14.637ns (5.102ns logic, 9.535ns route)
-                                                       (34.9% logic, 65.1% route)
-
---------------------------------------------------------------------------------
-Slack:                  5.214ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               btn_add_input/M_ctr_q_0 (FF)
-  Destination:          M_highscore_q_10 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      14.655ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.096ns (0.617 - 0.713)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_0 to M_highscore_q_10
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X10Y50.AQ      Tcko                  0.476   btn_add_input/M_ctr_q[3]
-                                                       btn_add_input/M_ctr_q_0
-    SLICE_X13Y41.D3      net (fanout=4)        1.550   M_ctr_q_0
-    SLICE_X13Y41.D       Tilo                  0.259   N123
-                                                       btn_add_input/out4_SW1
-    SLICE_X11Y51.B3      net (fanout=4)        1.541   N123
-    SLICE_X11Y51.B       Tilo                  0.259   out1_1
-                                                       M_state_q_FSM_FFd1-In11_1
-    SLICE_X12Y31.B6      net (fanout=13)       2.330   M_state_q_FSM_FFd1-In11
-    SLICE_X12Y31.B       Tilo                  0.254   M_b_q[15]
-                                                       Mmux_M_alu_b71
-    DSP48_X0Y9.A15       net (fanout=5)        1.884   M_alu_b[15]
-    DSP48_X0Y9.M0        Tdspdo_A_M            3.265   alu/multiplicationModule/Mmult_n0008
-                                                       alu/multiplicationModule/Mmult_n0008
-    SLICE_X14Y39.D6      net (fanout=5)        1.224   n0008[0]
-    SLICE_X14Y39.D       Tilo                  0.235   _n0229_inv1_cepot_cepot
-                                                       _n0229_inv1_cepot_cepot
-    SLICE_X8Y40.CE       net (fanout=4)        1.109   _n0229_inv1_cepot_cepot
-    SLICE_X8Y40.CLK      Tceck                 0.269   M_highscore_q[11]
-                                                       M_highscore_q_10
-    -------------------------------------------------  ---------------------------
-    Total                                     14.655ns (5.017ns logic, 9.638ns route)
-                                                       (34.2% logic, 65.8% route)
-
---------------------------------------------------------------------------------
-Slack:                  5.217ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               btn_add_input/M_ctr_q_0 (FF)
-  Destination:          M_highscore_q_11 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      14.652ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.096ns (0.617 - 0.713)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_0 to M_highscore_q_11
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X10Y50.AQ      Tcko                  0.476   btn_add_input/M_ctr_q[3]
-                                                       btn_add_input/M_ctr_q_0
-    SLICE_X13Y41.D3      net (fanout=4)        1.550   M_ctr_q_0
-    SLICE_X13Y41.D       Tilo                  0.259   N123
-                                                       btn_add_input/out4_SW1
-    SLICE_X11Y51.B3      net (fanout=4)        1.541   N123
-    SLICE_X11Y51.B       Tilo                  0.259   out1_1
-                                                       M_state_q_FSM_FFd1-In11_1
-    SLICE_X12Y31.B6      net (fanout=13)       2.330   M_state_q_FSM_FFd1-In11
-    SLICE_X12Y31.B       Tilo                  0.254   M_b_q[15]
-                                                       Mmux_M_alu_b71
-    DSP48_X0Y9.A15       net (fanout=5)        1.884   M_alu_b[15]
-    DSP48_X0Y9.M0        Tdspdo_A_M            3.265   alu/multiplicationModule/Mmult_n0008
-                                                       alu/multiplicationModule/Mmult_n0008
-    SLICE_X14Y39.D6      net (fanout=5)        1.224   n0008[0]
-    SLICE_X14Y39.D       Tilo                  0.235   _n0229_inv1_cepot_cepot
-                                                       _n0229_inv1_cepot_cepot
-    SLICE_X8Y40.CE       net (fanout=4)        1.109   _n0229_inv1_cepot_cepot
-    SLICE_X8Y40.CLK      Tceck                 0.266   M_highscore_q[11]
-                                                       M_highscore_q_11
-    -------------------------------------------------  ---------------------------
-    Total                                     14.652ns (5.014ns logic, 9.638ns route)
-                                                       (34.2% logic, 65.8% route)
-
---------------------------------------------------------------------------------
-Slack:                  5.220ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               btn_add_input/M_ctr_q_0 (FF)
-  Destination:          M_b_q_10 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      14.626ns (Levels of Logic = 6)
-  Clock Path Skew:      -0.119ns (0.687 - 0.806)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_0 to M_b_q_10
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X10Y50.AQ      Tcko                  0.476   btn_add_input/M_ctr_q[3]
-                                                       btn_add_input/M_ctr_q_0
-    SLICE_X13Y41.D3      net (fanout=4)        1.550   M_ctr_q_0
-    SLICE_X13Y41.D       Tilo                  0.259   N123
-                                                       btn_add_input/out4_SW1
-    SLICE_X11Y51.B3      net (fanout=4)        1.541   N123
-    SLICE_X11Y51.B       Tilo                  0.259   out1_1
-                                                       M_state_q_FSM_FFd1-In11_1
-    SLICE_X12Y31.B6      net (fanout=13)       2.330   M_state_q_FSM_FFd1-In11
-    SLICE_X12Y31.B       Tilo                  0.254   M_b_q[15]
-                                                       Mmux_M_alu_b71
-    DSP48_X0Y9.A15       net (fanout=5)        1.884   M_alu_b[15]
-    DSP48_X0Y9.M0        Tdspdo_A_M            3.265   alu/multiplicationModule/Mmult_n0008
-                                                       alu/multiplicationModule/Mmult_n0008
-    SLICE_X14Y31.A5      net (fanout=5)        1.323   n0008[0]
-    SLICE_X14Y31.A       Tilo                  0.235   M_b_q[6]
-                                                       _n0260_inv_rstpot
-    SLICE_X13Y29.D3      net (fanout=16)       0.877   _n0260_inv_rstpot
-    SLICE_X13Y29.CLK     Tas                   0.373   M_b_q[10]
-                                                       M_b_q_10_dpot
-                                                       M_b_q_10
-    -------------------------------------------------  ---------------------------
-    Total                                     14.626ns (5.121ns logic, 9.505ns route)
-                                                       (35.0% logic, 65.0% route)
-
---------------------------------------------------------------------------------
-Slack:                  5.230ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               btn_add_input/M_ctr_q_0 (FF)
-  Destination:          M_highscore_q_9 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      14.639ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.096ns (0.617 - 0.713)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_0 to M_highscore_q_9
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X10Y50.AQ      Tcko                  0.476   btn_add_input/M_ctr_q[3]
-                                                       btn_add_input/M_ctr_q_0
-    SLICE_X13Y41.D3      net (fanout=4)        1.550   M_ctr_q_0
-    SLICE_X13Y41.D       Tilo                  0.259   N123
-                                                       btn_add_input/out4_SW1
-    SLICE_X11Y51.B3      net (fanout=4)        1.541   N123
-    SLICE_X11Y51.B       Tilo                  0.259   out1_1
-                                                       M_state_q_FSM_FFd1-In11_1
-    SLICE_X12Y31.B6      net (fanout=13)       2.330   M_state_q_FSM_FFd1-In11
-    SLICE_X12Y31.B       Tilo                  0.254   M_b_q[15]
-                                                       Mmux_M_alu_b71
-    DSP48_X0Y9.A15       net (fanout=5)        1.884   M_alu_b[15]
-    DSP48_X0Y9.M0        Tdspdo_A_M            3.265   alu/multiplicationModule/Mmult_n0008
-                                                       alu/multiplicationModule/Mmult_n0008
-    SLICE_X14Y39.D6      net (fanout=5)        1.224   n0008[0]
-    SLICE_X14Y39.D       Tilo                  0.235   _n0229_inv1_cepot_cepot
-                                                       _n0229_inv1_cepot_cepot
-    SLICE_X8Y40.CE       net (fanout=4)        1.109   _n0229_inv1_cepot_cepot
-    SLICE_X8Y40.CLK      Tceck                 0.253   M_highscore_q[11]
-                                                       M_highscore_q_9
-    -------------------------------------------------  ---------------------------
-    Total                                     14.639ns (5.001ns logic, 9.638ns route)
-                                                       (34.2% logic, 65.8% route)
-
---------------------------------------------------------------------------------
-Slack:                  5.253ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               btn_add_input/M_ctr_q_0 (FF)
-  Destination:          M_b_q_9 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      14.593ns (Levels of Logic = 6)
-  Clock Path Skew:      -0.119ns (0.687 - 0.806)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_0 to M_b_q_9
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X10Y50.AQ      Tcko                  0.476   btn_add_input/M_ctr_q[3]
-                                                       btn_add_input/M_ctr_q_0
-    SLICE_X13Y41.D3      net (fanout=4)        1.550   M_ctr_q_0
-    SLICE_X13Y41.D       Tilo                  0.259   N123
-                                                       btn_add_input/out4_SW1
-    SLICE_X11Y51.B3      net (fanout=4)        1.541   N123
-    SLICE_X11Y51.B       Tilo                  0.259   out1_1
-                                                       M_state_q_FSM_FFd1-In11_1
-    SLICE_X12Y31.B6      net (fanout=13)       2.330   M_state_q_FSM_FFd1-In11
-    SLICE_X12Y31.B       Tilo                  0.254   M_b_q[15]
-                                                       Mmux_M_alu_b71
-    DSP48_X0Y9.A15       net (fanout=5)        1.884   M_alu_b[15]
-    DSP48_X0Y9.M0        Tdspdo_A_M            3.265   alu/multiplicationModule/Mmult_n0008
-                                                       alu/multiplicationModule/Mmult_n0008
-    SLICE_X14Y31.A5      net (fanout=5)        1.323   n0008[0]
-    SLICE_X14Y31.A       Tilo                  0.235   M_b_q[6]
-                                                       _n0260_inv_rstpot
-    SLICE_X13Y29.C3      net (fanout=16)       0.844   _n0260_inv_rstpot
-    SLICE_X13Y29.CLK     Tas                   0.373   M_b_q[10]
-                                                       M_b_q_9_dpot
-                                                       M_b_q_9
-    -------------------------------------------------  ---------------------------
-    Total                                     14.593ns (5.121ns logic, 9.472ns route)
-                                                       (35.1% logic, 64.9% route)
-
---------------------------------------------------------------------------------
-Slack:                  5.259ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               btn_add_input/M_ctr_q_0 (FF)
-  Destination:          M_b_q_12 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      14.588ns (Levels of Logic = 6)
-  Clock Path Skew:      -0.118ns (0.688 - 0.806)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_0 to M_b_q_12
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X10Y50.AQ      Tcko                  0.476   btn_add_input/M_ctr_q[3]
-                                                       btn_add_input/M_ctr_q_0
-    SLICE_X13Y41.D3      net (fanout=4)        1.550   M_ctr_q_0
-    SLICE_X13Y41.D       Tilo                  0.259   N123
-                                                       btn_add_input/out4_SW1
-    SLICE_X11Y51.B3      net (fanout=4)        1.541   N123
-    SLICE_X11Y51.B       Tilo                  0.259   out1_1
-                                                       M_state_q_FSM_FFd1-In11_1
-    SLICE_X12Y31.B6      net (fanout=13)       2.330   M_state_q_FSM_FFd1-In11
-    SLICE_X12Y31.B       Tilo                  0.254   M_b_q[15]
-                                                       Mmux_M_alu_b71
-    DSP48_X0Y9.A15       net (fanout=5)        1.884   M_alu_b[15]
-    DSP48_X0Y9.M0        Tdspdo_A_M            3.265   alu/multiplicationModule/Mmult_n0008
-                                                       alu/multiplicationModule/Mmult_n0008
-    SLICE_X14Y31.A5      net (fanout=5)        1.323   n0008[0]
-    SLICE_X14Y31.A       Tilo                  0.235   M_b_q[6]
-                                                       _n0260_inv_rstpot
-    SLICE_X13Y30.B4      net (fanout=16)       0.839   _n0260_inv_rstpot
-    SLICE_X13Y30.CLK     Tas                   0.373   M_b_q[14]
-                                                       M_b_q_12_dpot
-                                                       M_b_q_12
-    -------------------------------------------------  ---------------------------
-    Total                                     14.588ns (5.121ns logic, 9.467ns route)
-                                                       (35.1% logic, 64.9% route)
-
---------------------------------------------------------------------------------
-Slack:                  5.270ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               btn_add_input/M_ctr_q_0 (FF)
+Slack:                  7.436ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               btn_add_input/M_ctr_q_13 (FF)
   Destination:          M_highscore_q_6 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      14.609ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.086ns (0.627 - 0.713)
+  Data Path Delay:      12.518ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.011ns (0.290 - 0.301)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -684,41 +183,86 @@ Slack:                  5.270ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_0 to M_highscore_q_6
+  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_13 to M_highscore_q_6
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y50.AQ      Tcko                  0.476   btn_add_input/M_ctr_q[3]
-                                                       btn_add_input/M_ctr_q_0
-    SLICE_X13Y41.D3      net (fanout=4)        1.550   M_ctr_q_0
-    SLICE_X13Y41.D       Tilo                  0.259   N123
-                                                       btn_add_input/out4_SW1
-    SLICE_X11Y52.D1      net (fanout=4)        1.892   N123
-    SLICE_X11Y52.D       Tilo                  0.259   M_state_q_FSM_FFd1-In111
-                                                       M_state_q_FSM_FFd1-In11_2
-    SLICE_X11Y38.B1      net (fanout=7)        2.462   M_state_q_FSM_FFd1-In111
-    SLICE_X11Y38.B       Tilo                  0.259   M_alu_a[15]
-                                                       Mmux_M_alu_a71
-    DSP48_X0Y9.B15       net (fanout=1)        0.647   M_alu_a[15]
-    DSP48_X0Y9.M0        Tdspdo_B_M            3.894   alu/multiplicationModule/Mmult_n0008
+    SLICE_X16Y40.BQ      Tcko                  0.525   btn_add_input/M_ctr_q[15]
+                                                       btn_add_input/M_ctr_q_13
+    SLICE_X14Y38.A2      net (fanout=2)        0.951   btn_add_input/M_ctr_q[13]
+    SLICE_X14Y38.A       Tilo                  0.235   M_alu_b[0]
+                                                       btn_add_input/out3
+    SLICE_X17Y38.A1      net (fanout=6)        0.772   out2_1
+    SLICE_X17Y38.A       Tilo                  0.259   out1_1
+                                                       M_state_q_FSM_FFd1-In11_1
+    SLICE_X12Y33.D2      net (fanout=13)       1.497   M_state_q_FSM_FFd1-In11
+    SLICE_X12Y33.D       Tilo                  0.254   M_alu_a[6]
+                                                       Mmux_M_alu_a131
+    DSP48_X0Y8.B6        net (fanout=5)        1.100   M_alu_a[6]
+    DSP48_X0Y8.M0        Tdspdo_B_M            3.894   alu/multiplicationModule/Mmult_n0008
                                                        alu/multiplicationModule/Mmult_n0008
-    SLICE_X14Y39.D6      net (fanout=5)        1.224   n0008[0]
-    SLICE_X14Y39.D       Tilo                  0.235   _n0229_inv1_cepot_cepot
-                                                       _n0229_inv1_cepot_cepot
-    SLICE_X7Y38.CE       net (fanout=4)        1.044   _n0229_inv1_cepot_cepot
-    SLICE_X7Y38.CLK      Tceck                 0.408   M_highscore_q[7]
+    SLICE_X14Y39.D3      net (fanout=5)        1.662   n0008[0]
+    SLICE_X14Y39.D       Tilo                  0.235   _n0240_inv1_cepot_cepot
+                                                       _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CE      net (fanout=4)        0.726   _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CLK     Tceck                 0.408   M_highscore_q[7]
                                                        M_highscore_q_6
     -------------------------------------------------  ---------------------------
-    Total                                     14.609ns (5.790ns logic, 8.819ns route)
-                                                       (39.6% logic, 60.4% route)
+    Total                                     12.518ns (5.810ns logic, 6.708ns route)
+                                                       (46.4% logic, 53.6% route)
 
 --------------------------------------------------------------------------------
-Slack:                  5.288ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               btn_add_input/M_ctr_q_0 (FF)
+Slack:                  7.443ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               btn_add_input/M_ctr_q_12 (FF)
+  Destination:          M_highscore_q_4 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      12.511ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.011ns (0.290 - 0.301)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_12 to M_highscore_q_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y40.AQ      Tcko                  0.525   btn_add_input/M_ctr_q[15]
+                                                       btn_add_input/M_ctr_q_12
+    SLICE_X14Y38.A1      net (fanout=2)        0.987   btn_add_input/M_ctr_q[12]
+    SLICE_X14Y38.A       Tilo                  0.235   M_alu_b[0]
+                                                       btn_add_input/out3
+    SLICE_X17Y38.A1      net (fanout=6)        0.772   out2_1
+    SLICE_X17Y38.A       Tilo                  0.259   out1_1
+                                                       M_state_q_FSM_FFd1-In11_1
+    SLICE_X12Y33.D2      net (fanout=13)       1.497   M_state_q_FSM_FFd1-In11
+    SLICE_X12Y33.D       Tilo                  0.254   M_alu_a[6]
+                                                       Mmux_M_alu_a131
+    DSP48_X0Y8.B6        net (fanout=5)        1.100   M_alu_a[6]
+    DSP48_X0Y8.M0        Tdspdo_B_M            3.894   alu/multiplicationModule/Mmult_n0008
+                                                       alu/multiplicationModule/Mmult_n0008
+    SLICE_X14Y39.D3      net (fanout=5)        1.662   n0008[0]
+    SLICE_X14Y39.D       Tilo                  0.235   _n0240_inv1_cepot_cepot
+                                                       _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CE      net (fanout=4)        0.726   _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CLK     Tceck                 0.365   M_highscore_q[7]
+                                                       M_highscore_q_4
+    -------------------------------------------------  ---------------------------
+    Total                                     12.511ns (5.767ns logic, 6.744ns route)
+                                                       (46.1% logic, 53.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  7.454ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               btn_add_input/M_ctr_q_13 (FF)
   Destination:          M_highscore_q_5 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      14.591ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.086ns (0.627 - 0.713)
+  Data Path Delay:      12.500ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.011ns (0.290 - 0.301)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -729,41 +273,41 @@ Slack:                  5.288ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_0 to M_highscore_q_5
+  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_13 to M_highscore_q_5
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y50.AQ      Tcko                  0.476   btn_add_input/M_ctr_q[3]
-                                                       btn_add_input/M_ctr_q_0
-    SLICE_X13Y41.D3      net (fanout=4)        1.550   M_ctr_q_0
-    SLICE_X13Y41.D       Tilo                  0.259   N123
-                                                       btn_add_input/out4_SW1
-    SLICE_X11Y52.D1      net (fanout=4)        1.892   N123
-    SLICE_X11Y52.D       Tilo                  0.259   M_state_q_FSM_FFd1-In111
-                                                       M_state_q_FSM_FFd1-In11_2
-    SLICE_X11Y38.B1      net (fanout=7)        2.462   M_state_q_FSM_FFd1-In111
-    SLICE_X11Y38.B       Tilo                  0.259   M_alu_a[15]
-                                                       Mmux_M_alu_a71
-    DSP48_X0Y9.B15       net (fanout=1)        0.647   M_alu_a[15]
-    DSP48_X0Y9.M0        Tdspdo_B_M            3.894   alu/multiplicationModule/Mmult_n0008
+    SLICE_X16Y40.BQ      Tcko                  0.525   btn_add_input/M_ctr_q[15]
+                                                       btn_add_input/M_ctr_q_13
+    SLICE_X14Y38.A2      net (fanout=2)        0.951   btn_add_input/M_ctr_q[13]
+    SLICE_X14Y38.A       Tilo                  0.235   M_alu_b[0]
+                                                       btn_add_input/out3
+    SLICE_X17Y38.A1      net (fanout=6)        0.772   out2_1
+    SLICE_X17Y38.A       Tilo                  0.259   out1_1
+                                                       M_state_q_FSM_FFd1-In11_1
+    SLICE_X12Y33.D2      net (fanout=13)       1.497   M_state_q_FSM_FFd1-In11
+    SLICE_X12Y33.D       Tilo                  0.254   M_alu_a[6]
+                                                       Mmux_M_alu_a131
+    DSP48_X0Y8.B6        net (fanout=5)        1.100   M_alu_a[6]
+    DSP48_X0Y8.M0        Tdspdo_B_M            3.894   alu/multiplicationModule/Mmult_n0008
                                                        alu/multiplicationModule/Mmult_n0008
-    SLICE_X14Y39.D6      net (fanout=5)        1.224   n0008[0]
-    SLICE_X14Y39.D       Tilo                  0.235   _n0229_inv1_cepot_cepot
-                                                       _n0229_inv1_cepot_cepot
-    SLICE_X7Y38.CE       net (fanout=4)        1.044   _n0229_inv1_cepot_cepot
-    SLICE_X7Y38.CLK      Tceck                 0.390   M_highscore_q[7]
+    SLICE_X14Y39.D3      net (fanout=5)        1.662   n0008[0]
+    SLICE_X14Y39.D       Tilo                  0.235   _n0240_inv1_cepot_cepot
+                                                       _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CE      net (fanout=4)        0.726   _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CLK     Tceck                 0.390   M_highscore_q[7]
                                                        M_highscore_q_5
     -------------------------------------------------  ---------------------------
-    Total                                     14.591ns (5.772ns logic, 8.819ns route)
-                                                       (39.6% logic, 60.4% route)
+    Total                                     12.500ns (5.792ns logic, 6.708ns route)
+                                                       (46.3% logic, 53.7% route)
 
 --------------------------------------------------------------------------------
-Slack:                  5.290ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               btn_add_input/M_ctr_q_0 (FF)
-  Destination:          M_highscore_q_8 (FF)
+Slack:                  7.462ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               btn_add_input/M_ctr_q_13 (FF)
+  Destination:          M_highscore_q_7 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      14.579ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.096ns (0.617 - 0.713)
+  Data Path Delay:      12.492ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.011ns (0.290 - 0.301)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -774,41 +318,86 @@ Slack:                  5.290ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_0 to M_highscore_q_8
+  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_13 to M_highscore_q_7
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y50.AQ      Tcko                  0.476   btn_add_input/M_ctr_q[3]
-                                                       btn_add_input/M_ctr_q_0
-    SLICE_X13Y41.D3      net (fanout=4)        1.550   M_ctr_q_0
-    SLICE_X13Y41.D       Tilo                  0.259   N123
-                                                       btn_add_input/out4_SW1
-    SLICE_X11Y52.D1      net (fanout=4)        1.892   N123
-    SLICE_X11Y52.D       Tilo                  0.259   M_state_q_FSM_FFd1-In111
-                                                       M_state_q_FSM_FFd1-In11_2
-    SLICE_X11Y38.B1      net (fanout=7)        2.462   M_state_q_FSM_FFd1-In111
-    SLICE_X11Y38.B       Tilo                  0.259   M_alu_a[15]
-                                                       Mmux_M_alu_a71
-    DSP48_X0Y9.B15       net (fanout=1)        0.647   M_alu_a[15]
-    DSP48_X0Y9.M0        Tdspdo_B_M            3.894   alu/multiplicationModule/Mmult_n0008
+    SLICE_X16Y40.BQ      Tcko                  0.525   btn_add_input/M_ctr_q[15]
+                                                       btn_add_input/M_ctr_q_13
+    SLICE_X14Y38.A2      net (fanout=2)        0.951   btn_add_input/M_ctr_q[13]
+    SLICE_X14Y38.A       Tilo                  0.235   M_alu_b[0]
+                                                       btn_add_input/out3
+    SLICE_X17Y38.A1      net (fanout=6)        0.772   out2_1
+    SLICE_X17Y38.A       Tilo                  0.259   out1_1
+                                                       M_state_q_FSM_FFd1-In11_1
+    SLICE_X12Y33.D2      net (fanout=13)       1.497   M_state_q_FSM_FFd1-In11
+    SLICE_X12Y33.D       Tilo                  0.254   M_alu_a[6]
+                                                       Mmux_M_alu_a131
+    DSP48_X0Y8.B6        net (fanout=5)        1.100   M_alu_a[6]
+    DSP48_X0Y8.M0        Tdspdo_B_M            3.894   alu/multiplicationModule/Mmult_n0008
                                                        alu/multiplicationModule/Mmult_n0008
-    SLICE_X14Y39.D6      net (fanout=5)        1.224   n0008[0]
-    SLICE_X14Y39.D       Tilo                  0.235   _n0229_inv1_cepot_cepot
-                                                       _n0229_inv1_cepot_cepot
-    SLICE_X8Y40.CE       net (fanout=4)        1.109   _n0229_inv1_cepot_cepot
-    SLICE_X8Y40.CLK      Tceck                 0.313   M_highscore_q[11]
-                                                       M_highscore_q_8
+    SLICE_X14Y39.D3      net (fanout=5)        1.662   n0008[0]
+    SLICE_X14Y39.D       Tilo                  0.235   _n0240_inv1_cepot_cepot
+                                                       _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CE      net (fanout=4)        0.726   _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CLK     Tceck                 0.382   M_highscore_q[7]
+                                                       M_highscore_q_7
     -------------------------------------------------  ---------------------------
-    Total                                     14.579ns (5.695ns logic, 8.884ns route)
-                                                       (39.1% logic, 60.9% route)
+    Total                                     12.492ns (5.784ns logic, 6.708ns route)
+                                                       (46.3% logic, 53.7% route)
 
 --------------------------------------------------------------------------------
-Slack:                  5.291ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               btn_add_input/M_ctr_q_0 (FF)
+Slack:                  7.479ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               btn_add_input/M_ctr_q_13 (FF)
+  Destination:          M_highscore_q_4 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      12.475ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.011ns (0.290 - 0.301)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_13 to M_highscore_q_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y40.BQ      Tcko                  0.525   btn_add_input/M_ctr_q[15]
+                                                       btn_add_input/M_ctr_q_13
+    SLICE_X14Y38.A2      net (fanout=2)        0.951   btn_add_input/M_ctr_q[13]
+    SLICE_X14Y38.A       Tilo                  0.235   M_alu_b[0]
+                                                       btn_add_input/out3
+    SLICE_X17Y38.A1      net (fanout=6)        0.772   out2_1
+    SLICE_X17Y38.A       Tilo                  0.259   out1_1
+                                                       M_state_q_FSM_FFd1-In11_1
+    SLICE_X12Y33.D2      net (fanout=13)       1.497   M_state_q_FSM_FFd1-In11
+    SLICE_X12Y33.D       Tilo                  0.254   M_alu_a[6]
+                                                       Mmux_M_alu_a131
+    DSP48_X0Y8.B6        net (fanout=5)        1.100   M_alu_a[6]
+    DSP48_X0Y8.M0        Tdspdo_B_M            3.894   alu/multiplicationModule/Mmult_n0008
+                                                       alu/multiplicationModule/Mmult_n0008
+    SLICE_X14Y39.D3      net (fanout=5)        1.662   n0008[0]
+    SLICE_X14Y39.D       Tilo                  0.235   _n0240_inv1_cepot_cepot
+                                                       _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CE      net (fanout=4)        0.726   _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CLK     Tceck                 0.365   M_highscore_q[7]
+                                                       M_highscore_q_4
+    -------------------------------------------------  ---------------------------
+    Total                                     12.475ns (5.767ns logic, 6.708ns route)
+                                                       (46.2% logic, 53.8% route)
+
+--------------------------------------------------------------------------------
+Slack:                  7.486ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               btn_add_input/M_ctr_q_12 (FF)
   Destination:          M_highscore_q_6 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      14.588ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.086ns (0.627 - 0.713)
+  Data Path Delay:      12.468ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.011ns (0.290 - 0.301)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -819,539 +408,41 @@ Slack:                  5.291ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_0 to M_highscore_q_6
+  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_12 to M_highscore_q_6
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y50.AQ      Tcko                  0.476   btn_add_input/M_ctr_q[3]
-                                                       btn_add_input/M_ctr_q_0
-    SLICE_X13Y41.D3      net (fanout=4)        1.550   M_ctr_q_0
-    SLICE_X13Y41.D       Tilo                  0.259   N123
-                                                       btn_add_input/out4_SW1
-    SLICE_X11Y52.D1      net (fanout=4)        1.892   N123
-    SLICE_X11Y52.D       Tilo                  0.259   M_state_q_FSM_FFd1-In111
-                                                       M_state_q_FSM_FFd1-In11_2
-    SLICE_X6Y38.B1       net (fanout=7)        3.020   M_state_q_FSM_FFd1-In111
-    SLICE_X6Y38.B        Tilo                  0.235   M_alu_b[3]
-                                                       Mmux_M_alu_b102
-    DSP48_X0Y9.A3        net (fanout=4)        0.721   M_alu_b[3]
-    DSP48_X0Y9.M0        Tdspdo_A_M            3.265   alu/multiplicationModule/Mmult_n0008
-                                                       alu/multiplicationModule/Mmult_n0008
-    SLICE_X14Y39.D6      net (fanout=5)        1.224   n0008[0]
-    SLICE_X14Y39.D       Tilo                  0.235   _n0229_inv1_cepot_cepot
-                                                       _n0229_inv1_cepot_cepot
-    SLICE_X7Y38.CE       net (fanout=4)        1.044   _n0229_inv1_cepot_cepot
-    SLICE_X7Y38.CLK      Tceck                 0.408   M_highscore_q[7]
-                                                       M_highscore_q_6
-    -------------------------------------------------  ---------------------------
-    Total                                     14.588ns (5.137ns logic, 9.451ns route)
-                                                       (35.2% logic, 64.8% route)
-
---------------------------------------------------------------------------------
-Slack:                  5.296ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               btn_add_input/M_ctr_q_0 (FF)
-  Destination:          M_highscore_q_7 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      14.583ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.086ns (0.627 - 0.713)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_0 to M_highscore_q_7
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X10Y50.AQ      Tcko                  0.476   btn_add_input/M_ctr_q[3]
-                                                       btn_add_input/M_ctr_q_0
-    SLICE_X13Y41.D3      net (fanout=4)        1.550   M_ctr_q_0
-    SLICE_X13Y41.D       Tilo                  0.259   N123
-                                                       btn_add_input/out4_SW1
-    SLICE_X11Y52.D1      net (fanout=4)        1.892   N123
-    SLICE_X11Y52.D       Tilo                  0.259   M_state_q_FSM_FFd1-In111
-                                                       M_state_q_FSM_FFd1-In11_2
-    SLICE_X11Y38.B1      net (fanout=7)        2.462   M_state_q_FSM_FFd1-In111
-    SLICE_X11Y38.B       Tilo                  0.259   M_alu_a[15]
-                                                       Mmux_M_alu_a71
-    DSP48_X0Y9.B15       net (fanout=1)        0.647   M_alu_a[15]
-    DSP48_X0Y9.M0        Tdspdo_B_M            3.894   alu/multiplicationModule/Mmult_n0008
-                                                       alu/multiplicationModule/Mmult_n0008
-    SLICE_X14Y39.D6      net (fanout=5)        1.224   n0008[0]
-    SLICE_X14Y39.D       Tilo                  0.235   _n0229_inv1_cepot_cepot
-                                                       _n0229_inv1_cepot_cepot
-    SLICE_X7Y38.CE       net (fanout=4)        1.044   _n0229_inv1_cepot_cepot
-    SLICE_X7Y38.CLK      Tceck                 0.382   M_highscore_q[7]
-                                                       M_highscore_q_7
-    -------------------------------------------------  ---------------------------
-    Total                                     14.583ns (5.764ns logic, 8.819ns route)
-                                                       (39.5% logic, 60.5% route)
-
---------------------------------------------------------------------------------
-Slack:                  5.309ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               btn_add_input/M_ctr_q_0 (FF)
-  Destination:          M_highscore_q_5 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      14.570ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.086ns (0.627 - 0.713)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_0 to M_highscore_q_5
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X10Y50.AQ      Tcko                  0.476   btn_add_input/M_ctr_q[3]
-                                                       btn_add_input/M_ctr_q_0
-    SLICE_X13Y41.D3      net (fanout=4)        1.550   M_ctr_q_0
-    SLICE_X13Y41.D       Tilo                  0.259   N123
-                                                       btn_add_input/out4_SW1
-    SLICE_X11Y52.D1      net (fanout=4)        1.892   N123
-    SLICE_X11Y52.D       Tilo                  0.259   M_state_q_FSM_FFd1-In111
-                                                       M_state_q_FSM_FFd1-In11_2
-    SLICE_X6Y38.B1       net (fanout=7)        3.020   M_state_q_FSM_FFd1-In111
-    SLICE_X6Y38.B        Tilo                  0.235   M_alu_b[3]
-                                                       Mmux_M_alu_b102
-    DSP48_X0Y9.A3        net (fanout=4)        0.721   M_alu_b[3]
-    DSP48_X0Y9.M0        Tdspdo_A_M            3.265   alu/multiplicationModule/Mmult_n0008
-                                                       alu/multiplicationModule/Mmult_n0008
-    SLICE_X14Y39.D6      net (fanout=5)        1.224   n0008[0]
-    SLICE_X14Y39.D       Tilo                  0.235   _n0229_inv1_cepot_cepot
-                                                       _n0229_inv1_cepot_cepot
-    SLICE_X7Y38.CE       net (fanout=4)        1.044   _n0229_inv1_cepot_cepot
-    SLICE_X7Y38.CLK      Tceck                 0.390   M_highscore_q[7]
-                                                       M_highscore_q_5
-    -------------------------------------------------  ---------------------------
-    Total                                     14.570ns (5.119ns logic, 9.451ns route)
-                                                       (35.1% logic, 64.9% route)
-
---------------------------------------------------------------------------------
-Slack:                  5.311ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               btn_add_input/M_ctr_q_0 (FF)
-  Destination:          M_highscore_q_8 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      14.558ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.096ns (0.617 - 0.713)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_0 to M_highscore_q_8
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X10Y50.AQ      Tcko                  0.476   btn_add_input/M_ctr_q[3]
-                                                       btn_add_input/M_ctr_q_0
-    SLICE_X13Y41.D3      net (fanout=4)        1.550   M_ctr_q_0
-    SLICE_X13Y41.D       Tilo                  0.259   N123
-                                                       btn_add_input/out4_SW1
-    SLICE_X11Y52.D1      net (fanout=4)        1.892   N123
-    SLICE_X11Y52.D       Tilo                  0.259   M_state_q_FSM_FFd1-In111
-                                                       M_state_q_FSM_FFd1-In11_2
-    SLICE_X6Y38.B1       net (fanout=7)        3.020   M_state_q_FSM_FFd1-In111
-    SLICE_X6Y38.B        Tilo                  0.235   M_alu_b[3]
-                                                       Mmux_M_alu_b102
-    DSP48_X0Y9.A3        net (fanout=4)        0.721   M_alu_b[3]
-    DSP48_X0Y9.M0        Tdspdo_A_M            3.265   alu/multiplicationModule/Mmult_n0008
-                                                       alu/multiplicationModule/Mmult_n0008
-    SLICE_X14Y39.D6      net (fanout=5)        1.224   n0008[0]
-    SLICE_X14Y39.D       Tilo                  0.235   _n0229_inv1_cepot_cepot
-                                                       _n0229_inv1_cepot_cepot
-    SLICE_X8Y40.CE       net (fanout=4)        1.109   _n0229_inv1_cepot_cepot
-    SLICE_X8Y40.CLK      Tceck                 0.313   M_highscore_q[11]
-                                                       M_highscore_q_8
-    -------------------------------------------------  ---------------------------
-    Total                                     14.558ns (5.042ns logic, 9.516ns route)
-                                                       (34.6% logic, 65.4% route)
-
---------------------------------------------------------------------------------
-Slack:                  5.313ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               btn_add_input/M_ctr_q_0 (FF)
-  Destination:          M_highscore_q_4 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      14.566ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.086ns (0.627 - 0.713)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_0 to M_highscore_q_4
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X10Y50.AQ      Tcko                  0.476   btn_add_input/M_ctr_q[3]
-                                                       btn_add_input/M_ctr_q_0
-    SLICE_X13Y41.D3      net (fanout=4)        1.550   M_ctr_q_0
-    SLICE_X13Y41.D       Tilo                  0.259   N123
-                                                       btn_add_input/out4_SW1
-    SLICE_X11Y52.D1      net (fanout=4)        1.892   N123
-    SLICE_X11Y52.D       Tilo                  0.259   M_state_q_FSM_FFd1-In111
-                                                       M_state_q_FSM_FFd1-In11_2
-    SLICE_X11Y38.B1      net (fanout=7)        2.462   M_state_q_FSM_FFd1-In111
-    SLICE_X11Y38.B       Tilo                  0.259   M_alu_a[15]
-                                                       Mmux_M_alu_a71
-    DSP48_X0Y9.B15       net (fanout=1)        0.647   M_alu_a[15]
-    DSP48_X0Y9.M0        Tdspdo_B_M            3.894   alu/multiplicationModule/Mmult_n0008
-                                                       alu/multiplicationModule/Mmult_n0008
-    SLICE_X14Y39.D6      net (fanout=5)        1.224   n0008[0]
-    SLICE_X14Y39.D       Tilo                  0.235   _n0229_inv1_cepot_cepot
-                                                       _n0229_inv1_cepot_cepot
-    SLICE_X7Y38.CE       net (fanout=4)        1.044   _n0229_inv1_cepot_cepot
-    SLICE_X7Y38.CLK      Tceck                 0.365   M_highscore_q[7]
-                                                       M_highscore_q_4
-    -------------------------------------------------  ---------------------------
-    Total                                     14.566ns (5.747ns logic, 8.819ns route)
-                                                       (39.5% logic, 60.5% route)
-
---------------------------------------------------------------------------------
-Slack:                  5.317ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               btn_add_input/M_ctr_q_0 (FF)
-  Destination:          M_highscore_q_7 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      14.562ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.086ns (0.627 - 0.713)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_0 to M_highscore_q_7
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X10Y50.AQ      Tcko                  0.476   btn_add_input/M_ctr_q[3]
-                                                       btn_add_input/M_ctr_q_0
-    SLICE_X13Y41.D3      net (fanout=4)        1.550   M_ctr_q_0
-    SLICE_X13Y41.D       Tilo                  0.259   N123
-                                                       btn_add_input/out4_SW1
-    SLICE_X11Y52.D1      net (fanout=4)        1.892   N123
-    SLICE_X11Y52.D       Tilo                  0.259   M_state_q_FSM_FFd1-In111
-                                                       M_state_q_FSM_FFd1-In11_2
-    SLICE_X6Y38.B1       net (fanout=7)        3.020   M_state_q_FSM_FFd1-In111
-    SLICE_X6Y38.B        Tilo                  0.235   M_alu_b[3]
-                                                       Mmux_M_alu_b102
-    DSP48_X0Y9.A3        net (fanout=4)        0.721   M_alu_b[3]
-    DSP48_X0Y9.M0        Tdspdo_A_M            3.265   alu/multiplicationModule/Mmult_n0008
-                                                       alu/multiplicationModule/Mmult_n0008
-    SLICE_X14Y39.D6      net (fanout=5)        1.224   n0008[0]
-    SLICE_X14Y39.D       Tilo                  0.235   _n0229_inv1_cepot_cepot
-                                                       _n0229_inv1_cepot_cepot
-    SLICE_X7Y38.CE       net (fanout=4)        1.044   _n0229_inv1_cepot_cepot
-    SLICE_X7Y38.CLK      Tceck                 0.382   M_highscore_q[7]
-                                                       M_highscore_q_7
-    -------------------------------------------------  ---------------------------
-    Total                                     14.562ns (5.111ns logic, 9.451ns route)
-                                                       (35.1% logic, 64.9% route)
-
---------------------------------------------------------------------------------
-Slack:                  5.321ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               btn_add_input/M_ctr_q_0 (FF)
-  Destination:          M_b_q_14 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      14.526ns (Levels of Logic = 6)
-  Clock Path Skew:      -0.118ns (0.688 - 0.806)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_0 to M_b_q_14
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X10Y50.AQ      Tcko                  0.476   btn_add_input/M_ctr_q[3]
-                                                       btn_add_input/M_ctr_q_0
-    SLICE_X13Y41.D3      net (fanout=4)        1.550   M_ctr_q_0
-    SLICE_X13Y41.D       Tilo                  0.259   N123
-                                                       btn_add_input/out4_SW1
-    SLICE_X11Y51.B3      net (fanout=4)        1.541   N123
-    SLICE_X11Y51.B       Tilo                  0.259   out1_1
+    SLICE_X16Y40.AQ      Tcko                  0.525   btn_add_input/M_ctr_q[15]
+                                                       btn_add_input/M_ctr_q_12
+    SLICE_X14Y38.A1      net (fanout=2)        0.987   btn_add_input/M_ctr_q[12]
+    SLICE_X14Y38.A       Tilo                  0.235   M_alu_b[0]
+                                                       btn_add_input/out3
+    SLICE_X17Y38.A1      net (fanout=6)        0.772   out2_1
+    SLICE_X17Y38.A       Tilo                  0.259   out1_1
                                                        M_state_q_FSM_FFd1-In11_1
-    SLICE_X12Y31.B6      net (fanout=13)       2.330   M_state_q_FSM_FFd1-In11
-    SLICE_X12Y31.B       Tilo                  0.254   M_b_q[15]
-                                                       Mmux_M_alu_b71
-    DSP48_X0Y9.A15       net (fanout=5)        1.884   M_alu_b[15]
-    DSP48_X0Y9.M0        Tdspdo_A_M            3.265   alu/multiplicationModule/Mmult_n0008
-                                                       alu/multiplicationModule/Mmult_n0008
-    SLICE_X14Y31.A5      net (fanout=5)        1.323   n0008[0]
-    SLICE_X14Y31.A       Tilo                  0.235   M_b_q[6]
-                                                       _n0260_inv_rstpot
-    SLICE_X13Y30.D4      net (fanout=16)       0.777   _n0260_inv_rstpot
-    SLICE_X13Y30.CLK     Tas                   0.373   M_b_q[14]
-                                                       M_b_q_14_dpot
-                                                       M_b_q_14
-    -------------------------------------------------  ---------------------------
-    Total                                     14.526ns (5.121ns logic, 9.405ns route)
-                                                       (35.3% logic, 64.7% route)
-
---------------------------------------------------------------------------------
-Slack:                  5.334ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               btn_add_input/M_ctr_q_0 (FF)
-  Destination:          M_highscore_q_4 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      14.545ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.086ns (0.627 - 0.713)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_0 to M_highscore_q_4
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X10Y50.AQ      Tcko                  0.476   btn_add_input/M_ctr_q[3]
-                                                       btn_add_input/M_ctr_q_0
-    SLICE_X13Y41.D3      net (fanout=4)        1.550   M_ctr_q_0
-    SLICE_X13Y41.D       Tilo                  0.259   N123
-                                                       btn_add_input/out4_SW1
-    SLICE_X11Y52.D1      net (fanout=4)        1.892   N123
-    SLICE_X11Y52.D       Tilo                  0.259   M_state_q_FSM_FFd1-In111
-                                                       M_state_q_FSM_FFd1-In11_2
-    SLICE_X6Y38.B1       net (fanout=7)        3.020   M_state_q_FSM_FFd1-In111
-    SLICE_X6Y38.B        Tilo                  0.235   M_alu_b[3]
-                                                       Mmux_M_alu_b102
-    DSP48_X0Y9.A3        net (fanout=4)        0.721   M_alu_b[3]
-    DSP48_X0Y9.M0        Tdspdo_A_M            3.265   alu/multiplicationModule/Mmult_n0008
-                                                       alu/multiplicationModule/Mmult_n0008
-    SLICE_X14Y39.D6      net (fanout=5)        1.224   n0008[0]
-    SLICE_X14Y39.D       Tilo                  0.235   _n0229_inv1_cepot_cepot
-                                                       _n0229_inv1_cepot_cepot
-    SLICE_X7Y38.CE       net (fanout=4)        1.044   _n0229_inv1_cepot_cepot
-    SLICE_X7Y38.CLK      Tceck                 0.365   M_highscore_q[7]
-                                                       M_highscore_q_4
-    -------------------------------------------------  ---------------------------
-    Total                                     14.545ns (5.094ns logic, 9.451ns route)
-                                                       (35.0% logic, 65.0% route)
-
---------------------------------------------------------------------------------
-Slack:                  5.334ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               btn_add_input/M_ctr_q_0 (FF)
-  Destination:          M_highscore_q_10 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      14.535ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.096ns (0.617 - 0.713)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_0 to M_highscore_q_10
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X10Y50.AQ      Tcko                  0.476   btn_add_input/M_ctr_q[3]
-                                                       btn_add_input/M_ctr_q_0
-    SLICE_X13Y41.D3      net (fanout=4)        1.550   M_ctr_q_0
-    SLICE_X13Y41.D       Tilo                  0.259   N123
-                                                       btn_add_input/out4_SW1
-    SLICE_X11Y52.D1      net (fanout=4)        1.892   N123
-    SLICE_X11Y52.D       Tilo                  0.259   M_state_q_FSM_FFd1-In111
-                                                       M_state_q_FSM_FFd1-In11_2
-    SLICE_X11Y38.B1      net (fanout=7)        2.462   M_state_q_FSM_FFd1-In111
-    SLICE_X11Y38.B       Tilo                  0.259   M_alu_a[15]
-                                                       Mmux_M_alu_a71
-    DSP48_X0Y9.B15       net (fanout=1)        0.647   M_alu_a[15]
-    DSP48_X0Y9.M0        Tdspdo_B_M            3.894   alu/multiplicationModule/Mmult_n0008
-                                                       alu/multiplicationModule/Mmult_n0008
-    SLICE_X14Y39.D6      net (fanout=5)        1.224   n0008[0]
-    SLICE_X14Y39.D       Tilo                  0.235   _n0229_inv1_cepot_cepot
-                                                       _n0229_inv1_cepot_cepot
-    SLICE_X8Y40.CE       net (fanout=4)        1.109   _n0229_inv1_cepot_cepot
-    SLICE_X8Y40.CLK      Tceck                 0.269   M_highscore_q[11]
-                                                       M_highscore_q_10
-    -------------------------------------------------  ---------------------------
-    Total                                     14.535ns (5.651ns logic, 8.884ns route)
-                                                       (38.9% logic, 61.1% route)
-
---------------------------------------------------------------------------------
-Slack:                  5.337ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               btn_add_input/M_ctr_q_0 (FF)
-  Destination:          M_highscore_q_11 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      14.532ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.096ns (0.617 - 0.713)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_0 to M_highscore_q_11
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X10Y50.AQ      Tcko                  0.476   btn_add_input/M_ctr_q[3]
-                                                       btn_add_input/M_ctr_q_0
-    SLICE_X13Y41.D3      net (fanout=4)        1.550   M_ctr_q_0
-    SLICE_X13Y41.D       Tilo                  0.259   N123
-                                                       btn_add_input/out4_SW1
-    SLICE_X11Y52.D1      net (fanout=4)        1.892   N123
-    SLICE_X11Y52.D       Tilo                  0.259   M_state_q_FSM_FFd1-In111
-                                                       M_state_q_FSM_FFd1-In11_2
-    SLICE_X11Y38.B1      net (fanout=7)        2.462   M_state_q_FSM_FFd1-In111
-    SLICE_X11Y38.B       Tilo                  0.259   M_alu_a[15]
-                                                       Mmux_M_alu_a71
-    DSP48_X0Y9.B15       net (fanout=1)        0.647   M_alu_a[15]
-    DSP48_X0Y9.M0        Tdspdo_B_M            3.894   alu/multiplicationModule/Mmult_n0008
-                                                       alu/multiplicationModule/Mmult_n0008
-    SLICE_X14Y39.D6      net (fanout=5)        1.224   n0008[0]
-    SLICE_X14Y39.D       Tilo                  0.235   _n0229_inv1_cepot_cepot
-                                                       _n0229_inv1_cepot_cepot
-    SLICE_X8Y40.CE       net (fanout=4)        1.109   _n0229_inv1_cepot_cepot
-    SLICE_X8Y40.CLK      Tceck                 0.266   M_highscore_q[11]
-                                                       M_highscore_q_11
-    -------------------------------------------------  ---------------------------
-    Total                                     14.532ns (5.648ns logic, 8.884ns route)
-                                                       (38.9% logic, 61.1% route)
-
---------------------------------------------------------------------------------
-Slack:                  5.340ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               btn_add_input/M_ctr_q_0 (FF)
-  Destination:          M_b_q_10 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      14.506ns (Levels of Logic = 6)
-  Clock Path Skew:      -0.119ns (0.687 - 0.806)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_0 to M_b_q_10
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X10Y50.AQ      Tcko                  0.476   btn_add_input/M_ctr_q[3]
-                                                       btn_add_input/M_ctr_q_0
-    SLICE_X13Y41.D3      net (fanout=4)        1.550   M_ctr_q_0
-    SLICE_X13Y41.D       Tilo                  0.259   N123
-                                                       btn_add_input/out4_SW1
-    SLICE_X11Y52.D1      net (fanout=4)        1.892   N123
-    SLICE_X11Y52.D       Tilo                  0.259   M_state_q_FSM_FFd1-In111
-                                                       M_state_q_FSM_FFd1-In11_2
-    SLICE_X11Y38.B1      net (fanout=7)        2.462   M_state_q_FSM_FFd1-In111
-    SLICE_X11Y38.B       Tilo                  0.259   M_alu_a[15]
-                                                       Mmux_M_alu_a71
-    DSP48_X0Y9.B15       net (fanout=1)        0.647   M_alu_a[15]
-    DSP48_X0Y9.M0        Tdspdo_B_M            3.894   alu/multiplicationModule/Mmult_n0008
-                                                       alu/multiplicationModule/Mmult_n0008
-    SLICE_X14Y31.A5      net (fanout=5)        1.323   n0008[0]
-    SLICE_X14Y31.A       Tilo                  0.235   M_b_q[6]
-                                                       _n0260_inv_rstpot
-    SLICE_X13Y29.D3      net (fanout=16)       0.877   _n0260_inv_rstpot
-    SLICE_X13Y29.CLK     Tas                   0.373   M_b_q[10]
-                                                       M_b_q_10_dpot
-                                                       M_b_q_10
-    -------------------------------------------------  ---------------------------
-    Total                                     14.506ns (5.755ns logic, 8.751ns route)
-                                                       (39.7% logic, 60.3% route)
-
---------------------------------------------------------------------------------
-Slack:                  5.345ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               btn_add_input/M_ctr_q_0 (FF)
-  Destination:          M_b_q_11 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      14.502ns (Levels of Logic = 6)
-  Clock Path Skew:      -0.118ns (0.688 - 0.806)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_0 to M_b_q_11
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X10Y50.AQ      Tcko                  0.476   btn_add_input/M_ctr_q[3]
-                                                       btn_add_input/M_ctr_q_0
-    SLICE_X13Y41.D3      net (fanout=4)        1.550   M_ctr_q_0
-    SLICE_X13Y41.D       Tilo                  0.259   N123
-                                                       btn_add_input/out4_SW1
-    SLICE_X11Y51.B3      net (fanout=4)        1.541   N123
-    SLICE_X11Y51.B       Tilo                  0.259   out1_1
-                                                       M_state_q_FSM_FFd1-In11_1
-    SLICE_X14Y33.C4      net (fanout=13)       2.299   M_state_q_FSM_FFd1-In11
-    SLICE_X14Y33.C       Tilo                  0.235   M_counter_q[2]
+    SLICE_X15Y33.C2      net (fanout=13)       1.038   M_state_q_FSM_FFd1-In11
+    SLICE_X15Y33.C       Tilo                  0.259   M_counter_q[2]
                                                        Mmux_M_alu_a101
-    DSP48_X0Y9.B3        net (fanout=7)        1.029   M_alu_a[3]
-    DSP48_X0Y9.M0        Tdspdo_B_M            3.894   alu/multiplicationModule/Mmult_n0008
+    DSP48_X0Y8.B3        net (fanout=7)        1.468   M_alu_a[3]
+    DSP48_X0Y8.M0        Tdspdo_B_M            3.894   alu/multiplicationModule/Mmult_n0008
                                                        alu/multiplicationModule/Mmult_n0008
-    SLICE_X14Y31.A5      net (fanout=5)        1.323   n0008[0]
-    SLICE_X14Y31.A       Tilo                  0.235   M_b_q[6]
-                                                       _n0260_inv_rstpot
-    SLICE_X13Y30.A2      net (fanout=16)       1.029   _n0260_inv_rstpot
-    SLICE_X13Y30.CLK     Tas                   0.373   M_b_q[14]
-                                                       M_b_q_11_dpot
-                                                       M_b_q_11
+    SLICE_X14Y39.D3      net (fanout=5)        1.662   n0008[0]
+    SLICE_X14Y39.D       Tilo                  0.235   _n0240_inv1_cepot_cepot
+                                                       _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CE      net (fanout=4)        0.726   _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CLK     Tceck                 0.408   M_highscore_q[7]
+                                                       M_highscore_q_6
     -------------------------------------------------  ---------------------------
-    Total                                     14.502ns (5.731ns logic, 8.771ns route)
-                                                       (39.5% logic, 60.5% route)
+    Total                                     12.468ns (5.815ns logic, 6.653ns route)
+                                                       (46.6% logic, 53.4% route)
 
 --------------------------------------------------------------------------------
-Slack:                  5.350ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               btn_add_input/M_ctr_q_0 (FF)
-  Destination:          M_highscore_q_9 (FF)
+Slack:                  7.504ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               btn_add_input/M_ctr_q_12 (FF)
+  Destination:          M_highscore_q_5 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      14.519ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.096ns (0.617 - 0.713)
+  Data Path Delay:      12.450ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.011ns (0.290 - 0.301)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -1362,33 +453,935 @@ Slack:                  5.350ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_0 to M_highscore_q_9
+  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_12 to M_highscore_q_5
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y50.AQ      Tcko                  0.476   btn_add_input/M_ctr_q[3]
-                                                       btn_add_input/M_ctr_q_0
-    SLICE_X13Y41.D3      net (fanout=4)        1.550   M_ctr_q_0
-    SLICE_X13Y41.D       Tilo                  0.259   N123
-                                                       btn_add_input/out4_SW1
-    SLICE_X11Y52.D1      net (fanout=4)        1.892   N123
-    SLICE_X11Y52.D       Tilo                  0.259   M_state_q_FSM_FFd1-In111
-                                                       M_state_q_FSM_FFd1-In11_2
-    SLICE_X11Y38.B1      net (fanout=7)        2.462   M_state_q_FSM_FFd1-In111
-    SLICE_X11Y38.B       Tilo                  0.259   M_alu_a[15]
-                                                       Mmux_M_alu_a71
-    DSP48_X0Y9.B15       net (fanout=1)        0.647   M_alu_a[15]
-    DSP48_X0Y9.M0        Tdspdo_B_M            3.894   alu/multiplicationModule/Mmult_n0008
+    SLICE_X16Y40.AQ      Tcko                  0.525   btn_add_input/M_ctr_q[15]
+                                                       btn_add_input/M_ctr_q_12
+    SLICE_X14Y38.A1      net (fanout=2)        0.987   btn_add_input/M_ctr_q[12]
+    SLICE_X14Y38.A       Tilo                  0.235   M_alu_b[0]
+                                                       btn_add_input/out3
+    SLICE_X17Y38.A1      net (fanout=6)        0.772   out2_1
+    SLICE_X17Y38.A       Tilo                  0.259   out1_1
+                                                       M_state_q_FSM_FFd1-In11_1
+    SLICE_X15Y33.C2      net (fanout=13)       1.038   M_state_q_FSM_FFd1-In11
+    SLICE_X15Y33.C       Tilo                  0.259   M_counter_q[2]
+                                                       Mmux_M_alu_a101
+    DSP48_X0Y8.B3        net (fanout=7)        1.468   M_alu_a[3]
+    DSP48_X0Y8.M0        Tdspdo_B_M            3.894   alu/multiplicationModule/Mmult_n0008
                                                        alu/multiplicationModule/Mmult_n0008
-    SLICE_X14Y39.D6      net (fanout=5)        1.224   n0008[0]
-    SLICE_X14Y39.D       Tilo                  0.235   _n0229_inv1_cepot_cepot
-                                                       _n0229_inv1_cepot_cepot
-    SLICE_X8Y40.CE       net (fanout=4)        1.109   _n0229_inv1_cepot_cepot
-    SLICE_X8Y40.CLK      Tceck                 0.253   M_highscore_q[11]
-                                                       M_highscore_q_9
+    SLICE_X14Y39.D3      net (fanout=5)        1.662   n0008[0]
+    SLICE_X14Y39.D       Tilo                  0.235   _n0240_inv1_cepot_cepot
+                                                       _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CE      net (fanout=4)        0.726   _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CLK     Tceck                 0.390   M_highscore_q[7]
+                                                       M_highscore_q_5
     -------------------------------------------------  ---------------------------
-    Total                                     14.519ns (5.635ns logic, 8.884ns route)
-                                                       (38.8% logic, 61.2% route)
+    Total                                     12.450ns (5.797ns logic, 6.653ns route)
+                                                       (46.6% logic, 53.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  7.512ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               btn_add_input/M_ctr_q_12 (FF)
+  Destination:          M_highscore_q_7 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      12.442ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.011ns (0.290 - 0.301)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_12 to M_highscore_q_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y40.AQ      Tcko                  0.525   btn_add_input/M_ctr_q[15]
+                                                       btn_add_input/M_ctr_q_12
+    SLICE_X14Y38.A1      net (fanout=2)        0.987   btn_add_input/M_ctr_q[12]
+    SLICE_X14Y38.A       Tilo                  0.235   M_alu_b[0]
+                                                       btn_add_input/out3
+    SLICE_X17Y38.A1      net (fanout=6)        0.772   out2_1
+    SLICE_X17Y38.A       Tilo                  0.259   out1_1
+                                                       M_state_q_FSM_FFd1-In11_1
+    SLICE_X15Y33.C2      net (fanout=13)       1.038   M_state_q_FSM_FFd1-In11
+    SLICE_X15Y33.C       Tilo                  0.259   M_counter_q[2]
+                                                       Mmux_M_alu_a101
+    DSP48_X0Y8.B3        net (fanout=7)        1.468   M_alu_a[3]
+    DSP48_X0Y8.M0        Tdspdo_B_M            3.894   alu/multiplicationModule/Mmult_n0008
+                                                       alu/multiplicationModule/Mmult_n0008
+    SLICE_X14Y39.D3      net (fanout=5)        1.662   n0008[0]
+    SLICE_X14Y39.D       Tilo                  0.235   _n0240_inv1_cepot_cepot
+                                                       _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CE      net (fanout=4)        0.726   _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CLK     Tceck                 0.382   M_highscore_q[7]
+                                                       M_highscore_q_7
+    -------------------------------------------------  ---------------------------
+    Total                                     12.442ns (5.789ns logic, 6.653ns route)
+                                                       (46.5% logic, 53.5% route)
+
+--------------------------------------------------------------------------------
+Slack:                  7.522ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               btn_add_input/M_ctr_q_13 (FF)
+  Destination:          M_highscore_q_6 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      12.432ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.011ns (0.290 - 0.301)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_13 to M_highscore_q_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y40.BQ      Tcko                  0.525   btn_add_input/M_ctr_q[15]
+                                                       btn_add_input/M_ctr_q_13
+    SLICE_X14Y38.A2      net (fanout=2)        0.951   btn_add_input/M_ctr_q[13]
+    SLICE_X14Y38.A       Tilo                  0.235   M_alu_b[0]
+                                                       btn_add_input/out3
+    SLICE_X17Y38.A1      net (fanout=6)        0.772   out2_1
+    SLICE_X17Y38.A       Tilo                  0.259   out1_1
+                                                       M_state_q_FSM_FFd1-In11_1
+    SLICE_X15Y33.C2      net (fanout=13)       1.038   M_state_q_FSM_FFd1-In11
+    SLICE_X15Y33.C       Tilo                  0.259   M_counter_q[2]
+                                                       Mmux_M_alu_a101
+    DSP48_X0Y8.B3        net (fanout=7)        1.468   M_alu_a[3]
+    DSP48_X0Y8.M0        Tdspdo_B_M            3.894   alu/multiplicationModule/Mmult_n0008
+                                                       alu/multiplicationModule/Mmult_n0008
+    SLICE_X14Y39.D3      net (fanout=5)        1.662   n0008[0]
+    SLICE_X14Y39.D       Tilo                  0.235   _n0240_inv1_cepot_cepot
+                                                       _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CE      net (fanout=4)        0.726   _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CLK     Tceck                 0.408   M_highscore_q[7]
+                                                       M_highscore_q_6
+    -------------------------------------------------  ---------------------------
+    Total                                     12.432ns (5.815ns logic, 6.617ns route)
+                                                       (46.8% logic, 53.2% route)
+
+--------------------------------------------------------------------------------
+Slack:                  7.524ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               btn_add_input/M_ctr_q_12 (FF)
+  Destination:          M_highscore_q_6 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      12.430ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.011ns (0.290 - 0.301)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_12 to M_highscore_q_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y40.AQ      Tcko                  0.525   btn_add_input/M_ctr_q[15]
+                                                       btn_add_input/M_ctr_q_12
+    SLICE_X14Y38.A1      net (fanout=2)        0.987   btn_add_input/M_ctr_q[12]
+    SLICE_X14Y38.A       Tilo                  0.235   M_alu_b[0]
+                                                       btn_add_input/out3
+    SLICE_X14Y38.C4      net (fanout=6)        0.903   out2_1
+    SLICE_X14Y38.C       Tilo                  0.235   M_alu_b[0]
+                                                       M_state_q_FSM_FFd1-In11_2
+    SLICE_X12Y36.B1      net (fanout=7)        0.977   M_state_q_FSM_FFd1-In111
+    SLICE_X12Y36.B       Tilo                  0.254   M_alu_a[14]
+                                                       Mmux_M_alu_a61
+    DSP48_X0Y8.B14       net (fanout=5)        1.389   M_alu_a[14]
+    DSP48_X0Y8.M0        Tdspdo_B_M            3.894   alu/multiplicationModule/Mmult_n0008
+                                                       alu/multiplicationModule/Mmult_n0008
+    SLICE_X14Y39.D3      net (fanout=5)        1.662   n0008[0]
+    SLICE_X14Y39.D       Tilo                  0.235   _n0240_inv1_cepot_cepot
+                                                       _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CE      net (fanout=4)        0.726   _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CLK     Tceck                 0.408   M_highscore_q[7]
+                                                       M_highscore_q_6
+    -------------------------------------------------  ---------------------------
+    Total                                     12.430ns (5.786ns logic, 6.644ns route)
+                                                       (46.5% logic, 53.5% route)
+
+--------------------------------------------------------------------------------
+Slack:                  7.529ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               btn_add_input/M_ctr_q_12 (FF)
+  Destination:          M_highscore_q_4 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      12.425ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.011ns (0.290 - 0.301)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_12 to M_highscore_q_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y40.AQ      Tcko                  0.525   btn_add_input/M_ctr_q[15]
+                                                       btn_add_input/M_ctr_q_12
+    SLICE_X14Y38.A1      net (fanout=2)        0.987   btn_add_input/M_ctr_q[12]
+    SLICE_X14Y38.A       Tilo                  0.235   M_alu_b[0]
+                                                       btn_add_input/out3
+    SLICE_X17Y38.A1      net (fanout=6)        0.772   out2_1
+    SLICE_X17Y38.A       Tilo                  0.259   out1_1
+                                                       M_state_q_FSM_FFd1-In11_1
+    SLICE_X15Y33.C2      net (fanout=13)       1.038   M_state_q_FSM_FFd1-In11
+    SLICE_X15Y33.C       Tilo                  0.259   M_counter_q[2]
+                                                       Mmux_M_alu_a101
+    DSP48_X0Y8.B3        net (fanout=7)        1.468   M_alu_a[3]
+    DSP48_X0Y8.M0        Tdspdo_B_M            3.894   alu/multiplicationModule/Mmult_n0008
+                                                       alu/multiplicationModule/Mmult_n0008
+    SLICE_X14Y39.D3      net (fanout=5)        1.662   n0008[0]
+    SLICE_X14Y39.D       Tilo                  0.235   _n0240_inv1_cepot_cepot
+                                                       _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CE      net (fanout=4)        0.726   _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CLK     Tceck                 0.365   M_highscore_q[7]
+                                                       M_highscore_q_4
+    -------------------------------------------------  ---------------------------
+    Total                                     12.425ns (5.772ns logic, 6.653ns route)
+                                                       (46.5% logic, 53.5% route)
+
+--------------------------------------------------------------------------------
+Slack:                  7.535ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               btn_add_input/M_ctr_q_12 (FF)
+  Destination:          M_highscore_q_6 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      12.419ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.011ns (0.290 - 0.301)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_12 to M_highscore_q_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y40.AQ      Tcko                  0.525   btn_add_input/M_ctr_q[15]
+                                                       btn_add_input/M_ctr_q_12
+    SLICE_X14Y38.A1      net (fanout=2)        0.987   btn_add_input/M_ctr_q[12]
+    SLICE_X14Y38.A       Tilo                  0.235   M_alu_b[0]
+                                                       btn_add_input/out3
+    SLICE_X14Y38.C4      net (fanout=6)        0.903   out2_1
+    SLICE_X14Y38.C       Tilo                  0.235   M_alu_b[0]
+                                                       M_state_q_FSM_FFd1-In11_2
+    SLICE_X17Y29.D1      net (fanout=7)        1.538   M_state_q_FSM_FFd1-In111
+    SLICE_X17Y29.D       Tilo                  0.259   M_b_q[6]
+                                                       Mmux_M_alu_b111
+    DSP48_X0Y8.A4        net (fanout=5)        1.441   M_alu_b[4]
+    DSP48_X0Y8.M0        Tdspdo_A_M            3.265   alu/multiplicationModule/Mmult_n0008
+                                                       alu/multiplicationModule/Mmult_n0008
+    SLICE_X14Y39.D3      net (fanout=5)        1.662   n0008[0]
+    SLICE_X14Y39.D       Tilo                  0.235   _n0240_inv1_cepot_cepot
+                                                       _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CE      net (fanout=4)        0.726   _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CLK     Tceck                 0.408   M_highscore_q[7]
+                                                       M_highscore_q_6
+    -------------------------------------------------  ---------------------------
+    Total                                     12.419ns (5.162ns logic, 7.257ns route)
+                                                       (41.6% logic, 58.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  7.540ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               btn_add_input/M_ctr_q_13 (FF)
+  Destination:          M_highscore_q_5 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      12.414ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.011ns (0.290 - 0.301)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_13 to M_highscore_q_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y40.BQ      Tcko                  0.525   btn_add_input/M_ctr_q[15]
+                                                       btn_add_input/M_ctr_q_13
+    SLICE_X14Y38.A2      net (fanout=2)        0.951   btn_add_input/M_ctr_q[13]
+    SLICE_X14Y38.A       Tilo                  0.235   M_alu_b[0]
+                                                       btn_add_input/out3
+    SLICE_X17Y38.A1      net (fanout=6)        0.772   out2_1
+    SLICE_X17Y38.A       Tilo                  0.259   out1_1
+                                                       M_state_q_FSM_FFd1-In11_1
+    SLICE_X15Y33.C2      net (fanout=13)       1.038   M_state_q_FSM_FFd1-In11
+    SLICE_X15Y33.C       Tilo                  0.259   M_counter_q[2]
+                                                       Mmux_M_alu_a101
+    DSP48_X0Y8.B3        net (fanout=7)        1.468   M_alu_a[3]
+    DSP48_X0Y8.M0        Tdspdo_B_M            3.894   alu/multiplicationModule/Mmult_n0008
+                                                       alu/multiplicationModule/Mmult_n0008
+    SLICE_X14Y39.D3      net (fanout=5)        1.662   n0008[0]
+    SLICE_X14Y39.D       Tilo                  0.235   _n0240_inv1_cepot_cepot
+                                                       _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CE      net (fanout=4)        0.726   _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CLK     Tceck                 0.390   M_highscore_q[7]
+                                                       M_highscore_q_5
+    -------------------------------------------------  ---------------------------
+    Total                                     12.414ns (5.797ns logic, 6.617ns route)
+                                                       (46.7% logic, 53.3% route)
+
+--------------------------------------------------------------------------------
+Slack:                  7.542ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               btn_add_input/M_ctr_q_12 (FF)
+  Destination:          M_highscore_q_5 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      12.412ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.011ns (0.290 - 0.301)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_12 to M_highscore_q_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y40.AQ      Tcko                  0.525   btn_add_input/M_ctr_q[15]
+                                                       btn_add_input/M_ctr_q_12
+    SLICE_X14Y38.A1      net (fanout=2)        0.987   btn_add_input/M_ctr_q[12]
+    SLICE_X14Y38.A       Tilo                  0.235   M_alu_b[0]
+                                                       btn_add_input/out3
+    SLICE_X14Y38.C4      net (fanout=6)        0.903   out2_1
+    SLICE_X14Y38.C       Tilo                  0.235   M_alu_b[0]
+                                                       M_state_q_FSM_FFd1-In11_2
+    SLICE_X12Y36.B1      net (fanout=7)        0.977   M_state_q_FSM_FFd1-In111
+    SLICE_X12Y36.B       Tilo                  0.254   M_alu_a[14]
+                                                       Mmux_M_alu_a61
+    DSP48_X0Y8.B14       net (fanout=5)        1.389   M_alu_a[14]
+    DSP48_X0Y8.M0        Tdspdo_B_M            3.894   alu/multiplicationModule/Mmult_n0008
+                                                       alu/multiplicationModule/Mmult_n0008
+    SLICE_X14Y39.D3      net (fanout=5)        1.662   n0008[0]
+    SLICE_X14Y39.D       Tilo                  0.235   _n0240_inv1_cepot_cepot
+                                                       _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CE      net (fanout=4)        0.726   _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CLK     Tceck                 0.390   M_highscore_q[7]
+                                                       M_highscore_q_5
+    -------------------------------------------------  ---------------------------
+    Total                                     12.412ns (5.768ns logic, 6.644ns route)
+                                                       (46.5% logic, 53.5% route)
+
+--------------------------------------------------------------------------------
+Slack:                  7.548ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               btn_add_input/M_ctr_q_13 (FF)
+  Destination:          M_highscore_q_7 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      12.406ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.011ns (0.290 - 0.301)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_13 to M_highscore_q_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y40.BQ      Tcko                  0.525   btn_add_input/M_ctr_q[15]
+                                                       btn_add_input/M_ctr_q_13
+    SLICE_X14Y38.A2      net (fanout=2)        0.951   btn_add_input/M_ctr_q[13]
+    SLICE_X14Y38.A       Tilo                  0.235   M_alu_b[0]
+                                                       btn_add_input/out3
+    SLICE_X17Y38.A1      net (fanout=6)        0.772   out2_1
+    SLICE_X17Y38.A       Tilo                  0.259   out1_1
+                                                       M_state_q_FSM_FFd1-In11_1
+    SLICE_X15Y33.C2      net (fanout=13)       1.038   M_state_q_FSM_FFd1-In11
+    SLICE_X15Y33.C       Tilo                  0.259   M_counter_q[2]
+                                                       Mmux_M_alu_a101
+    DSP48_X0Y8.B3        net (fanout=7)        1.468   M_alu_a[3]
+    DSP48_X0Y8.M0        Tdspdo_B_M            3.894   alu/multiplicationModule/Mmult_n0008
+                                                       alu/multiplicationModule/Mmult_n0008
+    SLICE_X14Y39.D3      net (fanout=5)        1.662   n0008[0]
+    SLICE_X14Y39.D       Tilo                  0.235   _n0240_inv1_cepot_cepot
+                                                       _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CE      net (fanout=4)        0.726   _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CLK     Tceck                 0.382   M_highscore_q[7]
+                                                       M_highscore_q_7
+    -------------------------------------------------  ---------------------------
+    Total                                     12.406ns (5.789ns logic, 6.617ns route)
+                                                       (46.7% logic, 53.3% route)
+
+--------------------------------------------------------------------------------
+Slack:                  7.550ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               btn_add_input/M_ctr_q_12 (FF)
+  Destination:          M_highscore_q_7 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      12.404ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.011ns (0.290 - 0.301)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_12 to M_highscore_q_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y40.AQ      Tcko                  0.525   btn_add_input/M_ctr_q[15]
+                                                       btn_add_input/M_ctr_q_12
+    SLICE_X14Y38.A1      net (fanout=2)        0.987   btn_add_input/M_ctr_q[12]
+    SLICE_X14Y38.A       Tilo                  0.235   M_alu_b[0]
+                                                       btn_add_input/out3
+    SLICE_X14Y38.C4      net (fanout=6)        0.903   out2_1
+    SLICE_X14Y38.C       Tilo                  0.235   M_alu_b[0]
+                                                       M_state_q_FSM_FFd1-In11_2
+    SLICE_X12Y36.B1      net (fanout=7)        0.977   M_state_q_FSM_FFd1-In111
+    SLICE_X12Y36.B       Tilo                  0.254   M_alu_a[14]
+                                                       Mmux_M_alu_a61
+    DSP48_X0Y8.B14       net (fanout=5)        1.389   M_alu_a[14]
+    DSP48_X0Y8.M0        Tdspdo_B_M            3.894   alu/multiplicationModule/Mmult_n0008
+                                                       alu/multiplicationModule/Mmult_n0008
+    SLICE_X14Y39.D3      net (fanout=5)        1.662   n0008[0]
+    SLICE_X14Y39.D       Tilo                  0.235   _n0240_inv1_cepot_cepot
+                                                       _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CE      net (fanout=4)        0.726   _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CLK     Tceck                 0.382   M_highscore_q[7]
+                                                       M_highscore_q_7
+    -------------------------------------------------  ---------------------------
+    Total                                     12.404ns (5.760ns logic, 6.644ns route)
+                                                       (46.4% logic, 53.6% route)
+
+--------------------------------------------------------------------------------
+Slack:                  7.553ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               btn_add_input/M_ctr_q_12 (FF)
+  Destination:          M_highscore_q_5 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      12.401ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.011ns (0.290 - 0.301)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_12 to M_highscore_q_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y40.AQ      Tcko                  0.525   btn_add_input/M_ctr_q[15]
+                                                       btn_add_input/M_ctr_q_12
+    SLICE_X14Y38.A1      net (fanout=2)        0.987   btn_add_input/M_ctr_q[12]
+    SLICE_X14Y38.A       Tilo                  0.235   M_alu_b[0]
+                                                       btn_add_input/out3
+    SLICE_X14Y38.C4      net (fanout=6)        0.903   out2_1
+    SLICE_X14Y38.C       Tilo                  0.235   M_alu_b[0]
+                                                       M_state_q_FSM_FFd1-In11_2
+    SLICE_X17Y29.D1      net (fanout=7)        1.538   M_state_q_FSM_FFd1-In111
+    SLICE_X17Y29.D       Tilo                  0.259   M_b_q[6]
+                                                       Mmux_M_alu_b111
+    DSP48_X0Y8.A4        net (fanout=5)        1.441   M_alu_b[4]
+    DSP48_X0Y8.M0        Tdspdo_A_M            3.265   alu/multiplicationModule/Mmult_n0008
+                                                       alu/multiplicationModule/Mmult_n0008
+    SLICE_X14Y39.D3      net (fanout=5)        1.662   n0008[0]
+    SLICE_X14Y39.D       Tilo                  0.235   _n0240_inv1_cepot_cepot
+                                                       _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CE      net (fanout=4)        0.726   _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CLK     Tceck                 0.390   M_highscore_q[7]
+                                                       M_highscore_q_5
+    -------------------------------------------------  ---------------------------
+    Total                                     12.401ns (5.144ns logic, 7.257ns route)
+                                                       (41.5% logic, 58.5% route)
+
+--------------------------------------------------------------------------------
+Slack:                  7.560ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               btn_add_input/M_ctr_q_13 (FF)
+  Destination:          M_highscore_q_6 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      12.394ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.011ns (0.290 - 0.301)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_13 to M_highscore_q_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y40.BQ      Tcko                  0.525   btn_add_input/M_ctr_q[15]
+                                                       btn_add_input/M_ctr_q_13
+    SLICE_X14Y38.A2      net (fanout=2)        0.951   btn_add_input/M_ctr_q[13]
+    SLICE_X14Y38.A       Tilo                  0.235   M_alu_b[0]
+                                                       btn_add_input/out3
+    SLICE_X14Y38.C4      net (fanout=6)        0.903   out2_1
+    SLICE_X14Y38.C       Tilo                  0.235   M_alu_b[0]
+                                                       M_state_q_FSM_FFd1-In11_2
+    SLICE_X12Y36.B1      net (fanout=7)        0.977   M_state_q_FSM_FFd1-In111
+    SLICE_X12Y36.B       Tilo                  0.254   M_alu_a[14]
+                                                       Mmux_M_alu_a61
+    DSP48_X0Y8.B14       net (fanout=5)        1.389   M_alu_a[14]
+    DSP48_X0Y8.M0        Tdspdo_B_M            3.894   alu/multiplicationModule/Mmult_n0008
+                                                       alu/multiplicationModule/Mmult_n0008
+    SLICE_X14Y39.D3      net (fanout=5)        1.662   n0008[0]
+    SLICE_X14Y39.D       Tilo                  0.235   _n0240_inv1_cepot_cepot
+                                                       _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CE      net (fanout=4)        0.726   _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CLK     Tceck                 0.408   M_highscore_q[7]
+                                                       M_highscore_q_6
+    -------------------------------------------------  ---------------------------
+    Total                                     12.394ns (5.786ns logic, 6.608ns route)
+                                                       (46.7% logic, 53.3% route)
+
+--------------------------------------------------------------------------------
+Slack:                  7.561ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               btn_add_input/M_ctr_q_12 (FF)
+  Destination:          M_highscore_q_7 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      12.393ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.011ns (0.290 - 0.301)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_12 to M_highscore_q_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y40.AQ      Tcko                  0.525   btn_add_input/M_ctr_q[15]
+                                                       btn_add_input/M_ctr_q_12
+    SLICE_X14Y38.A1      net (fanout=2)        0.987   btn_add_input/M_ctr_q[12]
+    SLICE_X14Y38.A       Tilo                  0.235   M_alu_b[0]
+                                                       btn_add_input/out3
+    SLICE_X14Y38.C4      net (fanout=6)        0.903   out2_1
+    SLICE_X14Y38.C       Tilo                  0.235   M_alu_b[0]
+                                                       M_state_q_FSM_FFd1-In11_2
+    SLICE_X17Y29.D1      net (fanout=7)        1.538   M_state_q_FSM_FFd1-In111
+    SLICE_X17Y29.D       Tilo                  0.259   M_b_q[6]
+                                                       Mmux_M_alu_b111
+    DSP48_X0Y8.A4        net (fanout=5)        1.441   M_alu_b[4]
+    DSP48_X0Y8.M0        Tdspdo_A_M            3.265   alu/multiplicationModule/Mmult_n0008
+                                                       alu/multiplicationModule/Mmult_n0008
+    SLICE_X14Y39.D3      net (fanout=5)        1.662   n0008[0]
+    SLICE_X14Y39.D       Tilo                  0.235   _n0240_inv1_cepot_cepot
+                                                       _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CE      net (fanout=4)        0.726   _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CLK     Tceck                 0.382   M_highscore_q[7]
+                                                       M_highscore_q_7
+    -------------------------------------------------  ---------------------------
+    Total                                     12.393ns (5.136ns logic, 7.257ns route)
+                                                       (41.4% logic, 58.6% route)
+
+--------------------------------------------------------------------------------
+Slack:                  7.565ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               btn_add_input/M_ctr_q_13 (FF)
+  Destination:          M_highscore_q_4 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      12.389ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.011ns (0.290 - 0.301)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_13 to M_highscore_q_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y40.BQ      Tcko                  0.525   btn_add_input/M_ctr_q[15]
+                                                       btn_add_input/M_ctr_q_13
+    SLICE_X14Y38.A2      net (fanout=2)        0.951   btn_add_input/M_ctr_q[13]
+    SLICE_X14Y38.A       Tilo                  0.235   M_alu_b[0]
+                                                       btn_add_input/out3
+    SLICE_X17Y38.A1      net (fanout=6)        0.772   out2_1
+    SLICE_X17Y38.A       Tilo                  0.259   out1_1
+                                                       M_state_q_FSM_FFd1-In11_1
+    SLICE_X15Y33.C2      net (fanout=13)       1.038   M_state_q_FSM_FFd1-In11
+    SLICE_X15Y33.C       Tilo                  0.259   M_counter_q[2]
+                                                       Mmux_M_alu_a101
+    DSP48_X0Y8.B3        net (fanout=7)        1.468   M_alu_a[3]
+    DSP48_X0Y8.M0        Tdspdo_B_M            3.894   alu/multiplicationModule/Mmult_n0008
+                                                       alu/multiplicationModule/Mmult_n0008
+    SLICE_X14Y39.D3      net (fanout=5)        1.662   n0008[0]
+    SLICE_X14Y39.D       Tilo                  0.235   _n0240_inv1_cepot_cepot
+                                                       _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CE      net (fanout=4)        0.726   _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CLK     Tceck                 0.365   M_highscore_q[7]
+                                                       M_highscore_q_4
+    -------------------------------------------------  ---------------------------
+    Total                                     12.389ns (5.772ns logic, 6.617ns route)
+                                                       (46.6% logic, 53.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  7.567ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               btn_add_input/M_ctr_q_12 (FF)
+  Destination:          M_highscore_q_4 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      12.387ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.011ns (0.290 - 0.301)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_12 to M_highscore_q_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y40.AQ      Tcko                  0.525   btn_add_input/M_ctr_q[15]
+                                                       btn_add_input/M_ctr_q_12
+    SLICE_X14Y38.A1      net (fanout=2)        0.987   btn_add_input/M_ctr_q[12]
+    SLICE_X14Y38.A       Tilo                  0.235   M_alu_b[0]
+                                                       btn_add_input/out3
+    SLICE_X14Y38.C4      net (fanout=6)        0.903   out2_1
+    SLICE_X14Y38.C       Tilo                  0.235   M_alu_b[0]
+                                                       M_state_q_FSM_FFd1-In11_2
+    SLICE_X12Y36.B1      net (fanout=7)        0.977   M_state_q_FSM_FFd1-In111
+    SLICE_X12Y36.B       Tilo                  0.254   M_alu_a[14]
+                                                       Mmux_M_alu_a61
+    DSP48_X0Y8.B14       net (fanout=5)        1.389   M_alu_a[14]
+    DSP48_X0Y8.M0        Tdspdo_B_M            3.894   alu/multiplicationModule/Mmult_n0008
+                                                       alu/multiplicationModule/Mmult_n0008
+    SLICE_X14Y39.D3      net (fanout=5)        1.662   n0008[0]
+    SLICE_X14Y39.D       Tilo                  0.235   _n0240_inv1_cepot_cepot
+                                                       _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CE      net (fanout=4)        0.726   _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CLK     Tceck                 0.365   M_highscore_q[7]
+                                                       M_highscore_q_4
+    -------------------------------------------------  ---------------------------
+    Total                                     12.387ns (5.743ns logic, 6.644ns route)
+                                                       (46.4% logic, 53.6% route)
+
+--------------------------------------------------------------------------------
+Slack:                  7.571ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               btn_add_input/M_ctr_q_13 (FF)
+  Destination:          M_highscore_q_6 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      12.383ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.011ns (0.290 - 0.301)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_13 to M_highscore_q_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y40.BQ      Tcko                  0.525   btn_add_input/M_ctr_q[15]
+                                                       btn_add_input/M_ctr_q_13
+    SLICE_X14Y38.A2      net (fanout=2)        0.951   btn_add_input/M_ctr_q[13]
+    SLICE_X14Y38.A       Tilo                  0.235   M_alu_b[0]
+                                                       btn_add_input/out3
+    SLICE_X14Y38.C4      net (fanout=6)        0.903   out2_1
+    SLICE_X14Y38.C       Tilo                  0.235   M_alu_b[0]
+                                                       M_state_q_FSM_FFd1-In11_2
+    SLICE_X17Y29.D1      net (fanout=7)        1.538   M_state_q_FSM_FFd1-In111
+    SLICE_X17Y29.D       Tilo                  0.259   M_b_q[6]
+                                                       Mmux_M_alu_b111
+    DSP48_X0Y8.A4        net (fanout=5)        1.441   M_alu_b[4]
+    DSP48_X0Y8.M0        Tdspdo_A_M            3.265   alu/multiplicationModule/Mmult_n0008
+                                                       alu/multiplicationModule/Mmult_n0008
+    SLICE_X14Y39.D3      net (fanout=5)        1.662   n0008[0]
+    SLICE_X14Y39.D       Tilo                  0.235   _n0240_inv1_cepot_cepot
+                                                       _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CE      net (fanout=4)        0.726   _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CLK     Tceck                 0.408   M_highscore_q[7]
+                                                       M_highscore_q_6
+    -------------------------------------------------  ---------------------------
+    Total                                     12.383ns (5.162ns logic, 7.221ns route)
+                                                       (41.7% logic, 58.3% route)
+
+--------------------------------------------------------------------------------
+Slack:                  7.577ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               btn_add_input/M_ctr_q_12 (FF)
+  Destination:          M_b_q_5 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      12.369ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.019ns (0.687 - 0.706)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_12 to M_b_q_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y40.AQ      Tcko                  0.525   btn_add_input/M_ctr_q[15]
+                                                       btn_add_input/M_ctr_q_12
+    SLICE_X14Y38.A1      net (fanout=2)        0.987   btn_add_input/M_ctr_q[12]
+    SLICE_X14Y38.A       Tilo                  0.235   M_alu_b[0]
+                                                       btn_add_input/out3
+    SLICE_X17Y38.A1      net (fanout=6)        0.772   out2_1
+    SLICE_X17Y38.A       Tilo                  0.259   out1_1
+                                                       M_state_q_FSM_FFd1-In11_1
+    SLICE_X12Y33.D2      net (fanout=13)       1.497   M_state_q_FSM_FFd1-In11
+    SLICE_X12Y33.D       Tilo                  0.254   M_alu_a[6]
+                                                       Mmux_M_alu_a131
+    DSP48_X0Y8.B6        net (fanout=5)        1.100   M_alu_a[6]
+    DSP48_X0Y8.M0        Tdspdo_B_M            3.894   alu/multiplicationModule/Mmult_n0008
+                                                       alu/multiplicationModule/Mmult_n0008
+    SLICE_X15Y35.A6      net (fanout=5)        1.217   n0008[0]
+    SLICE_X15Y35.A       Tilo                  0.259   M_b_q[9]
+                                                       _n0271_inv_rstpot
+    SLICE_X17Y29.B5      net (fanout=16)       0.997   _n0271_inv_rstpot
+    SLICE_X17Y29.CLK     Tas                   0.373   M_b_q[6]
+                                                       M_b_q_5_dpot
+                                                       M_b_q_5
+    -------------------------------------------------  ---------------------------
+    Total                                     12.369ns (5.799ns logic, 6.570ns route)
+                                                       (46.9% logic, 53.1% route)
+
+--------------------------------------------------------------------------------
+Slack:                  7.578ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               btn_add_input/M_ctr_q_13 (FF)
+  Destination:          M_highscore_q_5 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      12.376ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.011ns (0.290 - 0.301)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_13 to M_highscore_q_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y40.BQ      Tcko                  0.525   btn_add_input/M_ctr_q[15]
+                                                       btn_add_input/M_ctr_q_13
+    SLICE_X14Y38.A2      net (fanout=2)        0.951   btn_add_input/M_ctr_q[13]
+    SLICE_X14Y38.A       Tilo                  0.235   M_alu_b[0]
+                                                       btn_add_input/out3
+    SLICE_X14Y38.C4      net (fanout=6)        0.903   out2_1
+    SLICE_X14Y38.C       Tilo                  0.235   M_alu_b[0]
+                                                       M_state_q_FSM_FFd1-In11_2
+    SLICE_X12Y36.B1      net (fanout=7)        0.977   M_state_q_FSM_FFd1-In111
+    SLICE_X12Y36.B       Tilo                  0.254   M_alu_a[14]
+                                                       Mmux_M_alu_a61
+    DSP48_X0Y8.B14       net (fanout=5)        1.389   M_alu_a[14]
+    DSP48_X0Y8.M0        Tdspdo_B_M            3.894   alu/multiplicationModule/Mmult_n0008
+                                                       alu/multiplicationModule/Mmult_n0008
+    SLICE_X14Y39.D3      net (fanout=5)        1.662   n0008[0]
+    SLICE_X14Y39.D       Tilo                  0.235   _n0240_inv1_cepot_cepot
+                                                       _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CE      net (fanout=4)        0.726   _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CLK     Tceck                 0.390   M_highscore_q[7]
+                                                       M_highscore_q_5
+    -------------------------------------------------  ---------------------------
+    Total                                     12.376ns (5.768ns logic, 6.608ns route)
+                                                       (46.6% logic, 53.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  7.578ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               btn_add_input/M_ctr_q_12 (FF)
+  Destination:          M_highscore_q_4 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      12.376ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.011ns (0.290 - 0.301)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_12 to M_highscore_q_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y40.AQ      Tcko                  0.525   btn_add_input/M_ctr_q[15]
+                                                       btn_add_input/M_ctr_q_12
+    SLICE_X14Y38.A1      net (fanout=2)        0.987   btn_add_input/M_ctr_q[12]
+    SLICE_X14Y38.A       Tilo                  0.235   M_alu_b[0]
+                                                       btn_add_input/out3
+    SLICE_X14Y38.C4      net (fanout=6)        0.903   out2_1
+    SLICE_X14Y38.C       Tilo                  0.235   M_alu_b[0]
+                                                       M_state_q_FSM_FFd1-In11_2
+    SLICE_X17Y29.D1      net (fanout=7)        1.538   M_state_q_FSM_FFd1-In111
+    SLICE_X17Y29.D       Tilo                  0.259   M_b_q[6]
+                                                       Mmux_M_alu_b111
+    DSP48_X0Y8.A4        net (fanout=5)        1.441   M_alu_b[4]
+    DSP48_X0Y8.M0        Tdspdo_A_M            3.265   alu/multiplicationModule/Mmult_n0008
+                                                       alu/multiplicationModule/Mmult_n0008
+    SLICE_X14Y39.D3      net (fanout=5)        1.662   n0008[0]
+    SLICE_X14Y39.D       Tilo                  0.235   _n0240_inv1_cepot_cepot
+                                                       _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CE      net (fanout=4)        0.726   _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CLK     Tceck                 0.365   M_highscore_q[7]
+                                                       M_highscore_q_4
+    -------------------------------------------------  ---------------------------
+    Total                                     12.376ns (5.119ns logic, 7.257ns route)
+                                                       (41.4% logic, 58.6% route)
+
+--------------------------------------------------------------------------------
+Slack:                  7.582ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               btn_add_input/M_ctr_q_12 (FF)
+  Destination:          M_b_q_4 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      12.364ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.019ns (0.687 - 0.706)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_12 to M_b_q_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y40.AQ      Tcko                  0.525   btn_add_input/M_ctr_q[15]
+                                                       btn_add_input/M_ctr_q_12
+    SLICE_X14Y38.A1      net (fanout=2)        0.987   btn_add_input/M_ctr_q[12]
+    SLICE_X14Y38.A       Tilo                  0.235   M_alu_b[0]
+                                                       btn_add_input/out3
+    SLICE_X17Y38.A1      net (fanout=6)        0.772   out2_1
+    SLICE_X17Y38.A       Tilo                  0.259   out1_1
+                                                       M_state_q_FSM_FFd1-In11_1
+    SLICE_X12Y33.D2      net (fanout=13)       1.497   M_state_q_FSM_FFd1-In11
+    SLICE_X12Y33.D       Tilo                  0.254   M_alu_a[6]
+                                                       Mmux_M_alu_a131
+    DSP48_X0Y8.B6        net (fanout=5)        1.100   M_alu_a[6]
+    DSP48_X0Y8.M0        Tdspdo_B_M            3.894   alu/multiplicationModule/Mmult_n0008
+                                                       alu/multiplicationModule/Mmult_n0008
+    SLICE_X15Y35.A6      net (fanout=5)        1.217   n0008[0]
+    SLICE_X15Y35.A       Tilo                  0.259   M_b_q[9]
+                                                       _n0271_inv_rstpot
+    SLICE_X17Y29.A5      net (fanout=16)       0.992   _n0271_inv_rstpot
+    SLICE_X17Y29.CLK     Tas                   0.373   M_b_q[6]
+                                                       M_b_q_4_dpot
+                                                       M_b_q_4
+    -------------------------------------------------  ---------------------------
+    Total                                     12.364ns (5.799ns logic, 6.565ns route)
+                                                       (46.9% logic, 53.1% route)
+
+--------------------------------------------------------------------------------
+Slack:                  7.586ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               btn_add_input/M_ctr_q_13 (FF)
+  Destination:          M_highscore_q_7 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      12.368ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.011ns (0.290 - 0.301)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: btn_add_input/M_ctr_q_13 to M_highscore_q_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y40.BQ      Tcko                  0.525   btn_add_input/M_ctr_q[15]
+                                                       btn_add_input/M_ctr_q_13
+    SLICE_X14Y38.A2      net (fanout=2)        0.951   btn_add_input/M_ctr_q[13]
+    SLICE_X14Y38.A       Tilo                  0.235   M_alu_b[0]
+                                                       btn_add_input/out3
+    SLICE_X14Y38.C4      net (fanout=6)        0.903   out2_1
+    SLICE_X14Y38.C       Tilo                  0.235   M_alu_b[0]
+                                                       M_state_q_FSM_FFd1-In11_2
+    SLICE_X12Y36.B1      net (fanout=7)        0.977   M_state_q_FSM_FFd1-In111
+    SLICE_X12Y36.B       Tilo                  0.254   M_alu_a[14]
+                                                       Mmux_M_alu_a61
+    DSP48_X0Y8.B14       net (fanout=5)        1.389   M_alu_a[14]
+    DSP48_X0Y8.M0        Tdspdo_B_M            3.894   alu/multiplicationModule/Mmult_n0008
+                                                       alu/multiplicationModule/Mmult_n0008
+    SLICE_X14Y39.D3      net (fanout=5)        1.662   n0008[0]
+    SLICE_X14Y39.D       Tilo                  0.235   _n0240_inv1_cepot_cepot
+                                                       _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CE      net (fanout=4)        0.726   _n0240_inv1_cepot_cepot
+    SLICE_X13Y36.CLK     Tceck                 0.382   M_highscore_q[7]
+                                                       M_highscore_q_7
+    -------------------------------------------------  ---------------------------
+    Total                                     12.368ns (5.760ns logic, 6.608ns route)
+                                                       (46.6% logic, 53.4% route)
 
 --------------------------------------------------------------------------------
 
@@ -1405,234 +1398,233 @@ Slack: 17.334ns (period - min period limit)
 Slack: 18.601ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 1.399ns (714.796MHz) (Tcp)
-  Physical resource: btn_add_input/M_sync_out/CLK
+  Physical resource: btn_start_input/M_sync_out/CLK
   Logical resource: btn_mode_input/sync/Mshreg_M_pipe_q_1/CLK
-  Location pin: SLICE_X16Y52.CLK
+  Location pin: SLICE_X20Y54.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 18.601ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 1.399ns (714.796MHz) (Tcp)
-  Physical resource: btn_add_input/M_sync_out/CLK
+  Physical resource: btn_start_input/M_sync_out/CLK
   Logical resource: btn_increase_input/sync/Mshreg_M_pipe_q_1/CLK
-  Location pin: SLICE_X16Y52.CLK
+  Location pin: SLICE_X20Y54.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 18.601ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 1.399ns (714.796MHz) (Tcp)
-  Physical resource: btn_add_input/M_sync_out/CLK
-  Logical resource: btn_start_input/sync/Mshreg_M_pipe_q_1/CLK
-  Location pin: SLICE_X16Y52.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 18.601ns (period - min period limit)
-  Period: 20.000ns
-  Min period limit: 1.399ns (714.796MHz) (Tcp)
-  Physical resource: btn_add_input/M_sync_out/CLK
+  Physical resource: btn_start_input/M_sync_out/CLK
   Logical resource: btn_add_input/sync/Mshreg_M_pipe_q_1/CLK
-  Location pin: SLICE_X16Y52.CLK
+  Location pin: SLICE_X20Y54.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 18.601ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 1.399ns (714.796MHz) (Tcp)
+  Physical resource: btn_start_input/M_sync_out/CLK
+  Logical resource: btn_start_input/sync/Mshreg_M_pipe_q_1/CLK
+  Location pin: SLICE_X20Y54.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 19.520ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: btn_mode_input/M_ctr_q[3]/CLK
-  Logical resource: btn_mode_input/M_ctr_q_0/CK
-  Location pin: SLICE_X16Y45.CLK
+  Physical resource: btn_add_input/M_ctr_q[3]/CLK
+  Logical resource: btn_add_input/M_ctr_q_0/CK
+  Location pin: SLICE_X16Y37.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 19.520ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: btn_mode_input/M_ctr_q[3]/CLK
-  Logical resource: btn_mode_input/M_ctr_q_1/CK
-  Location pin: SLICE_X16Y45.CLK
+  Physical resource: btn_add_input/M_ctr_q[3]/CLK
+  Logical resource: btn_add_input/M_ctr_q_1/CK
+  Location pin: SLICE_X16Y37.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 19.520ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: btn_mode_input/M_ctr_q[3]/CLK
-  Logical resource: btn_mode_input/M_ctr_q_2/CK
-  Location pin: SLICE_X16Y45.CLK
+  Physical resource: btn_add_input/M_ctr_q[3]/CLK
+  Logical resource: btn_add_input/M_ctr_q_2/CK
+  Location pin: SLICE_X16Y37.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 19.520ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: btn_mode_input/M_ctr_q[3]/CLK
-  Logical resource: btn_mode_input/M_ctr_q_3/CK
-  Location pin: SLICE_X16Y45.CLK
+  Physical resource: btn_add_input/M_ctr_q[3]/CLK
+  Logical resource: btn_add_input/M_ctr_q_3/CK
+  Location pin: SLICE_X16Y37.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 19.520ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: btn_mode_input/M_ctr_q[7]/CLK
-  Logical resource: btn_mode_input/M_ctr_q_4/CK
-  Location pin: SLICE_X16Y46.CLK
+  Physical resource: btn_add_input/M_ctr_q[7]/CLK
+  Logical resource: btn_add_input/M_ctr_q_4/CK
+  Location pin: SLICE_X16Y38.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 19.520ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: btn_mode_input/M_ctr_q[7]/CLK
-  Logical resource: btn_mode_input/M_ctr_q_5/CK
-  Location pin: SLICE_X16Y46.CLK
+  Physical resource: btn_add_input/M_ctr_q[7]/CLK
+  Logical resource: btn_add_input/M_ctr_q_5/CK
+  Location pin: SLICE_X16Y38.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 19.520ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: btn_mode_input/M_ctr_q[7]/CLK
-  Logical resource: btn_mode_input/M_ctr_q_6/CK
-  Location pin: SLICE_X16Y46.CLK
+  Physical resource: btn_add_input/M_ctr_q[7]/CLK
+  Logical resource: btn_add_input/M_ctr_q_6/CK
+  Location pin: SLICE_X16Y38.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 19.520ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: btn_mode_input/M_ctr_q[7]/CLK
-  Logical resource: btn_mode_input/M_ctr_q_7/CK
-  Location pin: SLICE_X16Y46.CLK
+  Physical resource: btn_add_input/M_ctr_q[7]/CLK
+  Logical resource: btn_add_input/M_ctr_q_7/CK
+  Location pin: SLICE_X16Y38.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 19.520ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: btn_mode_input/M_ctr_q[11]/CLK
-  Logical resource: btn_mode_input/M_ctr_q_8/CK
-  Location pin: SLICE_X16Y47.CLK
+  Physical resource: btn_add_input/M_ctr_q[11]/CLK
+  Logical resource: btn_add_input/M_ctr_q_8/CK
+  Location pin: SLICE_X16Y39.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 19.520ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: btn_mode_input/M_ctr_q[11]/CLK
-  Logical resource: btn_mode_input/M_ctr_q_9/CK
-  Location pin: SLICE_X16Y47.CLK
+  Physical resource: btn_add_input/M_ctr_q[11]/CLK
+  Logical resource: btn_add_input/M_ctr_q_9/CK
+  Location pin: SLICE_X16Y39.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 19.520ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: btn_mode_input/M_ctr_q[11]/CLK
-  Logical resource: btn_mode_input/M_ctr_q_10/CK
-  Location pin: SLICE_X16Y47.CLK
+  Physical resource: btn_add_input/M_ctr_q[11]/CLK
+  Logical resource: btn_add_input/M_ctr_q_10/CK
+  Location pin: SLICE_X16Y39.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 19.520ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: btn_mode_input/M_ctr_q[11]/CLK
-  Logical resource: btn_mode_input/M_ctr_q_11/CK
-  Location pin: SLICE_X16Y47.CLK
+  Physical resource: btn_add_input/M_ctr_q[11]/CLK
+  Logical resource: btn_add_input/M_ctr_q_11/CK
+  Location pin: SLICE_X16Y39.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 19.520ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: btn_mode_input/M_ctr_q[15]/CLK
-  Logical resource: btn_mode_input/M_ctr_q_12/CK
-  Location pin: SLICE_X16Y48.CLK
+  Physical resource: btn_add_input/M_ctr_q[15]/CLK
+  Logical resource: btn_add_input/M_ctr_q_12/CK
+  Location pin: SLICE_X16Y40.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 19.520ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: btn_mode_input/M_ctr_q[15]/CLK
-  Logical resource: btn_mode_input/M_ctr_q_13/CK
-  Location pin: SLICE_X16Y48.CLK
+  Physical resource: btn_add_input/M_ctr_q[15]/CLK
+  Logical resource: btn_add_input/M_ctr_q_13/CK
+  Location pin: SLICE_X16Y40.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 19.520ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: btn_mode_input/M_ctr_q[15]/CLK
-  Logical resource: btn_mode_input/M_ctr_q_14/CK
-  Location pin: SLICE_X16Y48.CLK
+  Physical resource: btn_add_input/M_ctr_q[15]/CLK
+  Logical resource: btn_add_input/M_ctr_q_14/CK
+  Location pin: SLICE_X16Y40.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 19.520ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: btn_mode_input/M_ctr_q[15]/CLK
-  Logical resource: btn_mode_input/M_ctr_q_15/CK
-  Location pin: SLICE_X16Y48.CLK
+  Physical resource: btn_add_input/M_ctr_q[15]/CLK
+  Logical resource: btn_add_input/M_ctr_q_15/CK
+  Location pin: SLICE_X16Y40.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 19.520ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: btn_mode_input/M_ctr_q[19]/CLK
-  Logical resource: btn_mode_input/M_ctr_q_16/CK
-  Location pin: SLICE_X16Y49.CLK
+  Physical resource: btn_add_input/M_ctr_q[19]/CLK
+  Logical resource: btn_add_input/M_ctr_q_16/CK
+  Location pin: SLICE_X16Y41.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 19.520ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: btn_mode_input/M_ctr_q[19]/CLK
-  Logical resource: btn_mode_input/M_ctr_q_17/CK
-  Location pin: SLICE_X16Y49.CLK
+  Physical resource: btn_add_input/M_ctr_q[19]/CLK
+  Logical resource: btn_add_input/M_ctr_q_17/CK
+  Location pin: SLICE_X16Y41.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 19.520ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: btn_mode_input/M_ctr_q[19]/CLK
-  Logical resource: btn_mode_input/M_ctr_q_18/CK
-  Location pin: SLICE_X16Y49.CLK
+  Physical resource: btn_add_input/M_ctr_q[19]/CLK
+  Logical resource: btn_add_input/M_ctr_q_18/CK
+  Location pin: SLICE_X16Y41.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 19.520ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: btn_mode_input/M_ctr_q[19]/CLK
-  Logical resource: btn_mode_input/M_ctr_q_19/CK
-  Location pin: SLICE_X16Y49.CLK
+  Physical resource: btn_add_input/M_ctr_q[19]/CLK
+  Logical resource: btn_add_input/M_ctr_q_19/CK
+  Location pin: SLICE_X16Y41.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 19.520ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: reset_cond/M_stage_q[2]/CLK
-  Logical resource: reset_cond/M_stage_q_3/CK
-  Location pin: SLICE_X4Y29.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 19.520ns (period - (min high pulse limit / (high pulse / period)))
-  Period: 20.000ns
-  High pulse: 10.000ns
-  High pulse limit: 0.240ns (Trpw)
-  Physical resource: reset_cond/M_stage_q[2]/SR
-  Logical resource: reset_cond/M_stage_q_3/SR
-  Location pin: SLICE_X4Y29.SR
-  Clock network: M_reset_cond_in
---------------------------------------------------------------------------------
-Slack: 19.520ns (period - min period limit)
-  Period: 20.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: reset_cond/M_stage_q[2]/CLK
-  Logical resource: reset_cond/M_stage_q_0/CK
-  Location pin: SLICE_X4Y29.CLK
+  Physical resource: btn_start_input/M_ctr_q[3]/CLK
+  Logical resource: btn_start_input/M_ctr_q_0/CK
+  Location pin: SLICE_X12Y55.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 19.520ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: reset_cond/M_stage_q[2]/CLK
-  Logical resource: reset_cond/M_stage_q_1/CK
-  Location pin: SLICE_X4Y29.CLK
+  Physical resource: btn_start_input/M_ctr_q[3]/CLK
+  Logical resource: btn_start_input/M_ctr_q_1/CK
+  Location pin: SLICE_X12Y55.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 19.520ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: reset_cond/M_stage_q[2]/CLK
-  Logical resource: reset_cond/M_stage_q_2/CK
-  Location pin: SLICE_X4Y29.CLK
+  Physical resource: btn_start_input/M_ctr_q[3]/CLK
+  Logical resource: btn_start_input/M_ctr_q_2/CK
+  Location pin: SLICE_X12Y55.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 19.520ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: btn_start_input/M_ctr_q[3]/CLK
+  Logical resource: btn_start_input/M_ctr_q_3/CK
+  Location pin: SLICE_X12Y55.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 19.520ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: btn_start_input/M_ctr_q[7]/CLK
+  Logical resource: btn_start_input/M_ctr_q_4/CK
+  Location pin: SLICE_X12Y56.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 
@@ -1649,7 +1641,7 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |   14.931|         |         |         |
+clk            |   12.600|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -1658,23 +1650,23 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 180767 paths, 0 nets, and 1698 connections
+Constraints cover 180659 paths, 0 nets, and 1690 connections
 
 Design statistics:
-   Minimum period:  14.931ns{1}   (Maximum frequency:  66.975MHz)
+   Minimum period:  12.600ns{1}   (Maximum frequency:  79.365MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Sat Nov 24 16:17:18 2018 
+Analysis completed Wed Nov 28 15:56:45 2018 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 176 MB
+Peak Memory Usage: 177 MB
 
 
 

@@ -26,6 +26,7 @@ module mojo_top_0 (
     input increaseInput,
     output reg outputModeOne,
     output reg outputModeTwo,
+    output reg outputButtonLight,
     output reg [6:0] io_seg1,
     output reg [3:0] io_sel1,
     output reg [6:0] io_seg2,
@@ -201,6 +202,7 @@ module mojo_top_0 (
     rst = M_reset_cond_out;
     outputModeOne = ~M_buttonGameMode_q;
     outputModeTwo = M_buttonGameMode_q;
+    outputButtonLight = 1'h0;
     led = 8'h00;
     spi_miso = 1'bz;
     spi_channel = 4'bzzzz;
@@ -211,6 +213,7 @@ module mojo_top_0 (
     
     case (M_state_q)
       IDLE_state: begin
+        outputButtonLight = 1'h1;
         led[0+0-:1] = 1'h1;
         M_counter_d = 1'h0;
         M_b_d = 16'h000b;
@@ -237,12 +240,18 @@ module mojo_top_0 (
       end
       STARTROUNDA_state: begin
         led[1+0-:1] = 1'h1;
+        if (M_test_counter_q[26+0-:1] == 1'h1) begin
+          outputButtonLight = 1'h1;
+        end
         if (M_edge_start_input_out) begin
           M_state_d = WAITARITHMETIC_state;
         end
       end
       STARTROUNDB_state: begin
         led[2+0-:1] = 1'h1;
+        if (M_test_counter_q[26+0-:1] == 1'h1) begin
+          outputButtonLight = 1'h1;
+        end
         if (M_edge_start_input_out) begin
           M_state_d = WAITARITHMETIC_state;
         end
