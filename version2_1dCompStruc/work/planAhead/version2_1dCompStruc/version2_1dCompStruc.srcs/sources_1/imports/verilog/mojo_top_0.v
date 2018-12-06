@@ -45,11 +45,42 @@ module mojo_top_0 (
   
   reg [29:0] M_test_counter_d, M_test_counter_q = 1'h0;
   
+  wire [16-1:0] M_emulator1_currentscore_output;
+  wire [16-1:0] M_emulator1_highscore_output;
+  wire [16-1:0] M_emulator1_b_output;
+  wire [16-1:0] M_emulator1_mode_output;
+  wire [16-1:0] M_emulator1_aluresult;
+  reg [1-1:0] M_emulator1_whs;
+  reg [1-1:0] M_emulator1_wcs;
+  reg [1-1:0] M_emulator1_wb;
+  reg [1-1:0] M_emulator1_wcounter;
+  reg [1-1:0] M_emulator1_wmode;
+  reg [6-1:0] M_emulator1_alufn;
+  reg [3-1:0] M_emulator1_asel;
+  reg [3-1:0] M_emulator1_bsel;
+  emulator_1 emulator1 (
+    .clk(clk),
+    .rst(rst),
+    .whs(M_emulator1_whs),
+    .wcs(M_emulator1_wcs),
+    .wb(M_emulator1_wb),
+    .wcounter(M_emulator1_wcounter),
+    .wmode(M_emulator1_wmode),
+    .alufn(M_emulator1_alufn),
+    .asel(M_emulator1_asel),
+    .bsel(M_emulator1_bsel),
+    .currentscore_output(M_emulator1_currentscore_output),
+    .highscore_output(M_emulator1_highscore_output),
+    .b_output(M_emulator1_b_output),
+    .mode_output(M_emulator1_mode_output),
+    .aluresult(M_emulator1_aluresult)
+  );
+  
   wire [16-1:0] M_alu_result;
   reg [16-1:0] M_alu_a;
   reg [16-1:0] M_alu_b;
   reg [6-1:0] M_alu_alufn;
-  alu_1 alu (
+  alu_2 alu (
     .a(M_alu_a),
     .b(M_alu_b),
     .alufn(M_alu_alufn),
@@ -58,79 +89,80 @@ module mojo_top_0 (
   
   wire [1-1:0] M_reset_cond_out;
   reg [1-1:0] M_reset_cond_in;
-  reset_conditioner_2 reset_cond (
+  reset_conditioner_3 reset_cond (
     .clk(clk),
     .in(M_reset_cond_in),
     .out(M_reset_cond_out)
   );
   wire [1-1:0] M_btn_mode_input_out;
   reg [1-1:0] M_btn_mode_input_in;
-  button_conditioner_3 btn_mode_input (
+  button_conditioner_4 btn_mode_input (
     .clk(clk),
     .in(M_btn_mode_input_in),
     .out(M_btn_mode_input_out)
   );
   wire [1-1:0] M_edge_mode_input_out;
   reg [1-1:0] M_edge_mode_input_in;
-  edge_detector_4 edge_mode_input (
+  edge_detector_5 edge_mode_input (
     .clk(clk),
     .in(M_edge_mode_input_in),
     .out(M_edge_mode_input_out)
   );
   wire [1-1:0] M_btn_start_input_out;
   reg [1-1:0] M_btn_start_input_in;
-  button_conditioner_3 btn_start_input (
+  button_conditioner_4 btn_start_input (
     .clk(clk),
     .in(M_btn_start_input_in),
     .out(M_btn_start_input_out)
   );
   wire [1-1:0] M_edge_start_input_out;
   reg [1-1:0] M_edge_start_input_in;
-  edge_detector_4 edge_start_input (
+  edge_detector_5 edge_start_input (
     .clk(clk),
     .in(M_edge_start_input_in),
     .out(M_edge_start_input_out)
   );
   wire [1-1:0] M_btn_increase_input_out;
   reg [1-1:0] M_btn_increase_input_in;
-  button_conditioner_3 btn_increase_input (
+  button_conditioner_4 btn_increase_input (
     .clk(clk),
     .in(M_btn_increase_input_in),
     .out(M_btn_increase_input_out)
   );
   wire [1-1:0] M_edge_increase_input_out;
   reg [1-1:0] M_edge_increase_input_in;
-  edge_detector_4 edge_increase_input (
+  edge_detector_5 edge_increase_input (
     .clk(clk),
     .in(M_edge_increase_input_in),
     .out(M_edge_increase_input_out)
   );
   wire [1-1:0] M_btn_add_input_out;
   reg [1-1:0] M_btn_add_input_in;
-  button_conditioner_3 btn_add_input (
+  button_conditioner_4 btn_add_input (
     .clk(clk),
     .in(M_btn_add_input_in),
     .out(M_btn_add_input_out)
   );
   wire [1-1:0] M_edge_add_input_out;
   reg [1-1:0] M_edge_add_input_in;
-  edge_detector_4 edge_add_input (
+  edge_detector_5 edge_add_input (
     .clk(clk),
     .in(M_edge_add_input_in),
     .out(M_edge_add_input_out)
   );
   localparam IDLE_state = 3'd0;
-  localparam STARTROUNDA_state = 3'd1;
-  localparam STARTROUNDB_state = 3'd2;
-  localparam WAITARITHMETIC_state = 3'd3;
-  localparam COMPARECOUNTER_state = 3'd4;
-  localparam COMPAREHIGHSCORE_state = 3'd5;
+  localparam ADDB_state = 3'd1;
+  localparam STARTROUNDA_state = 3'd2;
+  localparam STARTROUNDB_state = 3'd3;
+  localparam WAITARITHMETIC_state = 3'd4;
+  localparam COMPARECOUNTER_state = 3'd5;
+  localparam COMPAREHIGHSCORE_state = 3'd6;
   
   reg [2:0] M_state_d, M_state_q = IDLE_state;
   wire [7-1:0] M_seg_segs;
   wire [4-1:0] M_seg_sel;
   reg [16-1:0] M_seg_values;
-  multi_seven_seg_11 seg (
+  multi_seven_seg_12 seg (
     .clk(clk),
     .rst(rst),
     .values(M_seg_values),
@@ -140,7 +172,7 @@ module mojo_top_0 (
   wire [7-1:0] M_seg2_segs;
   wire [4-1:0] M_seg2_sel;
   reg [16-1:0] M_seg2_values;
-  multi_seven_seg_11 seg2 (
+  multi_seven_seg_12 seg2 (
     .clk(clk),
     .rst(rst),
     .values(M_seg2_values),
@@ -150,7 +182,7 @@ module mojo_top_0 (
   wire [7-1:0] M_seg4_segs;
   wire [4-1:0] M_seg4_sel;
   reg [16-1:0] M_seg4_values;
-  multi_seven_seg_11 seg4 (
+  multi_seven_seg_12 seg4 (
     .clk(clk),
     .rst(rst),
     .values(M_seg4_values),
@@ -167,14 +199,14 @@ module mojo_top_0 (
   
   wire [16-1:0] M_convertHS_digits;
   reg [14-1:0] M_convertHS_value;
-  bin_to_dec_14 convertHS (
+  bin_to_dec_15 convertHS (
     .value(M_convertHS_value),
     .digits(M_convertHS_digits)
   );
   
   wire [16-1:0] M_convertCS_digits;
   reg [14-1:0] M_convertCS_value;
-  bin_to_dec_14 convertCS (
+  bin_to_dec_15 convertCS (
     .value(M_convertCS_value),
     .digits(M_convertCS_digits)
   );
@@ -182,7 +214,6 @@ module mojo_top_0 (
   always @* begin
     M_state_d = M_state_q;
     M_b_d = M_b_q;
-    M_buttonGameMode_d = M_buttonGameMode_q;
     M_test_counter_d = M_test_counter_q;
     M_currentscore_d = M_currentscore_q;
     M_counter_d = M_counter_q;
@@ -210,29 +241,45 @@ module mojo_top_0 (
     M_alu_a = 16'h0000;
     M_alu_b = 16'h0000;
     M_alu_alufn = 6'h00;
+    M_emulator1_whs = 1'h0;
+    M_emulator1_wcs = 1'h0;
+    M_emulator1_wcounter = 1'h0;
+    M_emulator1_wb = 1'h0;
+    M_emulator1_whs = 1'h0;
+    M_emulator1_wmode = 1'h0;
+    M_emulator1_asel = 3'h1;
+    M_emulator1_bsel = 3'h0;
+    M_emulator1_alufn = 6'h00;
     
     case (M_state_q)
       IDLE_state: begin
         outputButtonLight = 1'h1;
         led[0+0-:1] = 1'h1;
-        M_counter_d = 1'h0;
-        M_b_d = 16'h000b;
+        M_emulator1_asel = 3'h1;
+        M_emulator1_bsel = 3'h0;
+        M_emulator1_alufn = 6'h00;
+        M_counter_d = 1'h1;
+        M_emulator1_alufn = 6'h00;
         M_convertCS_value = 16'haaaa;
         
         case (M_edge_mode_input_out)
           1'h1: begin
-            M_buttonGameMode_d = ~M_buttonGameMode_q;
+            M_emulator1_wmode = 1'h1;
           end
         endcase
         
         case (M_edge_start_input_out)
           1'h1: begin
-            M_currentscore_d = 16'h0000;
-            if (M_buttonGameMode_q == 1'h0) begin
+            M_state_d = ADDB_state;
+          end
+          ADDB_state: begin
+            M_emulator1_wb = 1'h1;
+            M_emulator1_asel = 3'h3;
+            M_emulator1_bsel = 3'h0;
+            M_emulator1_alufn = 6'h00;
+            if (M_emulator1_mode_output[0+0-:1] == 1'h0) begin
               M_state_d = STARTROUNDA_state;
-              M_b_d = 16'h0001;
             end else begin
-              M_b_d = 16'h0001;
               M_state_d = STARTROUNDB_state;
             end
           end
@@ -252,22 +299,28 @@ module mojo_top_0 (
         if (M_test_counter_q[26+0-:1] == 1'h1) begin
           outputButtonLight = 1'h1;
         end
+        if (M_edge_increase_input_out) begin
+          if (M_emulator1_b_output < 3'h5) begin
+            M_emulator1_asel = 3'h3;
+            M_emulator1_bsel = 3'h0;
+            M_emulator1_alufn = 6'h00;
+            M_emulator1_wb = 1'h1;
+          end else begin
+            M_emulator1_asel = 3'h4;
+            M_emulator1_bsel = 3'h0;
+            M_emulator1_alufn = 6'h00;
+            M_emulator1_wb = 1'h1;
+          end
+        end
         if (M_edge_start_input_out) begin
           M_state_d = WAITARITHMETIC_state;
-        end
-        if (M_edge_increase_input_out) begin
-          if (M_b_q < 3'h5) begin
-            M_b_d = M_b_q + 1'h1;
-          end else begin
-            M_b_d = 1'h1;
-          end
         end
       end
       WAITARITHMETIC_state: begin
         led[3+0-:1] = 1'h1;
+        M_emulator1_asel = 3'h0;
+        M_emulator1_bsel = 3'h3;
         if (M_edge_add_input_out) begin
-          M_alu_a = M_currentscore_q;
-          M_alu_b = M_b_q;
           M_alu_alufn = 6'h00;
           M_currentscore_d = M_alu_result;
           M_state_d = COMPAREHIGHSCORE_state;
@@ -311,7 +364,7 @@ module mojo_top_0 (
       COMPARECOUNTER_state: begin
         led[5+0-:1] = 1'h1;
         M_alu_a = M_counter_q;
-        M_alu_b = 3'h5;
+        M_alu_b = 3'h6;
         M_alu_alufn = 6'h33;
         if (M_alu_result[0+0-:1] == 1'h1) begin
           M_state_d = IDLE_state;
@@ -339,9 +392,18 @@ module mojo_top_0 (
     io_sel4 = ~M_seg4_sel;
     M_seg_values = M_convertHS_digits;
     M_seg2_values = M_convertCS_digits;
-    M_seg4_values = {M_b_q[0+3-:4], M_b_q[0+3-:4], M_b_q[0+3-:4], M_b_q[0+3-:4]};
+    M_seg4_values = {M_highscore_q[15+0-:1] ? 4'hb : 4'ha, (M_b_q[15+0-:1]) ? 4'hb : 4'ha, M_counter_q[0+3-:4], M_b_q[0+3-:4]};
     M_test_counter_d = M_test_counter_q + 1'h1;
   end
+  
+  always @(posedge clk) begin
+    if (rst == 1'b1) begin
+      M_test_counter_q <= 1'h0;
+    end else begin
+      M_test_counter_q <= M_test_counter_d;
+    end
+  end
+  
   
   always @(posedge clk) begin
     if (rst == 1'b1) begin
@@ -358,15 +420,6 @@ module mojo_top_0 (
       M_b_q <= M_b_d;
       M_buttonGameMode_q <= M_buttonGameMode_d;
       M_state_q <= M_state_d;
-    end
-  end
-  
-  
-  always @(posedge clk) begin
-    if (rst == 1'b1) begin
-      M_test_counter_q <= 1'h0;
-    end else begin
-      M_test_counter_q <= M_test_counter_d;
     end
   end
   

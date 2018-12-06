@@ -1,10 +1,75 @@
 module emulator (
     input clk,  // clock
     input rst,  // reset
-    output out
+    input whs,
+    input wcs,
+    input wb,
+    input wcounter,
+    input wmode,
+    input alufn [6],
+    input asel[3],
+    
+    input bsel[3],
+    output currentscore_output[16],
+    output highscore_output[16],
+    output b_output[16],
+    output mode_output[16],
+    output counter_output[16],
+    output aluresult[16]
   ) {
+      mux_5 mux_a;
+      mux_5 mux_b;
+      alu alu;
+   .clk(clk) {
+    // The reset conditioner is used to synchronize the reset signal to the FPGA
+    // clock. This ensures the entire FPGA comes out of reset at the same time.
 
+      .rst(rst) {
+      // states alternate between each possible alu operation based on the buttons pressed
+       register highscore;
+       register currentscore;
+       register b;
+       register counter;
+       register mode;
+       
+     
+
+      }  
+    }  
   always {
-    out = 0;
+    highscore.write=whs;
+    currentscore.write=wcs;
+    b.write=wb;
+    mode.write=wmode;
+    counter.write=wcounter;
+    mux_a.sel = asel;
+    mux_a.a= currentscore.out;
+    mux_a.b = mode.out;
+    mux_a.c = counter.out;
+    
+    mux_a.d = b.out;
+    mux_a.e = 16b0;
+    mux_b.sel = bsel;
+    mux_b.a = 16b1;
+    mux_b.b = 16d5;
+    mux_b.c = highscore.out;
+    mux_b.d = b.out;
+    mux_b.e = 16b0;//nth
+    
+    alu.a = mux_a.out;
+    alu.alufn = alufn;
+    alu.b = mux_b.out;
+    aluresult = alu.result;
+    b.value=alu.result;
+    counter.value=alu.result;
+    highscore.value=alu.result;
+    currentscore.value=alu.result;
+    b.value= alu.result;
+    mode.value=alu.result;
+    currentscore_output = currentscore.out;
+    counter_output = counter.out;
+    highscore_output = highscore.out;
+    b_output = b.out;
+    mode_output = mode.out;
   }
 }

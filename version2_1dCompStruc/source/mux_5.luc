@@ -1,10 +1,30 @@
 module mux_5 (
-    input clk,  // clock
-    input rst,  // reset
-    output out
+    input a[16],
+    input b[16],
+    input c[16],
+    input d[16],
+    input e[16],
+    input sel[3],
+    output out[16]
   ) {
 
   always {
-    out = 0;
+    case (sel) {
+      3b000:
+        out = a;
+      3b001:
+        out = b;
+            
+      3b010:
+        out = c;
+      3b011:
+        out = d;
+      3b100:
+        out = e;
+
+      default:
+        out = 16b0;
+    }
   }
 }
+

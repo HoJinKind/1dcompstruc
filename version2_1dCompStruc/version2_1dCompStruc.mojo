@@ -13,10 +13,10 @@
     <src>divideMdule.luc</src>
     <src>seven_seg.luc</src>
     <src>emulator.luc</src>
-    <src>booleanModule.luc</src>
     <src>mux_2.luc</src>
-    <ucf>custom.ucf</ucf>
+    <src>booleanModule.luc</src>
     <ucf lib="true">mojo.ucf</ucf>
+    <ucf>custom.ucf</ucf>
     <component>decoder.luc</component>
     <component>bin_to_dec.luc</component>
     <component>reset_conditioner.luc</component>

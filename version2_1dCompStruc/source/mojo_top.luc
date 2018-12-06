@@ -1,5 +1,4 @@
 
-
 global Inst {
   const ADD = 6h0;
   const SUB = 6h1;
@@ -47,17 +46,14 @@ module mojo_top (
     output io_seg2 [7],      // 7-segment LEDs on IO Shield
     output io_sel2 [4],     // Digit select on IO Shield
     output io_seg4 [7],   // single 7-segment LEDs on IO Shield
-    output io_sel4 [1]   // single Digit select on IO Shield
+    output io_sel4 [4]   // single Digit select on IO Shield
     
   ) {
   
   sig rst;                  // reset signal
   
-  
-  sig a[16];   
-  sig alufn[6];
   dff test_counter[30](.clk(clk), .rst(rst));
-  alu alu;
+  emulator emulator1(.clk(clk),.rst(rst));// instance of emulator
 
   .clk(clk) {
     // The reset conditioner is used to synchronize the reset signal to the FPGA
@@ -71,11 +67,18 @@ module mojo_top (
     edge_detector edge_increase_input (#RISE(1), #FALL(0));
     button_conditioner btn_add_input;
     edge_detector edge_add_input (#RISE(1), #FALL(0));
+    button_conditioner btn_sub_input;
+    edge_detector edge_sub_input (#RISE(1), #FALL(0));
+    button_conditioner btn_div_input;
+    edge_detector edge_div_input (#RISE(1), #FALL(0));
+    button_conditioner btn_mult_input;
+    edge_detector edge_mult_input (#RISE(1), #FALL(0));
+
     .rst(rst) {
       // states alternate between each possible alu operation based on the buttons pressed
       
       // ERROR simulates the error case for adder.
-      fsm state = {IDLE,STARTROUNDA,STARTROUNDB,WAITARITHMETIC,COMPARECOUNTER,COMPAREHIGHSCORE};
+      fsm state = {IDLE,ADDB,STARTROUNDA,STARTROUNDB,WAITARITHMETIC,ADDCOUNTER,COMPARECOUNTER,SHOWCURRENT,COMPAREHIGHSCORE,SETHIGHSCORE,RESETIDLE};
       multi_seven_seg seg;
       multi_seven_seg seg2;
       multi_seven_seg seg4;
@@ -105,15 +108,36 @@ module mojo_top (
     
     btn_add_input.in = addInput; // io_button[4] is the "right" button
     edge_add_input.in = btn_add_input.out; // connect the button to the edge edge_detector
+    btn_sub_input.in = subInput; // io_button[4] is the "right" button
+    edge_sub_input.in = btn_sub_input.out; // connect the button to the edge edge_detector
     
-    convertHS.value = highscore.q;//these values only go up to 9999
-    convertCS.value = currentscore.q;
+    btn_mult_input.in = multInput; // io_button[4] is the "right" button
+    edge_mult_input.in = btn_mult_input.out; // connect the button to the edge edge_detector
+    
+    btn_div_input.in = divInput; // io_button[4] is the "right" button
+    edge_div_input.in = btn_div_input.out; // connect the button to the edge edge_detector
+    //check if it is negative number
+    if (emulator1.highscore_output[15]){
+    convertHS.value = ~emulator1.highscore_output+1;//these values only go up to 9999
+    }
+    else{
+    convertHS.value = emulator1.highscore_output;
+    }
+
+    if (emulator1.currentscore_output[15]){
+    convertCS.value = ~emulator1.highscore_output+1;//these values only go up to 9999
+    }
+    else{
+    convertCS.value = emulator1.highscore_output;
+    }
+
     reset_cond.in = ~rst_n; // input raw inverted reset signal
     rst = reset_cond.out;   // conditioned reset
-
-    outputModeOne=~buttonGameMode.q;
-    outputModeTwo=buttonGameMode.q;
-    outputButtonLight=0;
+    
+    //mode 1/2 led lights
+    outputModeOne=~emulator1.mode_output;
+    outputModeTwo=emulator1.mode_output;
+    outputButtonLight=0;    // this is the led for big start button
     led = 8h00;             // turn LEDs off
     spi_miso = bz;          // not using SPI
     spi_channel = bzzzz;    // not using flags
@@ -123,49 +147,65 @@ module mojo_top (
 
     
     // Manual testing (dip switches used)    a[15:0] = io_dip[0];
-    alu.a =16b0;
-    alu.b = 16b0;
-    alu.alufn = 6b0; 
+
     
     // start initiates the testing for each module
-    
+   //rmb to set emulator values. 
    
-    
+    //initialise right to be 0 for all registers
+    emulator1.whs=0;
+    emulator1.wcs=0;
+    emulator1.wcounter=0;
+    emulator1.wb=0;
+    emulator1.whs=0;
+    emulator1.wmode = 0;
+    emulator1.asel=3b001;//select  mode
+    emulator1.bsel=3b000;
+    emulator1.alufn= Inst.ADD;
     //set the values of everyth in the cases
     case (state.q) {
         state.IDLE:
-        outputButtonLight=1;
-        led[0]=1;
-     //toggle between modes
-        counter.d =0;
-        b.d=16d11;
-        convertCS.value=16haaaa;
-        case (edge_mode_input.out){
-            1:
-              buttonGameMode.d=~buttonGameMode.q;
-                
-        
-        }
-        case(edge_start_input.out){
-          1:  //print current
-              //if button start which is input, is 1, then go already. no hesitation
-              currentscore.d=16b0;
-              if(buttonGameMode.q==0){
-                  state.d =state.STARTROUNDA;
+          outputButtonLight=1;
+          led[0]=1;
+          emulator1.asel=3b001;//select  mode
+          emulator1.bsel=3b000;
+          emulator1.alufn= Inst.ADD;
+       //toggle between modes
+          counter.d =1;
+          emulator1.alufn = Inst.ADD;
+          convertCS.value=16haaaa;//in this mode, display to 
+          case (edge_mode_input.out){
+              1:
+                emulator1.wmode = 1;
+                //allow to write into mod
                   
-                  b.d=16b1;
-                  
-              
-              }
-              else{
-                  b.d=16b1;
-                  state.d =state.STARTROUNDB;
+          }
   
-              }
+          case(edge_start_input.out){
+            1:  //print current
+                //if button start which is input, is 1, then go already. no hesitation
+                state.d=state.ADDB;
+                
+  
+            
+               
+          }
+        state.ADDB:
+            emulator1.wb=1;
+            emulator1.asel=3b011;//select b value
+            emulator1.bsel=3b000;
+            emulator1.alufn= Inst.ADD;
+                //add b by 1,check which mode to go to
+                
+                if(emulator1.mode_output[0]==0)
+                {
+                    state.d =state.STARTROUNDA;
+                }
+                else{
+                    
+                    state.d =state.STARTROUNDB;
+                }
         
-             
-        }
-    
         state.STARTROUNDA: 
             led[1]=1;
             if(test_counter.q[26]==1){
@@ -173,101 +213,135 @@ module mojo_top (
             }
             if (edge_start_input.out){
                         
-                        state.d = state.WAITARITHMETIC;
+            state.d = state.WAITARITHMETIC;
             }
 
         state.STARTROUNDB:
-          led[2]=1;
+          led[2]=1;//show state
           if(test_counter.q[26]==1){
               outputButtonLight=1;
           }
-          if (edge_start_input.out){
-                        
-                        state.d = state.WAITARITHMETIC;
-
-          }
-          if (edge_increase_input.out){
-
-              if(b.q<5){
-                b.d=b.q+1;
-              }
-              else{
-                b.d=1;
-              }
-          }
           
+
+          if (edge_increase_input.out ){
+            if(emulator1.b_output<5){
+          emulator1.asel=3b011;//select b value
+          emulator1.bsel=3b000;//select constant 1
+          emulator1.alufn= Inst.ADD;
+          emulator1.wb=1;
+            }
+            else{
+              //set to 1
+              emulator1.asel=3b100;//select 0
+              emulator1.bsel=3b000;//select constant 1
+              emulator1.alufn= Inst.ADD;
+              emulator1.wb=1;
+            }
+          }
           //in here, we display b, or maybe evrywhere :)
+          if (edge_start_input.out){
+            state.d = state.WAITARITHMETIC;
+
+          }
 
   
         state.WAITARITHMETIC:
-
-          led[3]=1;
+          led[3]=1;//show state
+          emulator1.asel =3b000;
+          emulator1.bsel = 3b011;
+          
           if(edge_add_input.out){
-          alu.a =currentscore.q;
-          alu.b = b.q;
-          alu.alufn = Inst.ADD; //done operation, now need to set value to new current score
-          currentscore.d= alu.result;
-          state.d = state.COMPAREHIGHSCORE;
-          counter.d = counter.q+1;
+          
+          emulator1.wcs = 1;//enable write to currentscore
+          emulator1.alufn = Inst.ADD; //done operation, now need to set value to new current score
+          state.d = state.ADDCOUNTER;   
+
           //
           }
-          if(subInput){
-          alu.a =currentscore.q;
-          alu.b = b.q;
-          alu.alufn = Inst.SUB;
-          currentscore.d= alu.result; 
-          state.d = state.COMPAREHIGHSCORE;
-          counter.d = counter.q+1;
+          if(edge_sub_input.out){
+          
+          emulator1.wcs = 1;//enable write to currentscore
+          emulator1.alufn = Inst.SUB;
+          state.d = state.ADDCOUNTER;   
+
           }
-          if (multInput==1){
-            
-          alu.a =currentscore.q;
-          alu.b = b.q;
-          alu.alufn = Inst.MUL; 
-          currentscore.d= alu.result;  
-          state.d = state.COMPAREHIGHSCORE; 
-          counter.d = counter.q+1;
+          if (edge_mult_input.out){
+          
+          emulator1.wcs = 1;//enable write to currentscore
+           
+          emulator1.alufn = Inst.MUL;
+          state.d = state.ADDCOUNTER;    
+
           }
-        if (divInput==1){
-            
-          alu.a =currentscore.q;
-          alu.b = b.q;
-          alu.alufn = Inst.DIVIDE;
-          currentscore.d= alu.result;    
-          state.d = state.COMPAREHIGHSCORE;
-          counter.d = counter.q+1;
+        if (edge_div_input.out){
+          emulator1.asel =3b100;
+          emulator1.wcs = 1;//enable write to currentscore
+          emulator1.alufn = Inst.LDR;
+          state.d = state.ADDCOUNTER;    
           }
         
-        state.COMPAREHIGHSCORE:
-            led[4]=1;
-            alu.a= currentscore.q;
-            alu.b= highscore.q;
-            alu.alufn=Inst.CMPLT;
-            if (alu.result[0]==0){
-                highscore.d=currentscore.q;
-            }
-            state.d= state.COMPARECOUNTER;
-
-
+         
+        
+        state.ADDCOUNTER:
+          led[4]=1;
+          emulator1.asel =3b010;//select counter
+          emulator1.bsel = 3b000;//select hardcode 1
+          emulator1.alufn = Inst.ADD;
+          emulator1.wcounter =1 ;
+          state.d = state.COMPARECOUNTER;   
+          
+        
         state.COMPARECOUNTER:
           led[5]=1;
-          alu.a=counter.q;
-          alu.b= 5;
-          alu.alufn= Inst.CMPEQ;
-          if (alu.result[0]==1){
-              state.d = state.IDLE;
-              
+          emulator1.asel =3b010;//select counter
+          emulator1.bsel = 3b001;//select hardcoded max rounds
+          emulator1.alufn = Inst.CMPEQ;//check if hit the max rounds.
+          if (emulator1.aluresult[0]){
+              state.d = state.SHOWCURRENT;
+                
           }
           else{
-              if(buttonGameMode.q==1){
+              if(emulator1.mode_output){
                   state.d = state.STARTROUNDB;
               }
               else{
-                  state.d= state.STARTROUNDA;
-                  b.d=b.q+1;
+                  state.d= state.ADDB;
               }
           }
             
+
+      
+        state.SHOWCURRENT:
+          if(edge_start_input.out){
+            state.d = state.COMPAREHIGHSCORE;
+          }
+        state.COMPAREHIGHSCORE:
+          led[4]=1;  
+          emulator1.asel =3b000;//select currentscore
+          emulator1.bsel = 3b010;//select highscore
+          emulator1.alufn = Inst.CMPLT;//check if current score less than high
+            emulator1.alufn=Inst.CMPLT;
+            if (emulator1.aluresult[0]==0){
+                state.d = state.SETHIGHSCORE;
+            }
+            else{state.d= state.RESETIDLE;
+            }
+        
+        state.SETHIGHSCORE:
+          emulator1.asel =3b000;//select currentscore
+          emulator1.bsel = 3b010;//select highscore
+          emulator1.alufn = Inst.LDR;//check if current score less than highscore
+          state.d = state.RESETIDLE;
+        
+        state.RESETIDLE:
+          emulator1.asel =3b100;
+          emulator1.wcs = 1;//enable write to currentscore
+          emulator1.wb =1;
+          emulator1.wcounter =1;
+          emulator1.alufn = Inst.LDR;
+          state.d = state.IDLE;    
+          
+
 
 
         
@@ -292,20 +366,13 @@ module mojo_top (
     io_sel4= ~seg4.sel;
     seg.values = convertHS.digits;
     seg2.values = convertCS.digits;
-    seg4.values = {b.q[3:0],b.q[3:0],b.q[3:0],b.q[3:0]};
+    seg4.values = {emulator1.highscore_output[15]?4d11:4d10,
+                   emulator1.currentscore_output[15]?4d11:4d10,
+                   emulator1.counter_output[3:0],
+                   emulator1.b_output[3:0]};
     
    
     test_counter.d = test_counter.q + 1;
     
-
-
-    // Set output to ALU
-    //        if (counter.q[X]==1&&alu==8b1010){ //once counter reaches defined value, and output of ALU is equal to manually calculated value (CORRECT ANSWER)
-    //        counter.d = 0; //reset counter value to 0
-    //        state.d = state.ADDERTEST1A; //move on to next test case
-    //    }else if (counter.q[X] == 1 && alu!= 8b1010){ //once counter reachse defined value but output of value is not equal to calculated value (WRONG ANSWER)
-    //        counter.d=0; //reset counter value to 0
-    //        state.d=state.ADDERERROR;} //move to adder error state
-    //   at the bottom of each state test.
   }
 }

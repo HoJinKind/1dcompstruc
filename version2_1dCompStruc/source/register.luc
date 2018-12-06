@@ -1,10 +1,22 @@
 module register (
-    input clk,  // clock
-    input rst,  // reset
-    output out
+    input clk,
+    input rst,
+    input write,  // clock
+    input value[16],
+    output out[16]
   ) {
-
+  dff reg[16](.clk(clk), .rst(rst));
   always {
-    out = 0;
+    case (write) {
+      1:
+        reg.d = value;
+        out = reg.q;
+      0:
+        reg.d = reg.q;
+        out = reg.q;
+      default:
+        out = 16b0;
+    }
+      
   }
 }
